@@ -7,7 +7,7 @@
 //
 
 #import "PIOViewController.h"
-
+#import "PredictIO.h"
 @interface PIOViewController ()
 
 @end
