@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'PredictIO-iOS_Example' do
+  pod 'PredictIO-iOS', :path => '../'
+
+  target 'PredictIO-iOS_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
