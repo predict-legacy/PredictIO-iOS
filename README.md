@@ -17,7 +17,7 @@ Detects that a user just arrived at the destination.
 Detects that user just started their journey.
 
 ##### Use Cases
-Look through the [Use cases](https://github.com/predict-io/PredictIO/wiki/Use-Cases) where this SDK can be used.
+Look through the [Use cases](https://github.com/predict-io/PredictIO-iOS/wiki/Use-Cases) where this SDK can be used.
 
 ## Requirements
 [Sign up](http://www.predict.io/sign-up/) for API key, iOS 7.0+, ARC
@@ -33,23 +33,23 @@ pod 'PredictIO', '~> 0.10.0'
 > You shouldn’t use TextEdit to edit the podfile because TextEdit likes to replace standard quotes with more graphically appealing quotes. This can cause CocoaPods to get confused and display errors, so it’s best to just use Xcode or another programming text editor.
 
 ### If not using cocoapods
-If you don't use cocoapods, you can manually add predict.io lib to your Xcode project, see [Adding static library in Xcode Project ](https://github.com/predict-io/PredictIO/wiki/If-not-using-cocoapods) guide for more details.
+If you don't use cocoapods, you can manually add predict.io lib to your Xcode project, see [Adding static library in Xcode Project ](https://github.com/predict-io/PredictIO-iOS/wiki/Manual-integration-of-PredictIO) guide for more details.
 
-## Project setup and Dependencies
-predict.io requires some addtional frameworks to be added to the project and also requires background location updates. Check out [Project setup and Dependencies guide](https://github.com/predict-io/PredictIO/wiki/Project-setup-and-Dependencies) for more details.
+## Enabling background location updates
+predict.io requires background location updates to be added to the project. Check out [Enabling background location updates](https://github.com/predict-io/PredictIO-iOS/wiki/Enabling-background-location-updates) for more details.
 
 ## API Documentation
 For complete reference to the API, please check out our API documentation and usage guides for your prefered language.
-* [Objective-C Guide](https://github.com/predict-io/PredictIO/wiki/Objective-C-Guide)
-* [Swift Guide](https://github.com/predict-io/PredictIO/wiki/Swift-Guide).
+* [Objective-C Guide](https://github.com/predict-io/PredictIO-iOS/wiki/Objective-C-Guide)
+* [Swift Guide](https://github.com/predict-io/PredictIO-iOS/wiki/Swift-Guide).
 
 ## Migration Guide
 If you are upgrading from SDK v2.1.2 or lower, please make sure that you update your integration code so that it conforms 3.0 release, checkout the appropriate guide for more details.
-* [Objective-C migration guide](https://github.com/predict-io/PredictIO/wiki/PredictIO-3.0-Migration-Guide-Objective-C)
-* [Swift migration guide](https://github.com/predict-io/PredictIO/wiki/PredictIO-3.0-Migration-Guide-Swift)
+* [Objective-C migration guide](https://github.com/predict-io/PredictIO-iOS/wiki/PredictIO-3.0-Migration-Guide-Objective-C)
+* [Swift migration guide](https://github.com/predict-io/PredictIO-iOS/wiki/PredictIO-3.0-Migration-Guide-Swift)
 
 ## FAQ
-Look through the [FAQ](https://github.com/predict-io/PredictIO/wiki/FAQs) for answers to the most commonly-asked questions about PredictIO.
+Look through the [FAQ](https://github.com/predict-io/PredictIO-iOS/wiki/FAQs) for answers to the most commonly-asked questions about PredictIO.
 
 ## Communication 
 * If you need help, use: [Support Center] (http://www.predict.io/support-center/)
