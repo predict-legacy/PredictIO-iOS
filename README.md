@@ -30,13 +30,13 @@ Copy and paste the following lines into your podfile:
 platform :ios, '7.0'
 pod 'PredictIO', '~> 0.10.0'
 ```
-> You shouldn’t use TextEdit to edit the podfile because TextEdit likes to replace standard quotes with more graphically appealing quotes. This can cause CocoaPods to get confused and display errors, so it’s best to just use Xcode or another programming text editor.
+> You should not use TextEdit to edit the podfile because TextEdit likes to replace standard quotes with more graphically appealing quotes. This can cause CocoaPods to get confused and display errors, so it’s best to just use Xcode or another programming text editor.
 
 ### If not using cocoapods
-If you don't use cocoapods, you can manually add predict.io lib to your Xcode project, see [Adding static library in Xcode Project ](https://github.com/predict-io/PredictIO-iOS/wiki/Manual-integration-of-PredictIO) guide for more details.
+If you don't use cocoapods, you can manually add predict.io lib to your Xcode project, see [Manual integration of PredictIO](https://github.com/predict-io/PredictIO-iOS/wiki/Manual-integration-of-PredictIO) guide for more details.
 
-## Enabling background location updates
-predict.io requires background location updates to be added to the project. Check out [Enabling background location updates](https://github.com/predict-io/PredictIO-iOS/wiki/Enabling-background-location-updates) for more details.
+## Getting Location Events in the Background
+predict.io requires location updates even when your Application is in background. Check out [Getting Location Events in the Background](https://github.com/predict-io/PredictIO-iOS/wiki/Getting-Location-Events-in-the-Background) for more details.
 
 ## API Documentation
 For complete reference to the API, please check out our API documentation and usage guides for your prefered language.
@@ -44,7 +44,7 @@ For complete reference to the API, please check out our API documentation and us
 * [Swift Guide](https://github.com/predict-io/PredictIO-iOS/wiki/Swift-Guide).
 
 ## Migration Guide
-If you are upgrading from SDK v2.1.2 or lower, please make sure that you update your integration code so that it conforms 3.0 release, checkout the appropriate guide for more details.
+If you are upgrading from SDK v2.1.2 or lower. Please make sure that you update your integration code, so that it conforms 3.0 release. Checkout the appropriate guide for more details.
 * [Objective-C migration guide](https://github.com/predict-io/PredictIO-iOS/wiki/PredictIO-3.0-Migration-Guide-Objective-C)
 * [Swift migration guide](https://github.com/predict-io/PredictIO-iOS/wiki/PredictIO-3.0-Migration-Guide-Swift)
 
