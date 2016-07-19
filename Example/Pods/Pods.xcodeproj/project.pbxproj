@@ -13,7 +13,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		20DF48A98642274C1E7D19236EEC3625 /* PredictIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PredictIO.h; sourceTree = "<group>"; };
 		39B543F13674DC081A4F3672C71F65A3 /* Pods-PredictIO-iOS_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PredictIO-iOS_Example-resources.sh"; sourceTree = "<group>"; };
 		3C6F086FAA9F4B6352B844C744429AF4 /* Pods-PredictIO-iOS_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PredictIO-iOS_Example-umbrella.h"; sourceTree = "<group>"; };
 		494607D12EE86FECE99108163555C166 /* Pods-PredictIO-iOS_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PredictIO-iOS_Example.modulemap"; sourceTree = "<group>"; };
@@ -23,8 +22,10 @@
 		92C28547C781A41614199C7B1BF7D450 /* Pods-PredictIO-iOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PredictIO-iOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A34814B10D12143ABEDEF122C714AF9D /* Pods_PredictIO_iOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PredictIO_iOS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDAFD9605D829E1B346BC0D5ED68585F /* PredictIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PredictIO.h; sourceTree = "<group>"; };
 		BE4805C0E49F9776D26A78A64F16E8B0 /* Pods-PredictIO-iOS_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PredictIO-iOS_Example-dummy.m"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E5E9713F5D528E8A8A020E311261E4E1 /* libPredictIO.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libPredictIO.a; path = "PredictIO-iOS/libPredictIO.a"; sourceTree = "<group>"; };
 		E9D0A3C0E723EB522E34CA39AD2C392A /* Pods-PredictIO-iOS_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PredictIO-iOS_Example-frameworks.sh"; sourceTree = "<group>"; };
 		EC07B514E15A65FE61C89AD414F9A1A3 /* Pods-PredictIO-iOS_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PredictIO-iOS_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,23 +42,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18A582AA2C3C007EFE2CCF4105AB32DC /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				20DF48A98642274C1E7D19236EEC3625 /* PredictIO.h */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		1BA8A973AD691D0DDA5164B30EC2772B /* PredictIO-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3CDD2615988DEE35A9B9BF7A560B0047 /* PredictIO-iOS */,
-			);
-			name = "PredictIO-iOS";
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		30E894D118C2F5A57F3E273FEB0B6433 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,12 +50,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		3CDD2615988DEE35A9B9BF7A560B0047 /* PredictIO-iOS */ = {
+		3499117BD157D6F28A9CBD8F27ACAF19 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				18A582AA2C3C007EFE2CCF4105AB32DC /* Classes */,
+				BDAFD9605D829E1B346BC0D5ED68585F /* PredictIO.h */,
 			);
-			path = "PredictIO-iOS";
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
@@ -100,6 +84,14 @@
 			path = "Target Support Files/Pods-PredictIO-iOS_Example";
 			sourceTree = "<group>";
 		};
+		4F2CB6C9034BD68419028DFEF9B27AA3 /* PredictIO-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3499117BD157D6F28A9CBD8F27ACAF19 /* Classes */,
+			);
+			path = "PredictIO-iOS";
+			sourceTree = "<group>";
+		};
 		6B882A3F2DAE17BB5C3A749BA532B5B0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,11 +104,29 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				D90BA3F3D21B744705D653D368C6DEDC /* Development Pods */,
+				99292094EA2667645A056AF9225FE689 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				6B882A3F2DAE17BB5C3A749BA532B5B0 /* Products */,
 				30E894D118C2F5A57F3E273FEB0B6433 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		99292094EA2667645A056AF9225FE689 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C3B63B924FF0968ADFFED176B30C766 /* PredictIO-iOS */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		9C3B63B924FF0968ADFFED176B30C766 /* PredictIO-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CE686630CA73F2DECBC21DC176903823 /* Frameworks */,
+				4F2CB6C9034BD68419028DFEF9B27AA3 /* PredictIO-iOS */,
+			);
+			name = "PredictIO-iOS";
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -127,12 +137,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D90BA3F3D21B744705D653D368C6DEDC /* Development Pods */ = {
+		CE686630CA73F2DECBC21DC176903823 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1BA8A973AD691D0DDA5164B30EC2772B /* PredictIO-iOS */,
+				E5E9713F5D528E8A8A020E311261E4E1 /* libPredictIO.a */,
 			);
-			name = "Development Pods";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

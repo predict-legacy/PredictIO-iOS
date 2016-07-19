@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D5A54D9C18CB5DFF32D0766 /* Pods_PredictIO_iOS_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB189803F8AE895CF1B4263 /* Pods_PredictIO_iOS_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -17,6 +16,8 @@
 		6003F5A7195388D20070C39A /* PIOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* PIOViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		88E9DD8E1D3E5CF30021FAE9 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E9DD8D1D3E5CF30021FAE9 /* Constants.m */; };
+		88E9DD931D3E61A30021FAE9 /* Pods_PredictIO_iOS_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB189803F8AE895CF1B4263 /* Pods_PredictIO_iOS_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		88E9DD8C1D3E5CF30021FAE9 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		88E9DD8D1D3E5CF30021FAE9 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		91B43538CE1EF4E26BC205AC /* Pods_PredictIO_iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PredictIO_iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D997E09133BBBE034F2217 /* Pods-PredictIO-iOS_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PredictIO-iOS_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PredictIO-iOS_Tests/Pods-PredictIO-iOS_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC07212FAC5A499E435D41B7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -55,10 +58,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E9DD931D3E61A30021FAE9 /* Pods_PredictIO_iOS_Example.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				4D5A54D9C18CB5DFF32D0766 /* Pods_PredictIO_iOS_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +104,8 @@
 		6003F593195388D20070C39A /* Example for PredictIO-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				88E9DD8C1D3E5CF30021FAE9 /* Constants.h */,
+				88E9DD8D1D3E5CF30021FAE9 /* Constants.m */,
 				6003F59C195388D20070C39A /* PIOAppDelegate.h */,
 				6003F59D195388D20070C39A /* PIOAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -284,6 +289,7 @@
 				6003F59E195388D20070C39A /* PIOAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* PIOViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				88E9DD8E1D3E5CF30021FAE9 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +394,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PredictIO-iOS/PredictIO-iOS-Prefix.pch";
 				INFOPLIST_FILE = "PredictIO-iOS/PredictIO-iOS-Info.plist";
@@ -404,6 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PredictIO-iOS/PredictIO-iOS-Prefix.pch";
 				INFOPLIST_FILE = "PredictIO-iOS/PredictIO-iOS-Info.plist";

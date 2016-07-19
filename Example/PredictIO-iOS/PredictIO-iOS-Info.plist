@@ -43,5 +43,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>location</string>
+    </array>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Data stays secure on your phone. GPS will help you find parking. Vacancy will be posted anonymously.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Data stays secure on your phone. GPS will help you find parking. Vacancy will be posted anonymously.</string>
 </dict>
 </plist>
