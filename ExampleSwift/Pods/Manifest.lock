@@ -1,0 +1,12 @@
+PODS:
+  - PredictIO-iOS (0.5.0)
+
+DEPENDENCIES:
+  - PredictIO-iOS (~> 0.5.0)
+
+SPEC CHECKSUMS:
+  PredictIO-iOS: a6aebbf0b4ffab6a8355d54a1c8f4ebac7de6576
+
+PODFILE CHECKSUM: 0bd5333a87e603bdefa1c7b6d58ba09846b75a2c
+
+COCOAPODS: 1.0.0
