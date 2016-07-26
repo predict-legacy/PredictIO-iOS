@@ -1,5 +1,5 @@
 # PredictIO-iOS
-predict.io offers mobile developers a battery-optimized SDK to get normalised sensor results. Available for iOS and Android. It gives you real-time updates when a user starts or ends a journey.
+predict.io offers mobile developers a battery-optimized SDK to get normalised sensor results. Available for iOS and Android. It gives you real-time updates when a user starts or ends a journey. With this trigger come contextual details for the mode of transportation (car vs. non-car).
 
 [![Version](https://img.shields.io/cocoapods/v/PredictIO-iOS.svg?style=flat)](http://cocoapods.org/pods/PredictIO-iOS)
 [![License](https://img.shields.io/cocoapods/l/PredictIO-iOS.svg?style=flat)](http://cocoapods.org/pods/PredictIO-iOS)
@@ -16,6 +16,9 @@ Detects that a user just arrived at the destination.
 ##### Departure
 Detects that user just started their journey.
 
+##### Transport Mode
+Distinguish car and non-car trips.
+
 ##### Use Cases
 Look through the [Use cases](https://github.com/predict-io/PredictIO-iOS/wiki/Use-Cases) where this SDK can be used.
 
@@ -31,10 +34,10 @@ pod 'PredictIO', '~> 0.10.0'
 ```
 > You should not use TextEdit to edit the podfile because TextEdit likes to replace standard quotes with more graphically appealing quotes. This can cause CocoaPods to get confused and display errors, so it’s best to just use Xcode or another programming text editor.
 
-### If not using cocoapods
-If you don't use cocoapods, you can manually add predict.io lib to your Xcode project, see [Manual integration of PredictIO](https://github.com/predict-io/PredictIO-iOS/wiki/Manual-integration-of-PredictIO) guide for more details.
+### If not using CocoaPods
+If you don't use CocoaPods, you can manually add predict.io lib to your Xcode project, see [Manual integration of predict.io](https://github.com/predict-io/PredictIO-iOS/wiki/Manual-integration-of-PredictIO) guide for more details.
 
-## Getting Location Events in the Background
+### Getting Location Events in the Background
 predict.io requires location updates even when your Application is in background. Check out [Getting Location Events in the Background](https://github.com/predict-io/PredictIO-iOS/wiki/Getting-Location-Events-in-the-Background) for more details.
 
 ## API Documentation
@@ -43,12 +46,12 @@ For complete reference to the API, please check out our API documentation and us
 * [Swift Guide](https://github.com/predict-io/PredictIO-iOS/wiki/Swift-Guide).
 
 ## Migration Guide
-If you are upgrading from SDK v2.1.2 or lower. Please make sure that you update your integration code, so that it conforms 3.0 release. Checkout the appropriate guide for more details.
-* [Objective-C migration guide](https://github.com/predict-io/PredictIO-iOS/wiki/PredictIO-3.0-Migration-Guide-Objective-C)
-* [Swift migration guide](https://github.com/predict-io/PredictIO-iOS/wiki/PredictIO-3.0-Migration-Guide-Swift)
+If you are upgrading from SDK v2.1.2 or lower. Please make sure that you update your integration code, so it conforms with 3.0 release. Checkout the appropriate guide for more details.
+* [Objective-C Migration Guide](https://github.com/predict-io/PredictIO-iOS/wiki/PredictIO-3.0-Migration-Guide-Objective-C)
+* [Swift Migration Guide](https://github.com/predict-io/PredictIO-iOS/wiki/PredictIO-3.0-Migration-Guide-Swift)
 
 ## FAQ
-Look through the [FAQ](https://github.com/predict-io/PredictIO-iOS/wiki/FAQs) for answers to the most commonly-asked questions about PredictIO.
+Look through the [FAQ](https://github.com/predict-io/PredictIO-iOS/wiki/FAQs) for answers to the most commonly-asked questions about predict.io.
 
 ## Communication 
 * If you need help, use: [Support Center] (http://www.predict.io/support-center/)
@@ -60,7 +63,7 @@ Look through the [FAQ](https://github.com/predict-io/PredictIO-iOS/wiki/FAQs) fo
 predict.io, developer@predict.io
 
 ## Credits
-### About PredictIO
+### About predict.io
 Our mobile SDK gives you battery friendly background location so you always know where and when a user arrives or departs. No fiddling with geofences. No beacons or NFC needed. It uses the sensors embedded in any modern smartphone. You can embed it in minutes. Rather than spending months fiddling with the Activity APIs yourself. Our SDK powers many industry leading Android and iOS apps in mobility, retail, hospitality, lifestyle and banking. 
 ### License
 #### Terms of use 
