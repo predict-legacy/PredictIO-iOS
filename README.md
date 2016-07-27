@@ -66,8 +66,8 @@ predict.io, developer@predict.io
 ### About predict.io
 Our mobile SDK gives you battery friendly background location so you always know where and when a user arrives or departs. No fiddling with geofences. No beacons or NFC needed. It uses the sensors embedded in any modern smartphone. You can embed it in minutes. Rather than spending months fiddling with the Activity APIs yourself. Our SDK powers many industry leading Android and iOS apps in mobility, retail, hospitality, lifestyle and banking. 
 ### License
-#### Terms of use 
-Terms of use can be found [here](http://www.predict.io/terms-of-use/).
+#### Terms of Service 
+Terms of service can be found [here](http://www.predict.io/terms-of-service/).
 #### Privacy Policy 
 Privacy Policy can be found [here](http://www.predict.io/privacy-policy/).
 #### License
