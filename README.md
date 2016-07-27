@@ -47,8 +47,8 @@ For complete reference to the API, please check out our API documentation and us
 
 ## Migration Guide
 If you are upgrading from SDK v2.1.2 or lower. Please make sure that you update your integration code, so it conforms with 3.0 release. Checkout the appropriate guide for more details.
-* [Objective-C Migration Guide](https://github.com/predict-io/PredictIO-iOS/wiki/PredictIO-3.0-Migration-Guide-Objective-C)
-* [Swift Migration Guide](https://github.com/predict-io/PredictIO-iOS/wiki/PredictIO-3.0-Migration-Guide-Swift)
+* [Objective-C Migration Guide](https://github.com/predict-io/PredictIO-iOS/wiki/Objective-C-Migration-Guide-for-predict.io-3.0)
+* [Swift Migration Guide](https://github.com/predict-io/PredictIO-iOS/wiki/Swift-Migration-Guide-for-predict.io-3.0)
 
 ## FAQ
 Look through the [FAQ](https://github.com/predict-io/PredictIO-iOS/wiki/FAQs) for answers to the most commonly-asked questions about predict.io.
