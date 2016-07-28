@@ -9,16 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PredictIODelegate {
-    let  API_KEY = "YOUR-API-KEY"
     
+    // MARK: Properties
+    
+    let  API_KEY = "260ef48214d69f06c1ad373c1354eab6605cf2792afc82e6e70f402e9cd1acee"
     let cellIdentifier = "CellIdentifier"
     var tableData: NSMutableArray = []
     var parktagEnabled = false;
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: Lifecycle methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         
@@ -30,9 +33,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
+    // MARK: UITableView delegate methods
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -95,11 +99,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.tableView.reloadData()
     }
     
-    func departingFromLocation(departureLocation: CLLocation, transportationMode: TransportationMode) {
+    // MARK: Predict.io delegate methods
+    
+    func departingFromLocation(departureLocation: CLLocation!, transportationMode: TransportationMode) {
         self.addEventName(PTEventVacatingParking)
     }
     
-    func departedLocation(departureLocation: CLLocation, departureTime: NSDate, transportationMode: TransportationMode) {
+    func departedLocation(departureLocation: CLLocation!, departureTime: NSDate!, transportationMode: TransportationMode) {
         self.addEventName(PTEventVacatedParking)
     }
     
@@ -107,11 +113,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.addEventName(PTEventVacatedParkingCancel)
     }
     
-    func arrivalSuspectedFromLocation(departureLocation: CLLocation, arrivalLocation: CLLocation, departureTime: NSDate, arrivalTime: NSDate, transportationMode: TransportationMode) {
+    func arrivalSuspectedFromLocation(departureLocation: CLLocation!, arrivalLocation: CLLocation!, departureTime: NSDate!, arrivalTime: NSDate!, transportationMode: TransportationMode) {
         self.addEventName(PTEventParkingSuspected)
     }
     
-    func arrivedAtLocation(arrivalLocation: CLLocation, departureLocation: CLLocation, arrivalTime: NSDate, departureTime: NSDate, transportationMode: TransportationMode) {
+    func arrivedAtLocation(arrivalLocation: CLLocation!, departureLocation: CLLocation!, arrivalTime: NSDate!, departureTime: NSDate!, transportationMode: TransportationMode) {
         self.addEventName(PTEventVehicleParked)
     }
     
@@ -119,7 +125,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.addEventName(PTEventSearchingParking)
     }
     
-    func didUpdateLocation(location: CLLocation) {
+    func didUpdateLocation(location: CLLocation!) {
         self.addEventName(PTEventUpdateLocation)
     }
     
