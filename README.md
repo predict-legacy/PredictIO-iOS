@@ -55,8 +55,7 @@ Look through the [FAQ](https://github.com/predict-io/PredictIO-iOS/wiki/FAQs) fo
 
 ## Communication 
 * If you need help, use: [Support Center] (http://www.predict.io/support-center/)
-* If you'd like to ask a general question: [FAQ] (http://www.predict.io/faq-items/)
-* If you found a bug, open an issue. 
+* If you found a bug, [open an issue](https://github.com/predict-io/PredictIO-iOS/issues). 
 * If you have a feature request, open an issue.
 
 ## Author
