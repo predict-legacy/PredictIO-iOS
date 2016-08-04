@@ -1,13 +1,9 @@
 # PredictIO-iOS
-predict.io offers mobile developers a battery-optimized SDK to get normalized sensor results. Available for iOS and Android. It gives you real-time updates when a user starts or ends a journey. With this trigger come contextual details for the mode of transportation (car vs. non-car).
+predict.io offers mobile developers a battery-optimized SDK to get normalised sensor results. Available for iOS and Android. It gives you real-time updates when a user starts or ends a journey. With this trigger come contextual details for the mode of transportation (car vs. non-car).
 
 [![Version](https://img.shields.io/cocoapods/v/PredictIO-iOS.svg?style=flat)](http://cocoapods.org/pods/PredictIO-iOS)
 [![License](https://img.shields.io/cocoapods/l/PredictIO-iOS.svg?style=flat)](http://cocoapods.org/pods/PredictIO-iOS)
 [![Platform](https://img.shields.io/cocoapods/p/PredictIO-iOS.svg?style=flat)](http://cocoapods.org/pods/PredictIO-iOS)
-
-
-## Example
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Features
 ##### Arrival 
@@ -37,7 +33,10 @@ pod 'PredictIO', '~> 0.10.0'
 > You should not use TextEdit to edit the podfile because TextEdit likes to replace standard quotes with more graphically appealing quotes. This can cause CocoaPods to get confused and display errors, so it’s best to just use Xcode or another programming text editor.
 
 ### If not using CocoaPods
-If you don't use CocoaPods, you can manually add predict.io lib to your Xcode project, check the [Manual integration of predict.io](https://github.com/predict-io/PredictIO-iOS/wiki/Manual-integration-of-PredictIO) guide for more details.
+If you don't use CocoaPods, you can manually add predict.io lib to your Xcode project, check the [Manual Integration Guide](https://github.com/predict-io/PredictIO-iOS/wiki/Manual-integration-of-PredictIO) for more details.
+
+### Example
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ### Getting Location Events in the Background
 predict.io requires location updates even when your application is in the background. Check out [Getting Location Events in the Background](https://github.com/predict-io/PredictIO-iOS/wiki/Getting-Location-Events-in-the-Background) for more details.
@@ -56,7 +55,7 @@ If you are upgrading from the ParkTAG SDK v2.1.2 or lower, please make sure that
 Look through the [FAQ](https://github.com/predict-io/PredictIO-iOS/wiki/FAQs) for answers to the most commonly-asked questions about predict.io.
 
 ## Communication 
-* If you need help, use: [Support Center] (http://www.predict.io/support-center/)
+* If you need help, visit our [Support Center] (http://www.predict.io/support-center/)
 
 ## Author
 predict.io, support@predict.io
