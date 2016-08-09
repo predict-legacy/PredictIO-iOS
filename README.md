@@ -19,7 +19,7 @@ Distinguish car and non-car trips.
 Look through the [Use Cases](https://github.com/predict-io/PredictIO-iOS/wiki/Use-Cases) where this SDK can be used.
 
 ## Requirements
-* [Sign up](http://www.predict.io/sign-up/) for API key
+* [Sign up](http://www.predict.io/sdk-sign-up/) for API key
 * iOS 7.0+
 * ARC
 
@@ -33,7 +33,7 @@ pod 'PredictIO', '~> 0.10.0'
 > You should not use TextEdit to edit the podfile because TextEdit likes to replace standard quotes with more graphically appealing quotes. This can cause CocoaPods to get confused and display errors, so it’s best to just use Xcode or another programming text editor.
 
 ### If not using CocoaPods
-If you don't use CocoaPods, you can manually add predict.io lib to your Xcode project, check the [Manual Integration Guide](https://github.com/predict-io/PredictIO-iOS/wiki/Manual-integration-of-PredictIO) for more details.
+If you don't use CocoaPods, you can manually add predict.io lib to your Xcode project, check the [Manual Integration Guide](https://github.com/predict-io/PredictIO-iOS/wiki/Manual-integration-of-predict.io) for more details.
 
 ### Example
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
