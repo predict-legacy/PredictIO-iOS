@@ -55,7 +55,7 @@ If you are upgrading from the ParkTAG SDK v2.1.2 or lower, please make sure that
 Look through the [FAQ](https://github.com/predict-io/PredictIO-iOS/wiki/FAQs) for answers to the most commonly-asked questions about predict.io.
 
 ## Communication 
-* If you need help, visit our [Support Center] (http://www.predict.io/support-center/)
+If you need help, visit our [Support Center] (http://www.predict.io/support-center/)
 
 ## Author
 predict.io, support@predict.io
