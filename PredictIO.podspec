@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'PredictIO'
-  s.version          = '3.0'
+  s.version          = '0.1.0'
   s.license          = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
   s.homepage         = 'https://github.com/predict-io/PredictIO-iOS'
   s.summary          = 'The parking detection API (patent pending) allows you to retrieve real-time updates on the parking status of a user.'
