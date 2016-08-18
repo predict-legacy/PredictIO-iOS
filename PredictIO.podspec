@@ -13,7 +13,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'PredictIO-iOS/Classes/**/*'
-  s.public_header_files = 'PredictIO-iOS/Classes/**/*.h'
   
   s.vendored_library = 'PredictIO-iOS/libPredictIO.a'
 
