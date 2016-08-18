@@ -13,7 +13,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'PredictIO-iOS/Classes/**/*'
-  
   s.vendored_library = 'PredictIO-iOS/libPredictIO.a'
 
   s.frameworks = 'UIKit', 'CoreMotion', 'CoreLocation', 'CoreTelephony', 'AdSupport', 'AVFoundation', 'CoreBluetooth', 'SystemConfiguration', 'ExternalAccessory'
