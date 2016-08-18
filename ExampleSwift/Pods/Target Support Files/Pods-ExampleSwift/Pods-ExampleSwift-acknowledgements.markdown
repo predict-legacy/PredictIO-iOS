@@ -1,7 +1,7 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## PredictIO-iOS
+## PredictIO
 
 Copyright 2016 Predict.io.
 

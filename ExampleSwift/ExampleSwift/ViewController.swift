@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PredictIODelegate {
     
     // MARK: Properties
-    
     let  API_KEY = "260ef48214d69f06c1ad373c1354eab6605cf2792afc82e6e70f402e9cd1acee"
     let cellIdentifier = "CellIdentifier"
     var tableData: NSMutableArray = []
