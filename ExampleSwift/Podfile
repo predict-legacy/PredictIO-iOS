@@ -6,5 +6,6 @@ target 'ExampleSwift' do
    use_frameworks!
 
   # Pods for TableViewCheck
-	pod 'PredictIO-iOS', '~> 0.5.0'
+	#pod 'PredictIO-iOS', '~> 0.5.0'
+	pod 'PredictIO'
 end

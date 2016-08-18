@@ -1,6 +1,6 @@
 # PredictIO-iOS
 predict.io offers mobile developers a battery-optimized SDK to get normalised sensor results. Available for iOS and Android. It gives you real-time updates when a user starts or ends a journey.
-[![CI Status](http://img.shields.io/travis/haseebOptini/PredictIO-iOS.svg?style=flat)](https://travis-ci.org/haseebOptini/PredictIO-iOS)
+
 [![Version](https://img.shields.io/cocoapods/v/PredictIO-iOS.svg?style=flat)](http://cocoapods.org/pods/PredictIO-iOS)
 [![License](https://img.shields.io/cocoapods/l/PredictIO-iOS.svg?style=flat)](http://cocoapods.org/pods/PredictIO-iOS)
 [![Platform](https://img.shields.io/cocoapods/p/PredictIO-iOS.svg?style=flat)](http://cocoapods.org/pods/PredictIO-iOS)
@@ -24,8 +24,7 @@ Look through the [Use cases](https://github.com/predict-io/PredictIO-iOS/wiki/Us
 
 ## Installation
 ### Using CocoaPods
-
-Copy and paste the following lines into your podfile:
+[CocoaPods](http://cocoapods.org/) is a dependency manager for Cocoa projects. Copy and paste the following lines into your podfile:
 ```ruby
 platform :ios, '7.0'
 pod 'PredictIO', '~> 0.10.0'
