@@ -28,7 +28,7 @@ Look through the [Use Cases](https://github.com/predict-io/PredictIO-iOS/wiki/Us
 [CocoaPods](http://cocoapods.org/) is a dependency manager for Cocoa projects. Copy and paste the following lines into your podfile:
 ```ruby
 platform :ios, '7.0'
-pod 'PredictIO', '~> 0.10.0'
+pod 'PredictIO'
 ```
 > You should not use TextEdit to edit the podfile because TextEdit likes to replace standard quotes with more graphically appealing quotes. This can cause CocoaPods to get confused and display errors, so it’s best to just use Xcode or another programming text editor.
 
