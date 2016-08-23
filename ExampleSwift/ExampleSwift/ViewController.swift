@@ -100,11 +100,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK: Predict.io delegate methods
     
-    func departingFromLocation(departureLocation: CLLocation!, transportationMode: TransportationMode) {
+    func departing(tripSegment: PIOTripSegment!) {
         self.addEventName(PTEventVacatingParking)
     }
     
-    func departedLocation(departureLocation: CLLocation!, departureTime: NSDate!, transportationMode: TransportationMode) {
+    func departed(tripSegment: PIOTripSegment) {
         self.addEventName(PTEventVacatedParking)
     }
     
@@ -112,11 +112,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.addEventName(PTEventVacatedParkingCancel)
     }
     
-    func arrivalSuspectedFromLocation(departureLocation: CLLocation!, arrivalLocation: CLLocation!, departureTime: NSDate!, arrivalTime: NSDate!, transportationMode: TransportationMode) {
+    func transportationMode(tripSegment: PIOTripSegment) {
+        self.addEventName(PTEventSTMP)
+    }
+    
+    func arrivalSuspected(tripSegment: PIOTripSegment) {
         self.addEventName(PTEventParkingSuspected)
     }
     
-    func arrivedAtLocation(arrivalLocation: CLLocation!, departureLocation: CLLocation!, arrivalTime: NSDate!, departureTime: NSDate!, transportationMode: TransportationMode) {
+    func arrived(tripSegment: PIOTripSegment) {
         self.addEventName(PTEventVehicleParked)
     }
     
@@ -125,7 +129,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func didUpdateLocation(location: CLLocation!) {
-        self.addEventName(PTEventUpdateLocation)
+        //self.addEventName(PTEventUpdateLocation)
     }
     
     func getPredictIOStatus() {

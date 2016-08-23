@@ -4,51 +4,10 @@
 //
 //  Created by Zee on 28/02/2013.
 //  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
-//  Version 3.0
+//  Version 3.0.0
 
 #import <Foundation/Foundation.h>
-#import <CoreLocation/CoreLocation.h>
-
-/*
- * PredictIOStatus
- * Discussion: Represents the current predict.io state.
- */
-typedef NS_ENUM(int, PredictIOStatus) {
-    // predict.io is in a working/active state
-    PredictIOStatusActive = 0,
-
-    // predict.io not in a working state as the location services are disabled
-    PredictIOStatusLocationServicesDisabled,
-
-    // predict.io has not been authorized by user to use location services at any time (kCLAuthorizationStatusAuthorizedAlways)
-    PredictIOStatusInsufficientPermission,
-
-    // predict.io has not been started. It is in inactive state.
-    PredictIOStatusInActive
-};
-
-/*
- * TransportationMode
- * Discussion: Represents the vehicle transportation mode, determined by the predict.io
- */
-typedef NS_ENUM(int, TransportationMode) {
-    // current transportation mode is Undetermined
-    TransportationModeUndetermined = 0,
-
-    // current transportation mode is Car
-    TransportationModeCar,
-
-    // current transportation mode is other than Car
-    TransportationModeOther
-};
-
-/*
- * LogLevel
- * Discussion: Represents the current predict.io logger state.
- */
-typedef NS_ENUM(int, LogLevel)  {
-    LogLevelNone = 0, LogLevelDebug
-};
+#import "PIOTripSegment.h"
 
 @protocol PredictIODelegate;
 
@@ -98,21 +57,22 @@ typedef NS_ENUM(int, LogLevel)  {
 
 /* This method is invoked when predict.io detects that the user is about to depart
  * from his location and is approaching to his vehicle
- * @param departureLocation: The Location from where the user departed
- * @param transportationMode: Mode of transportation
+ * @param tripSegment: PIOTripSegment having departing event information
+ * @discussion: At this point only following properties will be populated,
+ *   departureLocation: The Location from where the user departed
+ *   transportationMode:  Mode of transportation
  */
-- (void)departingFromLocation:(CLLocation *)departureLocation
-           transportationMode:(TransportationMode)transportationMode;
+- (void)departing:(PIOTripSegment *)tripSegment;
 
 /* This method is invoked when predict.io detects that the user has just departed
  * from his location and have started a new trip
- * @param departureLocation: The Location from where the user departed
- * @param departureTime: Start time of the trip
- * @param transportationMode: Mode of transportation
+ * @param tripSegment: PIOTripSegment have departed event information
+ * @discussion: At this point only following properties will be populated,
+ *   departureLocation: The Location from where the user departed
+ *   departureTime: Start time of the trip
+ *   transportationMode: Mode of transportation
  */
-- (void)departedLocation:(CLLocation *)departureLocation
-           departureTime:(NSDate *)departureTime
-      transportationMode:(TransportationMode)transportationMode;
+- (void)departed:(PIOTripSegment *)tripSegment;
 
 /* This method is invoked when predict.io is unable to validate the last departure event.
  * This can be due to invalid data received from sensors or the trip amplitude.
@@ -120,34 +80,35 @@ typedef NS_ENUM(int, LogLevel)  {
  */
 - (void)departureCanceled;
 
+/* This method is invoked when predict.io detects transportation mode
+ * @param: transportationMode: Mode of transportation
+ */
+- (void)transportationMode:(PIOTripSegment *)tripSegment;
+
 /* This method is invoked when predict.io suspects that the user has just arrived
  * at his location and have ended a trip
  * Most of the time it is followed by a confirmed arrivedAtLocation event
  * If you need only confirmed arrival events, use arrivedAtLocation method (below) instead
- * @param departureLocation: The Location from where the user departed
- * @param arrivalLocation: The Location where the user arrived and ended the trip
- * @param departureTime: Start time of trip
- * @param arrivalTime: Stop time of trip
- * @param transportationMode: Mode of transportation
+ * @param tripSegment: PIOTripSegment have arrivalSuspected event information
+ * @discussion: At this point only following properties will be populated,
+ *  departureLocation: The Location from where the user departed
+ *  arrivalLocation: The Location where the user arrived and ended the trip
+ *  departureTime: Start time of trip
+ *  arrivalTime: Stop time of trip
+ *  transportationMode: Mode of transportation
  */
-- (void)arrivalSuspectedFromLocation:(CLLocation *)departureLocation
-                     arrivalLocation:(CLLocation *)arrivalLocation
-                       departureTime:(NSDate *)departureTime
-                         arrivalTime:(NSDate *)arrivalTime
-                  transportationMode:(TransportationMode)transportationMode;
+- (void)arrivalSuspected:(PIOTripSegment *)tripSegment;
 
 /* This method is invoked when predict.io detects that the user has just arrived at destination
- * @param arrivalLocation: The Location where the user arrived and ended a trip
- * @param departureLocation: The Location from where the user departed
- * @param departureTime: Start time of trip
- * @param arrivalTime: Stop time of trip
- * @param transportationMode: Mode of transportation
+ * @param tripSegment: PIOTripSegment have arrived event information
+ * @discussion: At this point only following properties will be populated,
+ *  departureLocation: The Location from where the user departed
+ *  arrivalLocation: The Location where the user arrived and ended the trip
+ *  departureTime: Start time of trip
+ *  arrivalTime: Stop time of trip
+ *  transportationMode: Mode of transportation
  */
-- (void)arrivedAtLocation:(CLLocation *)arrivalLocation
-        departureLocation:(CLLocation *)departureLocation
-              arrivalTime:(NSDate *)arrivalTime
-            departureTime:(NSDate *)departureTime
-       transportationMode:(TransportationMode)transportationMode;
+- (void)arrived:(PIOTripSegment *)tripSegment;
 
 /* This method is invoked when predict.io detects that the user is searching for a
  * parking space at a specific location
@@ -173,3 +134,4 @@ FOUNDATION_EXPORT NSString *const PIODepartureCanceledNotification;
 FOUNDATION_EXPORT NSString *const PIOArrivalSuspectedNotification;
 FOUNDATION_EXPORT NSString *const PIOArrivedNotification;
 FOUNDATION_EXPORT NSString *const PIOSearchingParkingNotification;
+FOUNDATION_EXPORT NSString *const PIOTransportationModeNotification;
