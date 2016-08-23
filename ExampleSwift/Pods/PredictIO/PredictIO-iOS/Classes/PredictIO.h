@@ -4,51 +4,10 @@
 //
 //  Created by Zee on 28/02/2013.
 //  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
-//  Version 3.0
+//  Version 3.0.0
 
 #import <Foundation/Foundation.h>
-#import <CoreLocation/CoreLocation.h>
-
-/*
- * PredictIOStatus
- * Discussion: Represents the current predict.io state.
- */
-typedef NS_ENUM(int, PredictIOStatus) {
-    // predict.io is in a working/active state
-    PredictIOStatusActive = 0,
-
-    // predict.io not in a working state as the location services are disabled
-    PredictIOStatusLocationServicesDisabled,
-
-    // predict.io has not been authorized by user to use location services at any time (kCLAuthorizationStatusAuthorizedAlways)
-    PredictIOStatusInsufficientPermission,
-
-    // predict.io has not been started. It is in inactive state.
-    PredictIOStatusInActive
-};
-
-/*
- * TransportMode
- * Discussion: Represents the vehicle transport mode.
- */
-typedef NS_ENUM(int, TransportMode) {
-    // transport mode is Undetermined by the tracker
-    TransportModeUndetermined = -1,
-
-    // transport mode is Car determined by the tracker
-    TransportModeCar = 0,
-
-    // transport mode is other determined by the tracker
-    TransportModeOther = 1
-};
-
-/*
- * LogLevel
- * Discussion: Represents the current predict.io logger state.
- */
-typedef NS_ENUM(int, LogLevel)  {
-    LogLevelNone = 0, LogLevelDebug
-};
+#import "PIOTripSegment.h"
 
 @protocol PredictIODelegate;
 
@@ -60,30 +19,33 @@ typedef NS_ENUM(int, LogLevel)  {
 
 + (PredictIO *)sharedInstance;
 
-/*
- * Starts the predict.io Tracker if delegate and API-Key is set, otherwise returns Error
- * @param handler: The argument to the completion handler block is an error object that contains the description of the error in case an error is encountered while starting the ParkTAG tracker. If the tracker is started successfully, the error object is set to nil.
+/* This starts predict.io if delegate and API-Key are set, otherwise it returns an Error
+ * @param handler: The argument to the completion handler block is an error object that contains
+ * the description of the error. If predict.io is started successfully, then error object is nil
  */
 - (void)startWithCompletionHandler:(void(^)(NSError *error))handler;
 
 /*
- * Stops the predict.io Tracker
+ * Stop predict.io
  */
 - (void)stop;
 
 /*
- * Activates GPS (if not already activated) for short period of time i.e. 90 seconds
- * Note: To use this method Tracker must have been started first.
+ * Manually activate GPS for short period of time
  */
 - (void)kickStartGPS;
 
-/*
- * This method returns the status of the tracker i.e. if it is active or otherwise
+/* This method returns the status of predict.io, PredictIOStatus i.e. if it is active or not
+ * Discussion: PredictIOStatus represents the current predict.io state
+ * PredictIOStatusActive: predict.io is in a working, active state
+ * PredictIOStatusLocationServicesDisabled: predict.io is not in a working state as the location services are disabled
+ * PredictIOStatusInsufficientPermission: predict.io is not in a working state as the permissions to use location services are not provided by the user
+ * PredictIOStatusInActive: predict.io has not been started. It is in inactive state
  */
 - (PredictIOStatus)status;
 
 /*
- * Returns an alphanumeric string that uniquely identifies a device to the tracker
+ * An alphanumeric string that uniquely identifies a device to the predict.io
  */
 - (NSString *)deviceIdentifier;
 
@@ -93,81 +55,83 @@ typedef NS_ENUM(int, LogLevel)  {
 
 @optional
 
-/*
- * This method is invoked when predict.io detects that user is about to departure from his location
- * and is approaching his vehicle
- * @param departureLocation: The Location where predict.io identified the parking spot that is about to be vacated.
- * @param transportMode: Mode of transport
-*/
-- (void)departingFromLocation:(CLLocation *)departureLocation
-                transportMode:(TransportMode)transportMode;
-
-/*
- * This method is invoked when predict.io detects that user has just departed
- * from his location and have started a new trip
- * @param departureLocation: The Location where predict.io identified start of the trip
- * @param departureTime: start time of the trip
- * @param transportMode: Mode of transport
+/* This method is invoked when predict.io detects that the user is about to depart
+ * from his location and is approaching to his vehicle
+ * @param tripSegment: PIOTripSegment having departing event information
+ * @discussion: At this point only following properties will be populated,
+ *   departureLocation: The Location from where the user departed
+ *   transportationMode:  Mode of transportation
  */
-- (void)departedLocation:(CLLocation *)departureLocation
-           departureTime:(NSDate *)departureTime
-           transportMode:(TransportMode)transportMode;
+- (void)departing:(PIOTripSegment *)tripSegment;
 
-/*
- * This method is invoked when predict.io is unable to validate last departure event
+/* This method is invoked when predict.io detects that the user has just departed
+ * from his location and have started a new trip
+ * @param tripSegment: PIOTripSegment have departed event information
+ * @discussion: At this point only following properties will be populated,
+ *   departureLocation: The Location from where the user departed
+ *   departureTime: Start time of the trip
+ *   transportationMode: Mode of transportation
+ */
+- (void)departed:(PIOTripSegment *)tripSegment;
+
+/* This method is invoked when predict.io is unable to validate the last departure event.
+ * This can be due to invalid data received from sensors or the trip amplitude.
+ * i.e. If the trip takes less than 5 minutes or the distance travelled is less than 3km
  */
 - (void)departureCanceled;
 
-/*
- * This method is invoked when predict.io suspects that user has just parked his vehicle
- * Most of the time it is followed by a confirmed vehicleParked event
- * If you need only confirmed parked events, use vehicleParked method (below) instead
- * @param departureLocation: The Location from where user departed
- * @param arrivalLocation: The Location where user arrived and parked his vehicle
- * @param departureTime: Start time of trip
- * @param arrivalTime: Stop time of trip
- * @param transportMode: Mode of transport
+/* This method is invoked when predict.io detects transportation mode
+ * @param: transportationMode: Mode of transportation
  */
-- (void)arrivalSuspectedFromLocation:(CLLocation *)departureLocation
-                     arrivalLocation:(CLLocation *)arrivalLocation
-                       departureTime:(NSDate *)departureTime
-                         arrivalTime:(NSDate *)arrivalTime
-                       transportMode:(TransportMode)transportMode;
+- (void)transportationMode:(PIOTripSegment *)tripSegment;
 
-/*
- * This method is invoked when predict.io detects that user has just parked his vehicle
- * @param arrivalLocation:  The Location where vehicle is parked
- * @param departureLocation:  The Location where vehicle is vacated***
- * @param departureTime: Start time of trip
- * @param arrivalTime:  Stop time of trip
- * @param transportMode: Mode of transport
-*/
-- (void)arrivedAtLocation:(CLLocation *)arrivalLocation
-        departureLocation:(CLLocation *)departureLocation
-              arrivalTime:(NSDate *)arrivalTime
-            departureTime:(NSDate *)departureTime
-            transportMode:(TransportMode)transportMode;
+/* This method is invoked when predict.io suspects that the user has just arrived
+ * at his location and have ended a trip
+ * Most of the time it is followed by a confirmed arrivedAtLocation event
+ * If you need only confirmed arrival events, use arrivedAtLocation method (below) instead
+ * @param tripSegment: PIOTripSegment have arrivalSuspected event information
+ * @discussion: At this point only following properties will be populated,
+ *  departureLocation: The Location from where the user departed
+ *  arrivalLocation: The Location where the user arrived and ended the trip
+ *  departureTime: Start time of trip
+ *  arrivalTime: Stop time of trip
+ *  transportationMode: Mode of transportation
+ */
+- (void)arrivalSuspected:(PIOTripSegment *)tripSegment;
 
-/*
- * This method is invoked when predict.io user is looking for a free parking spot
- * @param location:  The Location where predict.io identified that user is searching for parking
+/* This method is invoked when predict.io detects that the user has just arrived at destination
+ * @param tripSegment: PIOTripSegment have arrived event information
+ * @discussion: At this point only following properties will be populated,
+ *  departureLocation: The Location from where the user departed
+ *  arrivalLocation: The Location where the user arrived and ended the trip
+ *  departureTime: Start time of trip
+ *  arrivalTime: Stop time of trip
+ *  transportationMode: Mode of transportation
+ */
+- (void)arrived:(PIOTripSegment *)tripSegment;
+
+/* This method is invoked when predict.io detects that the user is searching for a
+ * parking space at a specific location
+ * @param location: The Location where predict.io identifies that user is searching for a parking space
  */
 - (void)searchingInPerimeter:(CLLocation *)searchingLocation;
 
-/*
- * This is invoked when new location information is received from location services
+/* This is invoked when new location information is received from location services
  * Implemented this method if you need raw GPS data, instead of creating new location manager
  * Since, it is not recommended to use multiple location managers in a single app
- * @param location:  New location
+ * @param location: New location
  */
 - (void)didUpdateLocation:(CLLocation *)location;
 
 @end
 
-// These notifications are sent out after the equivalent delegate message is called
+/*
+ * These notifications are sent out after the equivalent delegate message is called
+ */
 FOUNDATION_EXPORT NSString *const PIODepartingNotification;
 FOUNDATION_EXPORT NSString *const PIODepartedNotification;
 FOUNDATION_EXPORT NSString *const PIODepartureCanceledNotification;
 FOUNDATION_EXPORT NSString *const PIOArrivalSuspectedNotification;
 FOUNDATION_EXPORT NSString *const PIOArrivedNotification;
 FOUNDATION_EXPORT NSString *const PIOSearchingParkingNotification;
+FOUNDATION_EXPORT NSString *const PIOTransportationModeNotification;

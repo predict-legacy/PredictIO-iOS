@@ -1,12 +1,12 @@
 PODS:
-  - PredictIO (0.1.0)
+  - PredictIO (3.0.1)
 
 DEPENDENCIES:
-  - PredictIO (~> 0.1.0)
+  - PredictIO (~> 3.0.1)
 
 SPEC CHECKSUMS:
-  PredictIO: 2004fc3cf2485e63f96eb2814b0bcb55adc82a2b
+  PredictIO: e052f8b39fa71347df9352dbd89bca57d02d8a2d
 
-PODFILE CHECKSUM: ee656b24dec4b9c144e95f76eb443fbcc0a2b332
+PODFILE CHECKSUM: d57994bd985046bc3ad2e986bf5bc2e8bfe22427
 
 COCOAPODS: 1.0.1

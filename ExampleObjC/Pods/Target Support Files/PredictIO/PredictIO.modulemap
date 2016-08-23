@@ -1,0 +1,6 @@
+framework module PredictIO {
+  umbrella header "PredictIO-umbrella.h"
+
+  export *
+  module * { export * }
+}
