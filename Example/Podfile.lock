@@ -1,5 +1,5 @@
 PODS:
-  - PredictIO (3.0.1)
+  - PredictIO (3.0.0)
 
 DEPENDENCIES:
   - PredictIO (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  PredictIO: c2154bd542db3b0788d4f46de13635da8c85b26d
+  PredictIO: df2f854dbf9bf20f8df48c3a41f78a930f9c634d
 
 PODFILE CHECKSUM: ea278b7a70cb8fe52485bf405951557cfc5c8ada
 

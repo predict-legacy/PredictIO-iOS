@@ -1,6 +1,6 @@
 {
   "name": "PredictIO",
-  "version": "3.0.1",
+  "version": "3.0.0",
   "license": {
     "type": "Apache License, Version 2.0",
     "file": "LICENSE"
@@ -12,14 +12,13 @@
   },
   "source": {
     "git": "https://github.com/predict-io/PredictIO-iOS.git",
-    "tag": "3.0.1"
+    "tag": "3.0.0"
   },
   "platforms": {
     "ios": "7.0"
   },
   "requires_arc": true,
-  "source_files": "SDK/*",
-  "vendored_libraries": "SDK/libPredictIO.a",
+  "source_files": "PredictIO-iOS/*",
   "frameworks": [
     "UIKit",
     "CoreMotion",
