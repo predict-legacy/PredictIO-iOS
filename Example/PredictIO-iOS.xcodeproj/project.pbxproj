@@ -176,12 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "PredictIO-iOS_Example" */;
 			buildPhases = (
-				8029F016AF793BD1E6EC95CA /* 📦 Check Pods Manifest.lock */,
+				8029F016AF793BD1E6EC95CA /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				623793234DBB47F40C194DF4 /* 📦 Embed Pods Frameworks */,
-				75C80BE75A64999877621725 /* 📦 Copy Pods Resources */,
+				623793234DBB47F40C194DF4 /* [CP] Embed Pods Frameworks */,
+				75C80BE75A64999877621725 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,14 +234,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		623793234DBB47F40C194DF4 /* 📦 Embed Pods Frameworks */ = {
+		623793234DBB47F40C194DF4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,14 +249,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PredictIO-iOS_Example/Pods-PredictIO-iOS_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		75C80BE75A64999877621725 /* 📦 Copy Pods Resources */ = {
+		75C80BE75A64999877621725 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,14 +264,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PredictIO-iOS_Example/Pods-PredictIO-iOS_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8029F016AF793BD1E6EC95CA /* 📦 Check Pods Manifest.lock */ = {
+		8029F016AF793BD1E6EC95CA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +399,7 @@
 				GCC_PREFIX_HEADER = "PredictIO-iOS/PredictIO-iOS-Prefix.pch";
 				INFOPLIST_FILE = "PredictIO-iOS/PredictIO-iOS-Info.plist";
 				MODULE_NAME = ExampleApp;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -416,6 +417,7 @@
 				GCC_PREFIX_HEADER = "PredictIO-iOS/PredictIO-iOS-Prefix.pch";
 				INFOPLIST_FILE = "PredictIO-iOS/PredictIO-iOS-Info.plist";
 				MODULE_NAME = ExampleApp;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

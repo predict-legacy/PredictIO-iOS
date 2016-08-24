@@ -1,16 +1,16 @@
 PODS:
-  - PredictIO-iOS (0.1.0)
+  - PredictIO (3.0.0)
 
 DEPENDENCIES:
-  - PredictIO-iOS (from `../`)
+  - PredictIO (from `../`)
 
 EXTERNAL SOURCES:
-  PredictIO-iOS:
+  PredictIO:
     :path: ../
 
 SPEC CHECKSUMS:
-  PredictIO-iOS: 5db65305070ad3bffca60affd3e3752fe136b91e
+  PredictIO: df2f854dbf9bf20f8df48c3a41f78a930f9c634d
 
-PODFILE CHECKSUM: de4178edd79a5e7b96100171a251183c0415781f
+PODFILE CHECKSUM: ea278b7a70cb8fe52485bf405951557cfc5c8ada
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.0.1
