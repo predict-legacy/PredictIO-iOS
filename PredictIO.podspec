@@ -21,14 +21,12 @@ Pod::Spec.new do |s|
   # 6
     s.source           = { :git => 'https://github.com/predict-io/PredictIO-iOS.git', :tag => s.version.to_s }
   
-
-    s.source_files ='PredictIO-iOS/*'
- # if we are providing static library then we need to have vendored_library.
-   s.vendored_library = 'PredictIO-iOS/libPredictIO.a'
-   s.public_header_files = 'PredictIO-iOS/*.h'
-
-  s.frameworks = 'UIKit', 'CoreMotion', 'CoreLocation', 'CoreTelephony', 'AdSupport', 'AVFoundation', 'CoreBluetooth', 'SystemConfiguration', 'ExternalAccessory'
-#2
-  s.description      = "You may use the parking updates to trigger events or notifications specific to your use case. The parking detection service stack leverages all available phone sensors. Sensor usage is extremely battery optimized. Incremental battery consumption does not exceed 10% in typical cases. Also we strongly suggest you ensure inclusion of LBS in your T&C and Privacy Policies. By using this API you explicitly agree to our license agreement, terms and conditions and privacy policy. If you are unsure about any item, please contact us at support@parktag.mobi."
+  #7
+    s.source_files = 'PredictIO-iOS/Classes/**/*'
+    s.vendored_library = 'PredictIO-iOS/libPredictIO.a'
+    s.frameworks = 'UIKit', 'CoreMotion', 'CoreLocation', 'CoreTelephony', 'AdSupport', 'AVFoundation', 'CoreBluetooth', 'SystemConfiguration', 'ExternalAccessory'
+  
+  #8
+  s.description = "You may use the parking updates to trigger events or notifications specific to your use case. The parking detection service stack leverages all available phone sensors. Sensor usage is extremely battery optimized. Incremental battery consumption does not exceed 10% in typical cases. Also we strongly suggest you ensure inclusion of LBS in your T&C and Privacy Policies. By using this API you explicitly agree to our license agreement, terms and conditions and privacy policy. If you are unsure about any item, please contact us at support@parktag.mobi."
 
 end

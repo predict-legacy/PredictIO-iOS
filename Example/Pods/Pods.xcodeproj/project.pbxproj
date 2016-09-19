@@ -18,10 +18,10 @@
 		4EBC8DFE23C6C29F7AC3734BA8B2080B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1B396E078D78305E512F388B9C9B275 /* SystemConfiguration.framework */; };
 		88AF86121D90322D00398387 /* libPredictIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88AF86111D90322D00398387 /* libPredictIO.a */; };
 		88AF86131D90322D00398387 /* libPredictIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88AF86111D90322D00398387 /* libPredictIO.a */; };
-		88AF86161D90323600398387 /* PIOTripSegment.h in Headers */ = {isa = PBXBuildFile; fileRef = 88AF86141D90323600398387 /* PIOTripSegment.h */; };
-		88AF86171D90323600398387 /* PIOTripSegment.h in Headers */ = {isa = PBXBuildFile; fileRef = 88AF86141D90323600398387 /* PIOTripSegment.h */; };
-		88AF86181D90323600398387 /* PredictIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 88AF86151D90323600398387 /* PredictIO.h */; };
-		88AF86191D90323600398387 /* PredictIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 88AF86151D90323600398387 /* PredictIO.h */; };
+		88AF86431D903D5500398387 /* PIOTripSegment.h in Headers */ = {isa = PBXBuildFile; fileRef = 88AF86411D903D5500398387 /* PIOTripSegment.h */; };
+		88AF86441D903D5500398387 /* PIOTripSegment.h in Headers */ = {isa = PBXBuildFile; fileRef = 88AF86411D903D5500398387 /* PIOTripSegment.h */; };
+		88AF86451D903D5500398387 /* PredictIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 88AF86421D903D5500398387 /* PredictIO.h */; };
+		88AF86461D903D5500398387 /* PredictIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 88AF86421D903D5500398387 /* PredictIO.h */; };
 		9C2A54FD00DA5D4240520DFA6E1C6AAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69521AF581EC0E5ADA9C4EA65294EDEE /* Foundation.framework */; };
 		AC7520A21CF4CBF95A9806F104037F70 /* Pods-PredictIO-iOS_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4805C0E49F9776D26A78A64F16E8B0 /* Pods-PredictIO-iOS_Example-dummy.m */; };
 		CD7CCF0E098B032961059943EECA355B /* PredictIO-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B12E911A3A4380FB99446DAB1DEB4C1 /* PredictIO-dummy.m */; };
@@ -57,8 +57,8 @@
 		80E5E321FD4B666FCF0DF7970CA7FF51 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82F0DE8E21B363FF4A999C4D37534578 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
 		88AF86111D90322D00398387 /* libPredictIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPredictIO.a; sourceTree = "<group>"; };
-		88AF86141D90323600398387 /* PIOTripSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIOTripSegment.h; sourceTree = "<group>"; };
-		88AF86151D90323600398387 /* PredictIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PredictIO.h; sourceTree = "<group>"; };
+		88AF86411D903D5500398387 /* PIOTripSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIOTripSegment.h; sourceTree = "<group>"; };
+		88AF86421D903D5500398387 /* PredictIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PredictIO.h; sourceTree = "<group>"; };
 		92C28547C781A41614199C7B1BF7D450 /* Pods-PredictIO-iOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PredictIO-iOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		947D4564C8D332C770E9C9CF1464C79D /* PredictIO-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PredictIO-umbrella.h"; sourceTree = "<group>"; };
@@ -174,6 +174,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		88AF86401D903D5500398387 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				88AF86411D903D5500398387 /* PIOTripSegment.h */,
+				88AF86421D903D5500398387 /* PredictIO.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		A82176A142C78E19F6824C90353E726A /* PredictIO */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,8 +221,7 @@
 		C76E8C0ED22CB69D58CF59C03361F208 /* PredictIO-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				88AF86141D90323600398387 /* PIOTripSegment.h */,
-				88AF86151D90323600398387 /* PredictIO.h */,
+				88AF86401D903D5500398387 /* Classes */,
 				88AF86111D90322D00398387 /* libPredictIO.a */,
 			);
 			path = "PredictIO-iOS";
@@ -226,8 +234,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88AF86161D90323600398387 /* PIOTripSegment.h in Headers */,
-				88AF86181D90323600398387 /* PredictIO.h in Headers */,
+				88AF86431D903D5500398387 /* PIOTripSegment.h in Headers */,
+				88AF86451D903D5500398387 /* PredictIO.h in Headers */,
 				140B67060D1AFD5BFBF0724AB28CC003 /* Pods-PredictIO-iOS_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,8 +244,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88AF86171D90323600398387 /* PIOTripSegment.h in Headers */,
-				88AF86191D90323600398387 /* PredictIO.h in Headers */,
+				88AF86441D903D5500398387 /* PIOTripSegment.h in Headers */,
+				88AF86461D903D5500398387 /* PredictIO.h in Headers */,
 				418672F61E26185C35A22D07A12F5EB2 /* PredictIO-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
