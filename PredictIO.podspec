@@ -1,21 +1,31 @@
 Pod::Spec.new do |s|
-  s.name             = 'PredictIO'
-  s.version          = '3.0.1'
-  s.license          = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
-  s.homepage         = 'https://github.com/predict-io/PredictIO-iOS'
-  s.summary          = 'The parking detection API (patent pending) allows you to retrieve real-time updates on the parking status of a user.'
-  s.author           = { "predict.io" => "developer@predict.io" }
+  # 1
+    s.platform = :ios
+    s.ios.deployment_target = '7.0'
+    s.name = "PredictIO"
+    s.summary = "The parking detection API (patent pending) allows you to retrieve real-time updates on the parking status of a user."
+    s.requires_arc = true
 
-  s.source           = { :git => 'https://github.com/predict-io/PredictIO-iOS.git', :tag => s.version.to_s }
+  # 2
+    s.version = "3.0.1"
   
-  s.platform = :ios
-  s.ios.deployment_target = '7.0'
-  s.requires_arc = true
+  # 3
+    s.license          = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
+  
+  # 4
+    s.author           = { "predict.io" => "developer@predict.io" }
 
-  s.source_files ='PredictIO-iOS/*'
+  # 5
+    s.homepage         = 'https://github.com/predict-io/PredictIO-iOS'
+  
+  # 6
+    s.source           = { :git => 'https://github.com/predict-io/PredictIO-iOS.git', :tag => s.version.to_s }
+  
+
+    s.source_files ='PredictIO-iOS/*'
  # if we are providing static library then we need to have vendored_library.
- s.vendored_library = 'PredictIO-iOS/libPredictIO.a'
- s.public_header_files = 'PredictIO-iOS/*.h'
+   s.vendored_library = 'PredictIO-iOS/libPredictIO.a'
+   s.public_header_files = 'PredictIO-iOS/*.h'
 
   s.frameworks = 'UIKit', 'CoreMotion', 'CoreLocation', 'CoreTelephony', 'AdSupport', 'AVFoundation', 'CoreBluetooth', 'SystemConfiguration', 'ExternalAccessory'
 #2
