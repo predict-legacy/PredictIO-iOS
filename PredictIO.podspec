@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'PredictIO-iOS/*'
   #s.public_header_files = 'SDK/*.h'
-  #s.vendored_library = 'SDK/libParktagSDK.a'
+  s.vendored_library = 'PredictIO-iOS/libParktagSDK.a'
 
   s.frameworks = 'UIKit', 'CoreMotion', 'CoreLocation', 'CoreTelephony', 'AdSupport', 'AVFoundation', 'CoreBluetooth', 'SystemConfiguration', 'ExternalAccessory'
 #2

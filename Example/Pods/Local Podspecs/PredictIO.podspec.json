@@ -1,6 +1,6 @@
 {
   "name": "PredictIO",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "license": {
     "type": "Apache License, Version 2.0",
     "file": "LICENSE"
@@ -12,13 +12,14 @@
   },
   "source": {
     "git": "https://github.com/predict-io/PredictIO-iOS.git",
-    "tag": "3.0.0"
+    "tag": "3.0.1"
   },
   "platforms": {
     "ios": "7.0"
   },
   "requires_arc": true,
   "source_files": "PredictIO-iOS/*",
+  "vendored_libraries": "PredictIO-iOS/libParktagSDK.a",
   "frameworks": [
     "UIKit",
     "CoreMotion",

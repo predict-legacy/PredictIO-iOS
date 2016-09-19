@@ -7,53 +7,107 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2185B5DD6692181B4C8A8A69A071E791 /* Pods-PredictIO-iOS_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4805C0E49F9776D26A78A64F16E8B0 /* Pods-PredictIO-iOS_Example-dummy.m */; };
-		25A8733A5A3C1FD5FB2A83E72A7ADABC /* Pods-PredictIO-iOS_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C6F086FAA9F4B6352B844C744429AF4 /* Pods-PredictIO-iOS_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		88F04ADD1D6C7B8E0012B98D /* libPredictIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F04ADA1D6C7B8E0012B98D /* libPredictIO.a */; };
-		88F04ADE1D6C7B8E0012B98D /* PIOTripSegment.h in Headers */ = {isa = PBXBuildFile; fileRef = 88F04ADB1D6C7B8E0012B98D /* PIOTripSegment.h */; };
-		88F04ADF1D6C7B8E0012B98D /* PredictIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 88F04ADC1D6C7B8E0012B98D /* PredictIO.h */; };
-		9CA3DA73D9AE65666FC62766FA1AD2B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		0AAF11E37C96FA0187A8E6278AFD4442 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 583E041D90A4247462BE18A97831686B /* CoreLocation.framework */; };
+		0DAFEB52AD7B23657D85E9EA67AFDBC1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 544AD55A8BB208DDF7DADAE61707DFAD /* AVFoundation.framework */; };
+		12F65A6F051764671C5ABDACBDFC0168 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB69FD04D6442EC3C7FB23C8455B0C98 /* CoreTelephony.framework */; };
+		140B67060D1AFD5BFBF0724AB28CC003 /* Pods-PredictIO-iOS_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C6F086FAA9F4B6352B844C744429AF4 /* Pods-PredictIO-iOS_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1755DEB99820A1A1681A2EEE2E3B4487 /* PIOTripSegment.h in Headers */ = {isa = PBXBuildFile; fileRef = 139A4EB9E9440CE6A23E1E3924E9CF09 /* PIOTripSegment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		394BDB29D42E5C54A455C156765CE811 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD837F3698056224DF78714F717F5D5 /* AdSupport.framework */; };
+		418672F61E26185C35A22D07A12F5EB2 /* PredictIO-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 947D4564C8D332C770E9C9CF1464C79D /* PredictIO-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A22F3A632821E692970E60982DCF798 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60C2A25E763FDD014FF3FD5A14CB784 /* CoreMotion.framework */; };
+		4AD7359493D5E26709639CCFA125CFC9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02EAB039633786826B1E43CD3480CEE5 /* UIKit.framework */; };
+		4EBC8DFE23C6C29F7AC3734BA8B2080B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1B396E078D78305E512F388B9C9B275 /* SystemConfiguration.framework */; };
+		904AD0276AA8DF4327AECBF5F51B7791 /* libPredictIO.a in Sources */ = {isa = PBXBuildFile; fileRef = B83C1C9288011766C98D921463DA5F6E /* libPredictIO.a */; };
+		94193D8E9D299250798E81E9FD893318 /* PredictIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CE7412D010130BD442568CAFA048870 /* PredictIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C2A54FD00DA5D4240520DFA6E1C6AAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69521AF581EC0E5ADA9C4EA65294EDEE /* Foundation.framework */; };
+		AC7520A21CF4CBF95A9806F104037F70 /* Pods-PredictIO-iOS_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4805C0E49F9776D26A78A64F16E8B0 /* Pods-PredictIO-iOS_Example-dummy.m */; };
+		CD7CCF0E098B032961059943EECA355B /* PredictIO-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B12E911A3A4380FB99446DAB1DEB4C1 /* PredictIO-dummy.m */; };
+		DA46C2B49A2D0D4A05BE1B5906115B7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69521AF581EC0E5ADA9C4EA65294EDEE /* Foundation.framework */; };
+		F51C4D4E7F3E2B066C28D6A9C964EDEE /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A736250444512D76B962AEEC5AB16AF /* ExternalAccessory.framework */; };
+		FA34C3BE3C81CDF8AC47FEBC0254B95A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F0DE8E21B363FF4A999C4D37534578 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AA822A0CB77C74A540DC4B4EE5149986 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62368589848DA7D0BF19690F74BE4030;
+			remoteInfo = PredictIO;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		02EAB039633786826B1E43CD3480CEE5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		139A4EB9E9440CE6A23E1E3924E9CF09 /* PIOTripSegment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PIOTripSegment.h; sourceTree = "<group>"; };
+		155732B935722E1B120F219132460101 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A736250444512D76B962AEEC5AB16AF /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/ExternalAccessory.framework; sourceTree = DEVELOPER_DIR; };
 		39B543F13674DC081A4F3672C71F65A3 /* Pods-PredictIO-iOS_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PredictIO-iOS_Example-resources.sh"; sourceTree = "<group>"; };
 		3C6F086FAA9F4B6352B844C744429AF4 /* Pods-PredictIO-iOS_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PredictIO-iOS_Example-umbrella.h"; sourceTree = "<group>"; };
 		494607D12EE86FECE99108163555C166 /* Pods-PredictIO-iOS_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PredictIO-iOS_Example.modulemap"; sourceTree = "<group>"; };
+		544AD55A8BB208DDF7DADAE61707DFAD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		583E041D90A4247462BE18A97831686B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		5CE7412D010130BD442568CAFA048870 /* PredictIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PredictIO.h; sourceTree = "<group>"; };
 		65AB702481A70AB8B48A7F397A65FCF2 /* Pods-PredictIO-iOS_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PredictIO-iOS_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		69521AF581EC0E5ADA9C4EA65294EDEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		746183121CEF8C0C1F86B3BBDF1404A1 /* Pods-PredictIO-iOS_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PredictIO-iOS_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		7B12E911A3A4380FB99446DAB1DEB4C1 /* PredictIO-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PredictIO-dummy.m"; sourceTree = "<group>"; };
+		7B8AA98CAA6A0CCE1556C2738EC51ADC /* PredictIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PredictIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E5E321FD4B666FCF0DF7970CA7FF51 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88F04ADA1D6C7B8E0012B98D /* libPredictIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPredictIO.a; sourceTree = "<group>"; };
-		88F04ADB1D6C7B8E0012B98D /* PIOTripSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIOTripSegment.h; sourceTree = "<group>"; };
-		88F04ADC1D6C7B8E0012B98D /* PredictIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PredictIO.h; sourceTree = "<group>"; };
+		82F0DE8E21B363FF4A999C4D37534578 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
 		92C28547C781A41614199C7B1BF7D450 /* Pods-PredictIO-iOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PredictIO-iOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A34814B10D12143ABEDEF122C714AF9D /* Pods_PredictIO_iOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PredictIO_iOS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		947D4564C8D332C770E9C9CF1464C79D /* PredictIO-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PredictIO-umbrella.h"; sourceTree = "<group>"; };
+		ABD837F3698056224DF78714F717F5D5 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
+		B83C1C9288011766C98D921463DA5F6E /* libPredictIO.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libPredictIO.a; sourceTree = "<group>"; };
 		BE4805C0E49F9776D26A78A64F16E8B0 /* Pods-PredictIO-iOS_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PredictIO-iOS_Example-dummy.m"; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		BF9CC3EA37F07A1D00289261CA360062 /* Pods_PredictIO_iOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PredictIO_iOS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB09C0DF6EA25DB15C2BF6ECF3B11738 /* PredictIO.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PredictIO.modulemap; sourceTree = "<group>"; };
+		DB69FD04D6442EC3C7FB23C8455B0C98 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
 		E9D0A3C0E723EB522E34CA39AD2C392A /* Pods-PredictIO-iOS_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PredictIO-iOS_Example-frameworks.sh"; sourceTree = "<group>"; };
 		EC07B514E15A65FE61C89AD414F9A1A3 /* Pods-PredictIO-iOS_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PredictIO-iOS_Example.release.xcconfig"; sourceTree = "<group>"; };
+		EDC4F2E1F692154215B4327641816043 /* PredictIO-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PredictIO-prefix.pch"; sourceTree = "<group>"; };
+		F1B396E078D78305E512F388B9C9B275 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		F52EC9193D4D5BFED51936F018C949AD /* PredictIO.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PredictIO.xcconfig; sourceTree = "<group>"; };
+		F60C2A25E763FDD014FF3FD5A14CB784 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D627F62403F012A259C61D5FCB914F66 /* Frameworks */ = {
+		41F6229F34B390716EF265798C8A2056 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CA3DA73D9AE65666FC62766FA1AD2B3 /* Foundation.framework in Frameworks */,
-				88F04ADD1D6C7B8E0012B98D /* libPredictIO.a in Frameworks */,
+				394BDB29D42E5C54A455C156765CE811 /* AdSupport.framework in Frameworks */,
+				0DAFEB52AD7B23657D85E9EA67AFDBC1 /* AVFoundation.framework in Frameworks */,
+				FA34C3BE3C81CDF8AC47FEBC0254B95A /* CoreBluetooth.framework in Frameworks */,
+				0AAF11E37C96FA0187A8E6278AFD4442 /* CoreLocation.framework in Frameworks */,
+				4A22F3A632821E692970E60982DCF798 /* CoreMotion.framework in Frameworks */,
+				12F65A6F051764671C5ABDACBDFC0168 /* CoreTelephony.framework in Frameworks */,
+				F51C4D4E7F3E2B066C28D6A9C964EDEE /* ExternalAccessory.framework in Frameworks */,
+				9C2A54FD00DA5D4240520DFA6E1C6AAA /* Foundation.framework in Frameworks */,
+				4EBC8DFE23C6C29F7AC3734BA8B2080B /* SystemConfiguration.framework in Frameworks */,
+				4AD7359493D5E26709639CCFA125CFC9 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97265320853941956660A045949CBB50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA46C2B49A2D0D4A05BE1B5906115B7E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1843E16A7D119303F683659359EB94A2 /* PredictIO */ = {
+		1ED8DF00505A91ABB1C91059720A749F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				88F04AD91D6C7B8E0012B98D /* SDK */,
+				BF9CC3EA37F07A1D00289261CA360062 /* Pods_PredictIO_iOS_Example.framework */,
+				7B8AA98CAA6A0CCE1556C2738EC51ADC /* PredictIO.framework */,
 			);
-			name = PredictIO;
-			path = ../..;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		30E894D118C2F5A57F3E273FEB0B6433 /* Targets Support Files */ = {
@@ -62,14 +116,6 @@
 				428898E1C511EAB8A8B0BABF267B2E52 /* Pods-PredictIO-iOS_Example */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		428898E1C511EAB8A8B0BABF267B2E52 /* Pods-PredictIO-iOS_Example */ = {
@@ -90,82 +136,141 @@
 			path = "Target Support Files/Pods-PredictIO-iOS_Example";
 			sourceTree = "<group>";
 		};
-		6B882A3F2DAE17BB5C3A749BA532B5B0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A34814B10D12143ABEDEF122C714AF9D /* Pods_PredictIO_iOS_Example.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6CA181DF535217CE54B15B4BFB048969 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1843E16A7D119303F683659359EB94A2 /* PredictIO */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				6CA181DF535217CE54B15B4BFB048969 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				6B882A3F2DAE17BB5C3A749BA532B5B0 /* Products */,
+				AA1E32B44B60AAA8F89EE1517DA95C4F /* Development Pods */,
+				876F80F8AFD1240ED0B7B9EA9C5BFAD8 /* Frameworks */,
+				1ED8DF00505A91ABB1C91059720A749F /* Products */,
 				30E894D118C2F5A57F3E273FEB0B6433 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		88F04AD91D6C7B8E0012B98D /* SDK */ = {
+		826A74D0AE3BBE4CB31AB7E9924E7827 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				88F04ADA1D6C7B8E0012B98D /* libPredictIO.a */,
-				88F04ADB1D6C7B8E0012B98D /* PIOTripSegment.h */,
-				88F04ADC1D6C7B8E0012B98D /* PredictIO.h */,
+				155732B935722E1B120F219132460101 /* Info.plist */,
+				DB09C0DF6EA25DB15C2BF6ECF3B11738 /* PredictIO.modulemap */,
+				F52EC9193D4D5BFED51936F018C949AD /* PredictIO.xcconfig */,
+				7B12E911A3A4380FB99446DAB1DEB4C1 /* PredictIO-dummy.m */,
+				EDC4F2E1F692154215B4327641816043 /* PredictIO-prefix.pch */,
+				947D4564C8D332C770E9C9CF1464C79D /* PredictIO-umbrella.h */,
 			);
-			path = SDK;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/PredictIO";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		876F80F8AFD1240ED0B7B9EA9C5BFAD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+				B47CA25567C60A035F336D86FEB7CF12 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A82176A142C78E19F6824C90353E726A /* PredictIO */ = {
+			isa = PBXGroup;
+			children = (
+				C76E8C0ED22CB69D58CF59C03361F208 /* PredictIO-iOS */,
+				826A74D0AE3BBE4CB31AB7E9924E7827 /* Support Files */,
+			);
+			name = PredictIO;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		AA1E32B44B60AAA8F89EE1517DA95C4F /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A82176A142C78E19F6824C90353E726A /* PredictIO */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		B47CA25567C60A035F336D86FEB7CF12 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				ABD837F3698056224DF78714F717F5D5 /* AdSupport.framework */,
+				544AD55A8BB208DDF7DADAE61707DFAD /* AVFoundation.framework */,
+				82F0DE8E21B363FF4A999C4D37534578 /* CoreBluetooth.framework */,
+				583E041D90A4247462BE18A97831686B /* CoreLocation.framework */,
+				F60C2A25E763FDD014FF3FD5A14CB784 /* CoreMotion.framework */,
+				DB69FD04D6442EC3C7FB23C8455B0C98 /* CoreTelephony.framework */,
+				1A736250444512D76B962AEEC5AB16AF /* ExternalAccessory.framework */,
+				69521AF581EC0E5ADA9C4EA65294EDEE /* Foundation.framework */,
+				F1B396E078D78305E512F388B9C9B275 /* SystemConfiguration.framework */,
+				02EAB039633786826B1E43CD3480CEE5 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C76E8C0ED22CB69D58CF59C03361F208 /* PredictIO-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B83C1C9288011766C98D921463DA5F6E /* libPredictIO.a */,
+				139A4EB9E9440CE6A23E1E3924E9CF09 /* PIOTripSegment.h */,
+				5CE7412D010130BD442568CAFA048870 /* PredictIO.h */,
+			);
+			path = "PredictIO-iOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		88FC09E1226D3F72B0C30C80FA28A6CF /* Headers */ = {
+		B3F60B2681970512244347B2B6088C39 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88F04ADE1D6C7B8E0012B98D /* PIOTripSegment.h in Headers */,
-				88F04ADF1D6C7B8E0012B98D /* PredictIO.h in Headers */,
-				25A8733A5A3C1FD5FB2A83E72A7ADABC /* Pods-PredictIO-iOS_Example-umbrella.h in Headers */,
+				140B67060D1AFD5BFBF0724AB28CC003 /* Pods-PredictIO-iOS_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0CF0D881654C49769C9E116E2CCB318 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1755DEB99820A1A1681A2EEE2E3B4487 /* PIOTripSegment.h in Headers */,
+				418672F61E26185C35A22D07A12F5EB2 /* PredictIO-umbrella.h in Headers */,
+				94193D8E9D299250798E81E9FD893318 /* PredictIO.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2C0542DA663012BC12808C184BC874CF /* Pods-PredictIO-iOS_Example */ = {
+		62368589848DA7D0BF19690F74BE4030 /* PredictIO */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE2A56334FED0FD31EDF1AACEB6E8944 /* Build configuration list for PBXNativeTarget "Pods-PredictIO-iOS_Example" */;
+			buildConfigurationList = DBF073FCDF9CBF68F5C0142F5489D387 /* Build configuration list for PBXNativeTarget "PredictIO" */;
 			buildPhases = (
-				BA800A65F47E4E9FF2301D2CEA228EB4 /* Sources */,
-				D627F62403F012A259C61D5FCB914F66 /* Frameworks */,
-				88FC09E1226D3F72B0C30C80FA28A6CF /* Headers */,
+				2056A177A247EE7CD5F5C057A08C6FC2 /* Sources */,
+				41F6229F34B390716EF265798C8A2056 /* Frameworks */,
+				E0CF0D881654C49769C9E116E2CCB318 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = PredictIO;
+			productName = PredictIO;
+			productReference = 7B8AA98CAA6A0CCE1556C2738EC51ADC /* PredictIO.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		95611EFCBCA750011B6B69C15DC2D15C /* Pods-PredictIO-iOS_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9898E326B60793E931F4E75211F5DB4 /* Build configuration list for PBXNativeTarget "Pods-PredictIO-iOS_Example" */;
+			buildPhases = (
+				3E4E39C5544C9CBA9DF9FBDAD81533BC /* Sources */,
+				97265320853941956660A045949CBB50 /* Frameworks */,
+				B3F60B2681970512244347B2B6088C39 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CDAD1F01122D94D84905122C5535039 /* PBXTargetDependency */,
+			);
 			name = "Pods-PredictIO-iOS_Example";
 			productName = "Pods-PredictIO-iOS_Example";
-			productReference = A34814B10D12143ABEDEF122C714AF9D /* Pods_PredictIO_iOS_Example.framework */;
+			productReference = BF9CC3EA37F07A1D00289261CA360062 /* Pods_PredictIO_iOS_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -185,27 +290,79 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 6B882A3F2DAE17BB5C3A749BA532B5B0 /* Products */;
+			productRefGroup = 1ED8DF00505A91ABB1C91059720A749F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2C0542DA663012BC12808C184BC874CF /* Pods-PredictIO-iOS_Example */,
+				95611EFCBCA750011B6B69C15DC2D15C /* Pods-PredictIO-iOS_Example */,
+				62368589848DA7D0BF19690F74BE4030 /* PredictIO */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BA800A65F47E4E9FF2301D2CEA228EB4 /* Sources */ = {
+		2056A177A247EE7CD5F5C057A08C6FC2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2185B5DD6692181B4C8A8A69A071E791 /* Pods-PredictIO-iOS_Example-dummy.m in Sources */,
+				904AD0276AA8DF4327AECBF5F51B7791 /* libPredictIO.a in Sources */,
+				CD7CCF0E098B032961059943EECA355B /* PredictIO-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E4E39C5544C9CBA9DF9FBDAD81533BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC7520A21CF4CBF95A9806F104037F70 /* Pods-PredictIO-iOS_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4CDAD1F01122D94D84905122C5535039 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PredictIO;
+			target = 62368589848DA7D0BF19690F74BE4030 /* PredictIO */;
+			targetProxy = AA822A0CB77C74A540DC4B4EE5149986 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		049763E2D86C97F5E3189C22B2E125BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC07B514E15A65FE61C89AD414F9A1A3 /* Pods-PredictIO-iOS_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PredictIO-iOS_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PredictIO-iOS_Example/Pods-PredictIO-iOS_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PredictIO_iOS_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -244,9 +401,9 @@
 			};
 			name = Release;
 		};
-		774B19E04C509331D2032700C6A5B3E2 /* Release */ = {
+		7A8FC18CA1E6524C9CD173C42818758B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC07B514E15A65FE61C89AD414F9A1A3 /* Pods-PredictIO-iOS_Example.release.xcconfig */;
+			baseConfigurationReference = F52EC9193D4D5BFED51936F018C949AD /* PredictIO.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -257,18 +414,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-PredictIO-iOS_Example/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/PredictIO/PredictIO-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PredictIO/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PredictIO-iOS_Example/Pods-PredictIO-iOS_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/PredictIO/PredictIO.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_PredictIO_iOS_Example;
+				PRODUCT_NAME = PredictIO;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -277,9 +430,9 @@
 			};
 			name = Release;
 		};
-		C24544162297DA9F80DCA09EA3114CEA /* Debug */ = {
+		A2C3B85B91E33D544E3DA1E377135ED7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92C28547C781A41614199C7B1BF7D450 /* Pods-PredictIO-iOS_Example.debug.xcconfig */;
+			baseConfigurationReference = F52EC9193D4D5BFED51936F018C949AD /* PredictIO.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -290,18 +443,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-PredictIO-iOS_Example/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/PredictIO/PredictIO-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PredictIO/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PredictIO-iOS_Example/Pods-PredictIO-iOS_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/PredictIO/PredictIO.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_PredictIO_iOS_Example;
+				PRODUCT_NAME = PredictIO;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -352,6 +501,39 @@
 			};
 			name = Debug;
 		};
+		E51E0734B2F484FA7D4C049AF9CD53DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92C28547C781A41614199C7B1BF7D450 /* Pods-PredictIO-iOS_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PredictIO-iOS_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PredictIO-iOS_Example/Pods-PredictIO-iOS_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_PredictIO_iOS_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -364,11 +546,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE2A56334FED0FD31EDF1AACEB6E8944 /* Build configuration list for PBXNativeTarget "Pods-PredictIO-iOS_Example" */ = {
+		DBF073FCDF9CBF68F5C0142F5489D387 /* Build configuration list for PBXNativeTarget "PredictIO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C24544162297DA9F80DCA09EA3114CEA /* Debug */,
-				774B19E04C509331D2032700C6A5B3E2 /* Release */,
+				A2C3B85B91E33D544E3DA1E377135ED7 /* Debug */,
+				7A8FC18CA1E6524C9CD173C42818758B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9898E326B60793E931F4E75211F5DB4 /* Build configuration list for PBXNativeTarget "Pods-PredictIO-iOS_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E51E0734B2F484FA7D4C049AF9CD53DB /* Debug */,
+				049763E2D86C97F5E3189C22B2E125BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
