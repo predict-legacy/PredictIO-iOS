@@ -3,8 +3,9 @@
 //  PredictIOSDK
 //
 //  Created by Abdul Haseeb on 8/8/16.
-//  Copyright © 2016 ParkTAG GmbH. All rights reserved.
+// Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
 //
+
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
@@ -52,21 +53,28 @@ typedef NS_ENUM(int, LogLevel)  {
 @interface PIOTripSegment : NSObject
 
 /** @brief Location from where the user departed */
-@property (strong, readonly) NSDate *departureTime;
-/** @brief Location where the user arrived and ended the trip */
-@property (strong, readonly) NSDate *arrivalTime;
-/** @brief Stop time of trip */
 @property (strong, readonly) CLLocation *departureLocation;
-/** @brief Start time of trip */
-@property (strong, readonly) CLLocation *arrivalLocation;
-/** @brief Predicted mode of transport */
-@property (nonatomic, readonly) TransportationMode transportationMode;
 
-- (id)init;
+/** @brief Start time of trip */
+@property (strong, readonly) NSDate *departureTime;
+
+/** @brief Location where the user arrived and ended the trip */
+@property (strong, readonly) CLLocation *arrivalLocation;
+
+/** @brief Stop time of trip */
+@property (strong, readonly) NSDate *arrivalTime;
+
+/** @brief Predicted mode of transport */
+@property (assign, readonly) TransportationMode transportationMode;
+
+/** @brief Trip Segment UUID */
+@property (strong, readonly) NSString *UUID;
+
 - (id)initWithDepartureLocation:(CLLocation *)departureLocation
-                 arrivalLocation:(CLLocation *)arrivalLocation
-                   departureTime:(NSDate *)departureTime
-                     arrivalTime:(NSDate *)arrivalTime
-               transportaionMode:(TransportationMode)transportationMode;
+                arrivalLocation:(CLLocation *)arrivalLocation
+                  departureTime:(NSDate *)departureTime
+                    arrivalTime:(NSDate *)arrivalTime
+             transportationMode:(TransportationMode)transportationMode
+                           UUID:(NSString *)UUID;
 
 @end
