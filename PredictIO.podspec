@@ -12,9 +12,10 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '7.0'
   s.requires_arc = true
 
-  s.source_files = 'PredictIO-iOS/*'
-  #s.public_header_files = 'SDK/*.h'
-  s.vendored_library = 'PredictIO-iOS/libPredictIO.a'
+  s.source_files ='PredictIO-iOS/*'
+ # if we are providing static library then we need to have vendored_library.
+ s.vendored_library = 'PredictIO-iOS/libPredictIO.a'
+ s.public_header_files = 'PredictIO-iOS/*.h'
 
   s.frameworks = 'UIKit', 'CoreMotion', 'CoreLocation', 'CoreTelephony', 'AdSupport', 'AVFoundation', 'CoreBluetooth', 'SystemConfiguration', 'ExternalAccessory'
 #2
