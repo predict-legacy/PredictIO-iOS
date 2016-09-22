@@ -33,4 +33,5 @@ Pod::Spec.new do |s|
 
     s.ios.module_map = 'PredictIO-iOS/PredictIO.modulemap'
     s.module_name = 'PredictIO'
+    s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
 end
