@@ -22,7 +22,8 @@ Pod::Spec.new do |s|
     s.source           = { :git => 'https://github.com/predict-io/PredictIO-iOS.git', :tag => s.version.to_s }
 
   #7
-    s.source_files = ['PredictIO-iOS/Classes/*.h', 'PredictIO-iOS/PredictIO.modulemap']
+    s.source_files = ['PredictIO-iOS/Classes/*.h']
+    s.preserve_paths = ['PredictIO-iOS/PredictIO.modulemap', 'LICENSE']
     s.header_dir = 'PredictIO-iOS/Classes'
     s.public_header_files = 'PredictIO-iOS/Classes/*.h'
     s.vendored_library = 'PredictIO-iOS/libPredictIO.a'
