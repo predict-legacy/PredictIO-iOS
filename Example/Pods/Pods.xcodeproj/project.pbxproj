@@ -16,6 +16,8 @@
 		4A22F3A632821E692970E60982DCF798 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60C2A25E763FDD014FF3FD5A14CB784 /* CoreMotion.framework */; };
 		4AD7359493D5E26709639CCFA125CFC9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02EAB039633786826B1E43CD3480CEE5 /* UIKit.framework */; };
 		4EBC8DFE23C6C29F7AC3734BA8B2080B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1B396E078D78305E512F388B9C9B275 /* SystemConfiguration.framework */; };
+		88A58AC31D99244B005CD072 /* PodsDummy_PredictIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A58AC21D99244B005CD072 /* PodsDummy_PredictIO.m */; };
+		88A58AC41D99244B005CD072 /* PodsDummy_PredictIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A58AC21D99244B005CD072 /* PodsDummy_PredictIO.m */; };
 		88AF86121D90322D00398387 /* libPredictIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88AF86111D90322D00398387 /* libPredictIO.a */; };
 		88AF86131D90322D00398387 /* libPredictIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88AF86111D90322D00398387 /* libPredictIO.a */; };
 		88AF86431D903D5500398387 /* PIOTripSegment.h in Headers */ = {isa = PBXBuildFile; fileRef = 88AF86411D903D5500398387 /* PIOTripSegment.h */; };
@@ -56,6 +58,7 @@
 		7B8AA98CAA6A0CCE1556C2738EC51ADC /* PredictIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PredictIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E5E321FD4B666FCF0DF7970CA7FF51 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82F0DE8E21B363FF4A999C4D37534578 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
+		88A58AC21D99244B005CD072 /* PodsDummy_PredictIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PodsDummy_PredictIO.m; sourceTree = "<group>"; };
 		88AF86111D90322D00398387 /* libPredictIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPredictIO.a; sourceTree = "<group>"; };
 		88AF86411D903D5500398387 /* PIOTripSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIOTripSegment.h; sourceTree = "<group>"; };
 		88AF86421D903D5500398387 /* PredictIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PredictIO.h; sourceTree = "<group>"; };
@@ -179,6 +182,7 @@
 			children = (
 				88AF86411D903D5500398387 /* PIOTripSegment.h */,
 				88AF86421D903D5500398387 /* PredictIO.h */,
+				88A58AC21D99244B005CD072 /* PodsDummy_PredictIO.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -320,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88A58AC41D99244B005CD072 /* PodsDummy_PredictIO.m in Sources */,
 				CD7CCF0E098B032961059943EECA355B /* PredictIO-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88A58AC31D99244B005CD072 /* PodsDummy_PredictIO.m in Sources */,
 				AC7520A21CF4CBF95A9806F104037F70 /* Pods-PredictIO-iOS_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
