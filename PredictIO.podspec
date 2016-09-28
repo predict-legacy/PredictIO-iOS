@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
     s.public_header_files = 'PredictIO-iOS/**/*.h'
     s.source_files = 'PredictIO-iOS/**/*.h', 'PredictIO-iOS/Classes/*.m'
     s.preserve_paths = 'PredictIO-iOS/**/*.h'
-    s.vendored_library = 'PredictIO-iOS/libPredictIO.a'
+    s.vendored_library = 'PredictIO-iOS/libPredictIOSDK.a'
     s.frameworks = 'UIKit', 'CoreMotion', 'CoreLocation', 'CoreTelephony', 'AdSupport', 'AVFoundation', 'CoreBluetooth', 'SystemConfiguration', 'ExternalAccessory'
     s.module_map = 'PredictIO-iOS/PredictIO.modulemap'
     s.header_dir = 'PredictIO-iOS'
