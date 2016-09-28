@@ -4,7 +4,7 @@
 //
 //  Created by Zee on 28/02/2013.
 //  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
-//  Version 3.0.0
+//  Version 3.0.1
 
 #import <Foundation/Foundation.h>
 #import "PIOTripSegment.h"
@@ -57,31 +57,36 @@
 
 /* This method is invoked when predict.io detects that the user is about to depart
  * from his location and is approaching to his vehicle
- * @param tripSegment: PIOTripSegment having departing event information
- * @discussion: At this point only following properties will be populated,
- *   departureLocation: The Location from where the user departed
- *   transportationMode:  Mode of transportation
+ * @param tripSegment: PIOTripSegment contains details about departing event
+ * @discussion: The following properties are populated currently:
+ *  UUID: Unique ID for a trip segment, e.g. to link departure and arrival events
+ *  departureLocation: The Location from where the user departed
  */
 - (void)departing:(PIOTripSegment *)tripSegment;
 
 /* This method is invoked when predict.io detects that the user has just departed
  * from his location and have started a new trip
- * @param tripSegment: PIOTripSegment have departed event information
- * @discussion: At this point only following properties will be populated,
- *   departureLocation: The Location from where the user departed
- *   departureTime: Start time of the trip
- *   transportationMode: Mode of transportation
+ * @param tripSegment: PIOTripSegment contains details about departure event
+ * @discussion: The following properties are populated currently:
+ *  UUID: Unique ID for a trip segment, e.g. to link departure and arrival events
+ *  departureLocation: The Location from where the user departed
+ *  departureTime: Time of departure
  */
 - (void)departed:(PIOTripSegment *)tripSegment;
 
 /* This method is invoked when predict.io is unable to validate the last departure event.
  * This can be due to invalid data received from sensors or the trip amplitude.
- * i.e. If the trip takes less than 5 minutes or the distance travelled is less than 3km
+ * i.e. If the trip takes less than 2 minutes or the distance travelled is less than 1km
  */
 - (void)departureCanceled;
 
 /* This method is invoked when predict.io detects transportation mode
- * @param: transportationMode: Mode of transportation
+ * @param tripSegment: PIOTripSegment contains details about user's transportation mode
+ * @discussion: The following properties are populated currently:
+ *  UUID: Unique ID for a trip segment, e.g. to link departure and arrival events
+ *  departureLocation: The Location from where the user departed
+ *  departureTime: Time of departure
+ *  transportationMode: Mode of transportation
  */
 - (void)transportationMode:(PIOTripSegment *)tripSegment;
 
@@ -89,23 +94,25 @@
  * at his location and have ended a trip
  * Most of the time it is followed by a confirmed arrivedAtLocation event
  * If you need only confirmed arrival events, use arrivedAtLocation method (below) instead
- * @param tripSegment: PIOTripSegment have arrivalSuspected event information
- * @discussion: At this point only following properties will be populated,
+ * @param tripSegment: PIOTripSegment contains details about arrival suspected event
+ * @discussion: The following properties are populated currently:
+ *  UUID: Unique ID for a trip segment, e.g. to link departure and arrival events
  *  departureLocation: The Location from where the user departed
  *  arrivalLocation: The Location where the user arrived and ended the trip
- *  departureTime: Start time of trip
- *  arrivalTime: Stop time of trip
+ *  departureTime: Time of departure
+ *  arrivalTime: Time of arrival
  *  transportationMode: Mode of transportation
  */
 - (void)arrivalSuspected:(PIOTripSegment *)tripSegment;
 
 /* This method is invoked when predict.io detects that the user has just arrived at destination
- * @param tripSegment: PIOTripSegment have arrived event information
- * @discussion: At this point only following properties will be populated,
+ * @param tripSegment: PIOTripSegment contains details about arrival event
+ * @discussion: The following properties are populated currently:
+ *  UUID: Unique ID for a trip segment, e.g. to link departure and arrival events
  *  departureLocation: The Location from where the user departed
  *  arrivalLocation: The Location where the user arrived and ended the trip
- *  departureTime: Start time of trip
- *  arrivalTime: Stop time of trip
+ *  departureTime: Time of departure
+ *  arrivalTime: Time of arrival
  *  transportationMode: Mode of transportation
  */
 - (void)arrived:(PIOTripSegment *)tripSegment;

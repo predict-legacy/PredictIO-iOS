@@ -3,8 +3,8 @@
 //  PredictIOSDK
 //
 //  Created by Abdul Haseeb on 8/8/16.
-// Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
-//
+//  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
+//  Version 3.0.1
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
@@ -52,6 +52,9 @@ typedef NS_ENUM(int, LogLevel)  {
 
 @interface PIOTripSegment : NSObject
 
+/** @brief Trip Segment UUID */
+@property (strong, readonly) NSString *UUID;
+
 /** @brief Location from where the user departed */
 @property (strong, readonly) CLLocation *departureLocation;
 
@@ -67,14 +70,11 @@ typedef NS_ENUM(int, LogLevel)  {
 /** @brief Predicted mode of transport */
 @property (assign, readonly) TransportationMode transportationMode;
 
-/** @brief Trip Segment UUID */
-@property (strong, readonly) NSString *UUID;
-
-- (id)initWithDepartureLocation:(CLLocation *)departureLocation
-                arrivalLocation:(CLLocation *)arrivalLocation
-                  departureTime:(NSDate *)departureTime
-                    arrivalTime:(NSDate *)arrivalTime
-             transportationMode:(TransportationMode)transportationMode
-                           UUID:(NSString *)UUID;
+- (id)initWithUUID:(NSString *)UUID
+ departureLocation:(CLLocation *)departureLocation
+   arrivalLocation:(CLLocation *)arrivalLocation
+     departureTime:(NSDate *)departureTime
+       arrivalTime:(NSDate *)arrivalTime
+transportationMode:(TransportationMode)transportationMode;
 
 @end
