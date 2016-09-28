@@ -35,10 +35,4 @@ Pod::Spec.new do |s|
   #8
     s.description = "You may use the parking updates to trigger events or notifications specific to your use case. The parking detection service stack leverages all available phone sensors. Sensor usage is extremely battery optimized. Incremental battery consumption does not exceed 10% in typical cases. Also we strongly suggest you ensure inclusion of LBS in your T&C and Privacy Policies. By using this API you explicitly agree to our license agreement, terms and conditions and privacy policy. If you are unsure about any item, please contact us at support@parktag.mobi."
 
-    s.ios.module_map = 'PredictIO-iOS/PredictIO.modulemap'
-    s.module_name = 'PredictIO'
-    s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
-
-
-  
 end
