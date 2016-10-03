@@ -1,9 +1,9 @@
 # PredictIO-iOS
 predict.io offers mobile developers a battery-optimized SDK to get normalised sensor results. Available for iOS and Android. It gives you real-time updates when a user starts or ends a journey. With this trigger come contextual details for the mode of transportation (car vs. non-car).
 
-[![Version](https://img.shields.io/cocoapods/v/PredictIO-iOS.svg?style=flat)](http://cocoapods.org/pods/PredictIO-iOS)
-[![License](https://img.shields.io/cocoapods/l/PredictIO-iOS.svg?style=flat)](http://cocoapods.org/pods/PredictIO-iOS)
-[![Platform](https://img.shields.io/cocoapods/p/PredictIO-iOS.svg?style=flat)](http://cocoapods.org/pods/PredictIO-iOS)
+[![Version](https://img.shields.io/cocoapods/v/PredictIO.svg?style=flat)](http://cocoapods.org/pods/PredictIO)
+[![License](https://img.shields.io/cocoapods/l/PredictIO.svg?style=flat)](http://cocoapods.org/pods/PredictIO)
+[![Platform](https://img.shields.io/cocoapods/p/PredictIO.svg?style=flat)](http://cocoapods.org/pods/PredictIO)
 
 ## Features
 ##### Arrival 
