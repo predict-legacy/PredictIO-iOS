@@ -1,5 +1,0 @@
-use_frameworks!
-
-target 'PredictIO-iOS_Example' do
-  pod 'PredictIO', :path => '../'
-end
