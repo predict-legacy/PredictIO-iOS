@@ -38,7 +38,7 @@ class PredictIOService: NSObject, PredictIODelegate {
 
         NSNotificationCenter.defaultCenter().addObserver(self,selector: #selector(departureCanceledViaNotification),name: PIODepartureCanceledNotification ,object: nil)
 
-        NSNotificationCenter.defaultCenter().addObserver(self,selector: #selector(departureCanceledViaNotification),name: PIOTransportationModeNotification ,object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self,selector: #selector(transportationModeViaNotification),name: PIOTransportationModeNotification ,object: nil)
 
         NSNotificationCenter.defaultCenter().addObserver(self,selector: #selector(arrivalSuspectedViaNotification),name: PIOArrivalSuspectedNotification ,object: nil)
 

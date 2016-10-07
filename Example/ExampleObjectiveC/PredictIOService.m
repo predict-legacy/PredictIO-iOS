@@ -12,7 +12,7 @@
 #import "EventViaNotification.h"
 #import "EventViaDelegate.h"
 
-#define API_KEY      @"d34cac663cbea38f6c735a86c24d9b9f4d4e0a3457b7c4bca675fe85c78451db"
+#define API_KEY      @"YOUR-API-KEY"
 
 @interface PredictIOService ()<PredictIODelegate>
 
