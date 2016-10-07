@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "PredictIO.h"
+#import <PredictIO-iOS/PredictIO.h>
 
 typedef NS_ENUM(int, PredictIOEventType) {
     Departing = 0,

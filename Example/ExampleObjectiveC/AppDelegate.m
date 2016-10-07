@@ -7,8 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <Fabric/Fabric.h>
-#import <Crashlytics/Crashlytics.h>
 
 @interface AppDelegate () <UISplitViewControllerDelegate>
 
@@ -17,11 +15,12 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Override point for customization after application launch.
     
-    [Fabric with:@[[Crashlytics class]]];
-    
+    // Resume PredictIO
     self.predictIOService = [[PredictIOService alloc] init];
     [self.predictIOService resume];
+    
     return YES;
 }
 

@@ -130,10 +130,13 @@
 - (void)configureCell:(UITableViewCell *)cell withEvent:(EventViaDelegate *)event {
     enum PredictIOEventType eventType = (enum PredictIOEventType) event.type.integerValue;
     if (eventType == TransportMode) {
-        enum TransportationMode transportationMode = (enum TransportationMode) event.mode.integerValue;
-        cell.textLabel.text = self.transportationModeLabels[transportationMode];
+        cell.textLabel.text = self.transportationModeLabels[event.mode.integerValue];
+        cell.accessoryType = UITableViewCellAccessoryNone;
     } else {
         cell.textLabel.text = self.labels[eventType];
+        if (eventType == DepartureCanceled) {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
     }
     cell.detailTextLabel.text = [self.dateFormatter stringFromDate:event.timeStamp];
 }
