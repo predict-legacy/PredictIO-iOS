@@ -30,6 +30,16 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarTintParameters</key>
+	<dict>
+		<key>UINavigationBar</key>
+		<dict>
+			<key>Style</key>
+			<string>UIBarStyleDefault</string>
+			<key>Translucent</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -43,14 +53,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    
     <key>UIBackgroundModes</key>
     <array>
         <string>location</string>
     </array>
     <key>NSLocationAlwaysUsageDescription</key>
     <string>Data stays secure on your phone. GPS will help you find parking. Vacancy will be posted anonymously.</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Data stays secure on your phone. GPS will help you find parking. Vacancy will be posted anonymously.</string>
-
 </dict>
 </plist>
