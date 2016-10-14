@@ -111,11 +111,7 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let event = fetchedResultsController.objectAtIndexPath(indexPath) as! EventViaDelegate
-        let eventType = PredictIOEventType(rawValue: (event.type?.integerValue)!)
-        if (eventType != PredictIOEventType.DepartureCanceled && eventType != PredictIOEventType.TransportMode) {
-            performSegueWithIdentifier("showOnMap", sender: self)
-        }
+        performSegueWithIdentifier("showOnMap", sender: self)
     }
 
     func configureCell(cell: UITableViewCell, withEvent event: EventViaDelegate) {
@@ -124,12 +120,8 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
         if (eventType == .TransportMode) {
             let modeIntegerValue = event.mode!.integerValue
             cell.textLabel!.text = transportationModeLabels[modeIntegerValue]
-            cell.accessoryType = .None
         } else {
             cell.textLabel!.text = labels[eventTypeIntegerValue]
-            if (eventType == .DepartureCanceled) {
-                cell.accessoryType = .None
-            }
         }
         cell.detailTextLabel!.text =  dateFormatter.stringFromDate(event.timeStamp!)
     }

@@ -131,22 +131,14 @@
     enum PredictIOEventType eventType = (enum PredictIOEventType) event.type.integerValue;
     if (eventType == TransportMode) {
         cell.textLabel.text = self.transportationModeLabels[event.mode.integerValue];
-        cell.accessoryType = UITableViewCellAccessoryNone;
     } else {
         cell.textLabel.text = self.labels[eventType];
-        if (eventType == DepartureCanceled) {
-            cell.accessoryType = UITableViewCellAccessoryNone;
-        }
     }
     cell.detailTextLabel.text = [self.dateFormatter stringFromDate:event.timeStamp];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    EventViaNotification *event = (EventViaNotification *) [[self fetchedResultsController] objectAtIndexPath:indexPath];
-    PredictIOEventType eventType = (PredictIOEventType) event.type.integerValue;
-    if (eventType != DepartureCanceled && eventType != TransportMode) {
-        [self performSegueWithIdentifier:@"showOnMap" sender:self];
-    }
+    [self performSegueWithIdentifier:@"showOnMap" sender:self];
 }
 
 #pragma mark - Fetched results controller
