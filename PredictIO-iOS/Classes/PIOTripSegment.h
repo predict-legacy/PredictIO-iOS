@@ -4,7 +4,7 @@
 //
 //  Created by Abdul Haseeb on 8/8/16.
 //  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
-//  Version 3.0.1
+//  Version 3.0.2
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
