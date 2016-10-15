@@ -23,7 +23,7 @@ enum PredictIOEventType: Int {
 
 class PredictIOService: NSObject, PredictIODelegate {
 
-    let apiKey = "d34cac663cbea38f6c735a86c24d9b9f4d4e0a3457b7c4bca675fe85c78451db"
+    let apiKey = "YOUR-API-KEY"
 
     override init() {
         super.init()
@@ -32,17 +32,12 @@ class PredictIOService: NSObject, PredictIODelegate {
         predictIO.delegate = self
         predictIO.apiKey = apiKey
 
-        NSNotificationCenter.defaultCenter().addObserver(self,selector: #selector(departingViaNotification),name: PIODepartingNotification ,object: nil)
-
-        NSNotificationCenter.defaultCenter().addObserver(self,selector: #selector(departedViaNotification),name: PIODepartedNotification ,object: nil)
-
-        NSNotificationCenter.defaultCenter().addObserver(self,selector: #selector(departureCanceledViaNotification),name: PIODepartureCanceledNotification ,object: nil)
-
-        NSNotificationCenter.defaultCenter().addObserver(self,selector: #selector(transportationModeViaNotification),name: PIOTransportationModeNotification ,object: nil)
-
-        NSNotificationCenter.defaultCenter().addObserver(self,selector: #selector(arrivalSuspectedViaNotification),name: PIOArrivalSuspectedNotification ,object: nil)
-
-        NSNotificationCenter.defaultCenter().addObserver(self,selector: #selector(arrivedViaNotification),name: PIOArrivedNotification ,object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(departingViaNotification), name:PIODepartingNotification, object:nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(departedViaNotification), name:PIODepartedNotification, object:nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(departureCanceledViaNotification), name:PIODepartureCanceledNotification, object:nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(transportationModeViaNotification), name:PIOTransportationModeNotification, object:nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(arrivalSuspectedViaNotification), name:PIOArrivalSuspectedNotification, object:nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(arrivedViaNotification), name:PIOArrivedNotification, object:nil)
     }
 
     func resume() -> Void {

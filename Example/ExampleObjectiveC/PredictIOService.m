@@ -12,7 +12,7 @@
 #import "EventViaNotification.h"
 #import "EventViaDelegate.h"
 
-#define API_KEY      @"d34cac663cbea38f6c735a86c24d9b9f4d4e0a3457b7c4bca675fe85c78451db"
+#define API_KEY      @"YOUR-API-KEY"
 
 @interface PredictIOService ()<PredictIODelegate>
 
@@ -200,7 +200,6 @@
 #pragma - mark core data
 
 - (void)insertEventViaDelegate:(PredictIOEventType)type location:(CLLocation *)location mode:(TransportationMode)transportationMode {
-    
     AppDelegate *appDelegate = (AppDelegate *) [UIApplication sharedApplication].delegate;
     NSManagedObjectContext *context = appDelegate.managedObjectContext;
     EventViaDelegate *event = [NSEntityDescription insertNewObjectForEntityForName:@"EventViaDelegate" inManagedObjectContext:context];
@@ -210,7 +209,7 @@
     event.timeStamp = [NSDate new];
     event.type = @(type);
     event.mode = @(transportationMode);
-    
+
     NSError *error = nil;
     if (![context save:&error]) {
         // Replace this implementation with code to handle the error appropriately.
