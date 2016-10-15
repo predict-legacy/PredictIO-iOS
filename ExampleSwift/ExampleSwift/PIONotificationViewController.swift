@@ -120,12 +120,8 @@ class PIONotificationViewController: UITableViewController, NSFetchedResultsCont
         if (eventType == .TransportMode) {
             let modeIntegerValue = event.mode!.integerValue
             cell.textLabel!.text = transportationModeLabels[modeIntegerValue]
-            cell.accessoryType = .None
         } else {
             cell.textLabel!.text = labels[eventTypeIntegerValue]
-            if (eventType == .DepartureCanceled) {
-                cell.accessoryType = .None
-            }
         }
         cell.detailTextLabel!.text =  dateFormatter.stringFromDate(event.timeStamp!)
     }

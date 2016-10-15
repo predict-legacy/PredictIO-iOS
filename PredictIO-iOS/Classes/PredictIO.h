@@ -4,7 +4,7 @@
 //
 //  Created by Zee on 28/02/2013.
 //  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
-//  Version 3.0.1
+//  Version 3.0.2
 
 #import <Foundation/Foundation.h>
 #import "PIOTripSegment.h"
@@ -77,8 +77,14 @@
 /* This method is invoked when predict.io is unable to validate the last departure event.
  * This can be due to invalid data received from sensors or the trip amplitude.
  * i.e. If the trip takes less than 2 minutes or the distance travelled is less than 1km
+ * @param tripSegment: PIOTripSegment have departureCanceled event information
+ * @discussion: At this point only following properties will be populated,
+ *  UUID: Unique ID for a trip segment, e.g. to link departure and departure canceled events
+ *  departureLocation: The Location from where the user departed
+ *  departureTime: Start time of the trip
+ *  transportationMode: Mode of transportation
  */
-- (void)departureCanceled;
+- (void)departureCanceled:(PIOTripSegment *)tripSegment;
 
 /* This method is invoked when predict.io detects transportation mode
  * @param tripSegment: PIOTripSegment contains details about user's transportation mode

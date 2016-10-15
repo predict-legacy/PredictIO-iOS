@@ -117,8 +117,8 @@
     NSLog(@"Delegate - departed");
 }
 
-- (void)departureCanceled {
-    [self insertEventViaDelegate:DepartureCanceled location:nil mode:TransportationModeUndetermined];
+- (void)departureCanceled:(PIOTripSegment *)tripSegment {
+    [self insertEventViaDelegate:DepartureCanceled location:tripSegment.departureLocation mode:tripSegment.transportationMode];
     NSLog(@"Delegate - departureCanceled");
 }
 
@@ -163,7 +163,9 @@
 }
 
 - (void)departureCanceledViaNotification:(NSNotification *)notification {
-    [self insertEventViaNotification:DepartureCanceled location:nil mode:TransportationModeUndetermined];
+    NSDictionary *userInfo = notification.userInfo;
+    PIOTripSegment *tripSegment = userInfo[@"tripSegment"];
+    [self insertEventViaNotification:DepartureCanceled location:tripSegment.departureLocation mode:tripSegment.transportationMode];
     NSLog(@"Notification - departedCanceled");
 }
 
@@ -198,7 +200,6 @@
 #pragma - mark core data
 
 - (void)insertEventViaDelegate:(PredictIOEventType)type location:(CLLocation *)location mode:(TransportationMode)transportationMode {
-    
     AppDelegate *appDelegate = (AppDelegate *) [UIApplication sharedApplication].delegate;
     NSManagedObjectContext *context = appDelegate.managedObjectContext;
     EventViaDelegate *event = [NSEntityDescription insertNewObjectForEntityForName:@"EventViaDelegate" inManagedObjectContext:context];
@@ -208,7 +209,7 @@
     event.timeStamp = [NSDate new];
     event.type = @(type);
     event.mode = @(transportationMode);
-    
+
     NSError *error = nil;
     if (![context save:&error]) {
         // Replace this implementation with code to handle the error appropriately.
