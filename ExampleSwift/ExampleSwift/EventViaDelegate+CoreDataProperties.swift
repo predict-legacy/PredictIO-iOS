@@ -18,7 +18,7 @@ extension EventViaDelegate {
     @NSManaged var latitude: NSNumber?
     @NSManaged var longitude: NSNumber?
     @NSManaged var mode: NSNumber?
-    @NSManaged var timeStamp: NSDate?
+    @NSManaged var timeStamp: Date?
     @NSManaged var type: NSNumber?
 
 }
