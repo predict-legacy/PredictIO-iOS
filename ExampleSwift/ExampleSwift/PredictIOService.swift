@@ -48,8 +48,9 @@ class PredictIOService: NSObject, PredictIODelegate {
             PredictIO.sharedInstance().start(completionHandler: { (error) -> (Void) in
                 if error != nil {
                     OperationQueue.main.addOperation({
-                        let errorTitle = error!.userInfo["NSLocalizedFailureReason"] as! String
-                        let errorDescription = error!.userInfo["NSLocalizedDescription"] as! String
+                        let userInfo = error!._userInfo as! NSDictionary
+                        let errorTitle = userInfo["NSLocalizedFailureReason"] as! String
+                        let errorDescription = userInfo["NSLocalizedDescription"] as! String
                         let rootViewController = UIApplication.shared.keyWindow?.rootViewController;
                         let alertController = UIAlertController(title: errorTitle, message: errorDescription, preferredStyle: .alert)
                         let alertActionOK = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -66,7 +67,7 @@ class PredictIOService: NSObject, PredictIODelegate {
         }
     }
 
-    func startWithCompletionHandler(_ handler: @escaping (_ error: NSError?) -> (Void) ) -> Void {
+    func startWithCompletionHandler(_ handler: @escaping (_ error: Error?) -> (Void) ) -> Void {
         PredictIO.sharedInstance().start(completionHandler: handler)
         // set to run PredictIO on every app launch
         let defaults = UserDefaults.standard
@@ -186,7 +187,7 @@ class PredictIOService: NSObject, PredictIODelegate {
         event.longitude = location.coordinate.longitude as NSNumber?
         event.accuracy = location.horizontalAccuracy as NSNumber?
         event.type = type.rawValue as NSNumber?
-        event.timeStamp = Date()
+        event.timeStamp = Date() as NSDate?
         event.mode = NSNumber(value: transportationMode.rawValue as Int32);
 
         do {
@@ -210,7 +211,7 @@ class PredictIOService: NSObject, PredictIODelegate {
         event.longitude = location.coordinate.longitude as NSNumber?
         event.accuracy = location.horizontalAccuracy as NSNumber?
         event.type = type.rawValue as NSNumber?
-        event.timeStamp = Date()
+        event.timeStamp = Date() as NSDate?
         event.mode = NSNumber(value: transportationMode.rawValue as Int32)
 
         do {

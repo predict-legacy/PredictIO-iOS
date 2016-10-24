@@ -57,8 +57,9 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
             predictIOService.startWithCompletionHandler({ (error) -> (Void) in
                 if (error != nil) {
                     OperationQueue.main.addOperation({
-                        let errorTitle = error!.userInfo["NSLocalizedFailureReason"] as! String
-                        let errorDescription = error!.userInfo["NSLocalizedDescription"] as! String
+                        let userInfo = error!._userInfo as! NSDictionary
+                        let errorTitle = userInfo["NSLocalizedFailureReason"] as! String
+                        let errorDescription = userInfo["NSLocalizedDescription"] as! String
                         let alertController = UIAlertController(title: errorTitle, message: errorDescription, preferredStyle: .alert)
                         let alertActionOK = UIAlertAction(title: "OK", style: .default, handler: nil)
                         alertController.addAction(alertActionOK)
@@ -74,7 +75,7 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
             })
         }
     }
-    
+
     // MARK: - Table View
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -100,7 +101,7 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let event = fetchedResultsController.object(at: indexPath) as! EventViaDelegate
+        let event = fetchedResultsController.object(at: indexPath)
         configureCell(cell, withEvent: event)
         return cell
     }
@@ -123,7 +124,7 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
         } else {
             cell.textLabel!.text = labels[eventTypeIntegerValue]
         }
-        cell.detailTextLabel!.text =  dateFormatter.string(from: event.timeStamp!)
+        cell.detailTextLabel!.text =  dateFormatter.string(from: event.timeStamp! as Date)
     }
 
     // MARK: - Navigation
@@ -131,9 +132,9 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if (segue.identifier == "showOnMap") {
             let indexPath = tableView.indexPathForSelectedRow!
-            let event = (fetchedResultsController.object(at: indexPath) as! EventViaDelegate)
+            let event = fetchedResultsController.object(at: indexPath)
             let coordinate = CLLocationCoordinate2DMake(event.latitude!.doubleValue, event.longitude!.doubleValue)
-            let location = CLLocation(coordinate: coordinate, altitude: 0.0, horizontalAccuracy: event.accuracy!.doubleValue , verticalAccuracy: 0.0, course: 0.0, speed: 0.0, timestamp: event.timeStamp!)
+            let location = CLLocation(coordinate: coordinate, altitude: 0.0, horizontalAccuracy: event.accuracy!.doubleValue , verticalAccuracy: 0.0, course: 0.0, speed: 0.0, timestamp: event.timeStamp! as Date)
             let controller = segue.destination as! PIOMapViewController
             controller.location = location
         }
@@ -141,15 +142,12 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
 
     // MARK: - Fetched results controller
 
-    var fetchedResultsController: NSFetchedResultsController {
+    var fetchedResultsController: NSFetchedResultsController<EventViaDelegate> {
         if _fetchedResultsController != nil {
             return _fetchedResultsController!
         }
         
-        let fetchRequest = NSFetchRequest()
-        // Edit the entity name as appropriate.
-        let entity = NSEntityDescription.entity(forEntityName: "EventViaDelegate", in: managedObjectContext)
-        fetchRequest.entity = entity
+        let fetchRequest: NSFetchRequest<EventViaDelegate> = EventViaDelegate.fetchRequest()
         
         // Set the batch size to a suitable number.
         fetchRequest.fetchBatchSize = 20
@@ -161,7 +159,7 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: "Master1")
+        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: "Master1")
         aFetchedResultsController.delegate = self
         _fetchedResultsController = aFetchedResultsController
         
@@ -169,15 +167,14 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
             try _fetchedResultsController!.performFetch()
         } catch {
              // Replace this implementation with code to handle the error appropriately.
-             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-             //print("Unresolved error \(error), \(error.userInfo)")
-             abort()
+             // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+             let nserror = error as NSError
+             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
         
         return _fetchedResultsController!
     }
-
-    var _fetchedResultsController: NSFetchedResultsController? = nil
+    var _fetchedResultsController: NSFetchedResultsController<EventViaDelegate>? = nil
 
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
@@ -194,20 +191,20 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
         }
     }
 
-    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        switch type {
-            case .insert:
-                tableView.insertRows(at: [newIndexPath!], with: .fade)
-            case .delete:
-                tableView.deleteRows(at: [indexPath!], with: .fade)
-            case .update:
-                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! EventViaDelegate)
-            case .move:
-                tableView.moveRow(at: indexPath!, to: newIndexPath!)
-        }
-    }
-
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        tableView.endUpdates()
-    }
+//    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+//        switch type {
+//            case .insert:
+//                tableView.insertRows(at: [newIndexPath!], with: .fade)
+//            case .delete:
+//                tableView.deleteRows(at: [indexPath!], with: .fade)
+//            case .update:
+//                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! EventViaDelegate)
+//            case .move:
+//                tableView.moveRow(at: indexPath!, to: newIndexPath!)
+//        }
+//    }
+//
+//    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+//        tableView.endUpdates()
+//    }
 }
