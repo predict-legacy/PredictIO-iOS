@@ -93,7 +93,7 @@ class PIONotificationViewController: UITableViewController, NSFetchedResultsCont
         let version = PredictIO.sharedInstance().version
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell")
-        cell?.textLabel?.text = "SDK v\(version)"
+        cell?.textLabel?.text = "SDK v\(version!)"
         cell?.detailTextLabel?.text = "Build v\(build!)"
         
         return cell
@@ -152,13 +152,13 @@ class PIONotificationViewController: UITableViewController, NSFetchedResultsCont
         fetchRequest.fetchBatchSize = 20
         
         // Edit the sort key as appropriate.
-        let sortDescriptor = NSSortDescriptor(key: "timestamp", ascending: false)
+        let sortDescriptor = NSSortDescriptor(key: "timeStamp", ascending: false)
         
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: "Master")
+        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: "Master2")
         aFetchedResultsController.delegate = self
         _fetchedResultsController = aFetchedResultsController
         

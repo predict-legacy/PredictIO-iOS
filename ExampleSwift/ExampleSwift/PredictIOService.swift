@@ -38,6 +38,7 @@ class PredictIOService: NSObject, PredictIODelegate {
         NotificationCenter.default.addObserver(self, selector:#selector(transportationModeViaNotification), name:NSNotification.Name.PIOTransportationMode, object:nil)
         NotificationCenter.default.addObserver(self, selector:#selector(arrivalSuspectedViaNotification), name:NSNotification.Name.PIOArrivalSuspected, object:nil)
         NotificationCenter.default.addObserver(self, selector:#selector(arrivedViaNotification), name:NSNotification.Name.PIOArrived, object:nil)
+        NotificationCenter.default.addObserver(self, selector:#selector(searchingInPerimeterViaNotification), name:NSNotification.Name.PIOSearchingParking, object:nil)
     }
 
     func resume() -> Void {

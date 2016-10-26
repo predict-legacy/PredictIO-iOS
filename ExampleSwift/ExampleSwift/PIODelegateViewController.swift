@@ -93,7 +93,7 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
         let version = PredictIO.sharedInstance().version
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell")
-        cell?.textLabel?.text = "SDK v\(version)"
+        cell?.textLabel?.text = "SDK v\(version!)"
         cell?.detailTextLabel?.text = "Build v\(build!)"
         
         return cell
