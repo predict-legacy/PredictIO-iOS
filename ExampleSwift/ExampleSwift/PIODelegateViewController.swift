@@ -191,20 +191,20 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
         }
     }
 
-//    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-//        switch type {
-//            case .insert:
-//                tableView.insertRows(at: [newIndexPath!], with: .fade)
-//            case .delete:
-//                tableView.deleteRows(at: [indexPath!], with: .fade)
-//            case .update:
-//                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! EventViaDelegate)
-//            case .move:
-//                tableView.moveRow(at: indexPath!, to: newIndexPath!)
-//        }
-//    }
-//
-//    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-//        tableView.endUpdates()
-//    }
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+            case .insert:
+                tableView.insertRows(at: [newIndexPath!], with: .fade)
+            case .delete:
+                tableView.deleteRows(at: [indexPath!], with: .fade)
+            case .update:
+                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! EventViaDelegate)
+            case .move:
+                tableView.moveRow(at: indexPath!, to: newIndexPath!)
+        }
+    }
+
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
 }
