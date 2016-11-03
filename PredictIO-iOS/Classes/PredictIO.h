@@ -4,7 +4,7 @@
 //
 //  Created by Zee on 28/02/2013.
 //  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
-//  Version 3.0.2
+//  SDK Version 3.1.0
 
 #import <Foundation/Foundation.h>
 #import "PIOTripSegment.h"
@@ -48,6 +48,18 @@
  * An alphanumeric string that uniquely identifies a device to the predict.io
  */
 - (NSString *)deviceIdentifier;
+
+/* Set custom parameters which can then be sent to a user defined webhook url
+ * @param key:   Key to identify a custom parameter value
+ * @param value: Custom parameter value
+ */
+- (void)setCustomParameter:(NSString *)key andValue:(NSString *)value;
+
+/* Set a webhook url where all the detected events can then be forwarded along with the custom parameters.
+ * This webhook will not support additional authentication. So any additional validation of legitimate requests must take place.
+ * @param url: The webhook url
+ */
+- (void)setWebhookURL:(NSString *)url;
 
 @end
 

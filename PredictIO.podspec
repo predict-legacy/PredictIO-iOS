@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   # 1
     s.platform = :ios
-    s.ios.deployment_target = '7.0'
+    s.ios.deployment_target = '8.0'
     s.name = "PredictIO"
-    s.summary = "The parking detection API (patent pending) allows you to retrieve real-time updates on the parking status of a user."
+    s.summary = "A battery-optimized SDK for iOS to get real-time updates with context information when a user starts or ends a journey."
     s.requires_arc = true
 
   # 2
-    s.version = "3.0.2"
+    s.version = "3.1.0"
 
   # 3
     s.license          = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
@@ -26,13 +26,13 @@ Pod::Spec.new do |s|
     s.source_files = 'PredictIO-iOS/**/*.h', 'PredictIO-iOS/Classes/*.m'
     s.preserve_paths = 'PredictIO-iOS/**/*.h'
     s.vendored_library = 'PredictIO-iOS/libPredictIOSDK.a'
-    s.frameworks = 'UIKit', 'CoreMotion', 'CoreLocation', 'CoreTelephony', 'AdSupport', 'AVFoundation', 'CoreBluetooth', 'SystemConfiguration', 'ExternalAccessory'
+    s.frameworks = 'UIKit', 'CoreMotion', 'CoreLocation', 'CoreTelephony', 'AdSupport', 'AVFoundation', 'CoreBluetooth', 'SystemConfiguration'
     s.module_map = 'PredictIO-iOS/PredictIO.modulemap'
     s.header_dir = 'PredictIO-iOS'
     s.module_name = 'PredictIO'
     s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
 
   #8
-    s.description = "You may use the parking updates to trigger events or notifications specific to your use case. The parking detection service stack leverages all available phone sensors. Sensor usage is extremely battery optimized. Incremental battery consumption does not exceed 10% in typical cases. Also we strongly suggest you ensure inclusion of LBS in your T&C and Privacy Policies. By using this API you explicitly agree to our license agreement, terms and conditions and privacy policy. If you are unsure about any item, please contact us at support@parktag.mobi."
+    s.description = "predict.io offers mobile developers a battery-optimized SDK to get normalised sensor results. Available for iOS and Android. It gives you real-time updates when a user starts or ends a journey. With this trigger come contextual details for the mode of transportation (car vs. non-car)."
 
 end
