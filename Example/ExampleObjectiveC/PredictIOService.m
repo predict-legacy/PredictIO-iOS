@@ -2,7 +2,7 @@
 //  PredictIOService.m
 //  ExampleObjectiveC
 //
-//  Created by ParkTAG on 8/23/16.
+//  Created by zee-pk on 23/08/2016.
 //  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
 //
 
@@ -52,11 +52,7 @@
                                                  name:PIOArrivedNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(searchingInPerimeterViaNotification:)
-                                                 name:PIOSearchingParkingNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(searchingInPerimeterViaNotification:)
-                                                 name:PIOSearchingParkingNotification object:nil];
-}
+                                                 name:PIOSearchingParkingNotification object:nil];}
 
 - (void)resume {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -193,7 +189,7 @@
 - (void)searchingInPerimeterViaNotification:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     CLLocation *location = userInfo[@"location"];
-    [self insertEventViaNotification:Departing location:location mode:TransportationModeUndetermined];
+    [self insertEventViaNotification:Searching location:location mode:TransportationModeUndetermined];
     NSLog(@"Notification - searchingInPerimeter");
 }
 
