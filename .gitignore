@@ -31,5 +31,25 @@ Carthage
 # `pod install` in .travis.yml
 #
 # Pods/
-Example/Pods/Local Podspecs/PredictIO.podspec.json
-ExampleSwift/Pods/Local Podspecs/PredictIO.podspec.json
+
+Example/.idea/.name
+
+Example/.idea/Example.iml
+
+Example/.idea/modules.xml
+
+Example/.idea/vcs.xml
+
+Example/.idea/workspace.xml
+
+Example/.idea/xcode.xml
+
+ExampleSwift/.idea/ExampleSwift.iml
+
+ExampleSwift/.idea/modules.xml
+
+ExampleSwift/.idea/vcs.xml
+
+ExampleSwift/.idea/workspace.xml
+
+ExampleSwift/.idea/xcode.xml

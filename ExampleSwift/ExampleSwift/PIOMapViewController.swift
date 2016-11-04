@@ -2,8 +2,8 @@
 //  MapViewController.swift
 //  ExampleSwift
 //
-//  Created by Abdul Haseeb on 9/8/16.
-//  Copyright © 2016 Abdul Haseeb. All rights reserved.
+//  Created by zee-pk on 08/09/2016.
+//  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
 //
 
 import UIKit
@@ -22,7 +22,7 @@ class PIOMapViewController: UIViewController, MKMapViewDelegate {
         self.navigationItem.title = "Location"
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.mapView.delegate = self;
@@ -32,7 +32,7 @@ class PIOMapViewController: UIViewController, MKMapViewDelegate {
         annotation.title = "Event location" //You can set the subtitle too
         self.mapView.addAnnotation(annotation)
         
-        mapView.addOverlay(MKCircle(centerCoordinate: coordinate, radius: self.location.horizontalAccuracy))
+        mapView.add(MKCircle(center: coordinate, radius: self.location.horizontalAccuracy))
         
         let coordinateDelta:CLLocationDegrees = 0.003
         let span = MKCoordinateSpanMake(coordinateDelta, coordinateDelta)
@@ -40,18 +40,18 @@ class PIOMapViewController: UIViewController, MKMapViewDelegate {
         mapView.setRegion(region, animated: true)
     }
     
-    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if (overlay is MKCircle) {
             let circleRenderer = MKCircleRenderer.init(circle: overlay as! MKCircle)
-            circleRenderer.fillColor = UIColor.greenColor().colorWithAlphaComponent(0.05)
-            circleRenderer.strokeColor = UIColor.greenColor().colorWithAlphaComponent(0.3)
+            circleRenderer.fillColor = UIColor.green.withAlphaComponent(0.05)
+            circleRenderer.strokeColor = UIColor.green.withAlphaComponent(0.3)
             circleRenderer.lineWidth = 4
             return circleRenderer
         }
         return MKPolylineRenderer()
     }
     
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         var annotationView: MKAnnotationView? = nil
         if !(annotation is MKUserLocation) {
             annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "temp")

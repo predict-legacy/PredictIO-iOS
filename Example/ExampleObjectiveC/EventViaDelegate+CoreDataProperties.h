@@ -2,7 +2,7 @@
 //  EventViaDelegate+CoreDataProperties.h
 //  ExampleObjectiveC
 //
-//  Created by Zee on 02/09/2016.
+//  Created by zee-pk on 02/09/2016.
 //  Copyright © 2016 predict.io by ParkTAG GmbH. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu

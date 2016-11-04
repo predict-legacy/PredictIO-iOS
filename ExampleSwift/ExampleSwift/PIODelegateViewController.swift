@@ -2,7 +2,7 @@
 //  PIODelegateViewController.swift
 //  ExampleSwift
 //
-//  Created by Zee on 8/23/16.
+//  Created by zee-pk on 23/08/2016.
 //  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
 //
 
@@ -13,19 +13,19 @@ import PredictIO
 
 class PIODelegateViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
-    let dateFormatter = NSDateFormatter()
+    let dateFormatter = DateFormatter()
 
     let labels = ["Departing", "Departed", "Departure Cancelled", "STMP Callback", "Arrival Suspected", "Arrived", "Searching in perimeter"]
     
     let transportationModeLabels = ["TransportationMode: Undetermined", "TransportationMode: Car", "TransportationMode: NonCar"];
     
     let managedObjectContext: NSManagedObjectContext = {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.managedObjectContext
     }()
     
     let predictIOService: PredictIOService = {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.predictIOService
     }()
 
@@ -34,10 +34,10 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
         dateFormatter.dateFormat = "dd/MM hh:mm a"
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let predictIOEnabled = defaults.boolForKey("PredictIOEnabled")
+        let defaults = UserDefaults.standard
+        let predictIOEnabled = defaults.bool(forKey: "PredictIOEnabled")
         navigationItem.rightBarButtonItem!.title = predictIOEnabled ? "Stop" : "Start"
     }
 
@@ -46,9 +46,9 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func startStopPredictIO(sender: AnyObject) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let predictIOEnabled = defaults.boolForKey("PredictIOEnabled")
+    @IBAction func startStopPredictIO(_ sender: AnyObject) {
+        let defaults = UserDefaults.standard
+        let predictIOEnabled = defaults.bool(forKey: "PredictIOEnabled")
         if predictIOEnabled {
             navigationItem.rightBarButtonItem!.title = "Start"
             predictIOService.stop()
@@ -56,16 +56,17 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
             navigationItem.rightBarButtonItem!.title = "Stop"
             predictIOService.startWithCompletionHandler({ (error) -> (Void) in
                 if (error != nil) {
-                    NSOperationQueue.mainQueue().addOperationWithBlock({
-                        let errorTitle = error!.userInfo["NSLocalizedFailureReason"] as! String
-                        let errorDescription = error!.userInfo["NSLocalizedDescription"] as! String
-                        let alertController = UIAlertController(title: errorTitle, message: errorDescription, preferredStyle: .Alert)
-                        let alertActionOK = UIAlertAction(title: "OK", style: .Default, handler: nil)
+                    OperationQueue.main.addOperation({
+                        let userInfo = error!._userInfo as! NSDictionary
+                        let errorTitle = userInfo["NSLocalizedFailureReason"] as! String
+                        let errorDescription = userInfo["NSLocalizedDescription"] as! String
+                        let alertController = UIAlertController(title: errorTitle, message: errorDescription, preferredStyle: .alert)
+                        let alertActionOK = UIAlertAction(title: "OK", style: .default, handler: nil)
                         alertController.addAction(alertActionOK)
-                        self.presentViewController(alertController, animated: true, completion: nil)
+                        self.present(alertController, animated: true, completion: nil)
                         self.navigationItem.rightBarButtonItem!.title = "Start"
                         print("<predict.io> API Key: \(errorTitle) \(errorDescription)")
-                        defaults.setBool(false, forKey: "PredictIOEnabled")
+                        defaults.set(false, forKey: "PredictIOEnabled")
                         defaults.synchronize()
                     })
                 } else {
@@ -74,82 +75,79 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
             })
         }
     }
-    
+
     // MARK: - Table View
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return fetchedResultsController.sections?.count ?? 0
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionInfo = fetchedResultsController.sections![section]
         return sectionInfo.numberOfObjects
     }
     
-    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let infoDictionary = NSBundle.mainBundle().infoDictionary
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let infoDictionary = Bundle.main.infoDictionary
         let build = infoDictionary!["CFBundleVersion"]
         let version = PredictIO.sharedInstance().version
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("HeaderCell")
-        cell?.textLabel?.text = "SDK v\(version)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell")
+        cell?.textLabel?.text = "SDK v\(version!)"
         cell?.detailTextLabel?.text = "Build v\(build!)"
         
         return cell
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        let event = fetchedResultsController.objectAtIndexPath(indexPath) as! EventViaDelegate
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let event = fetchedResultsController.object(at: indexPath)
         configureCell(cell, withEvent: event)
         return cell
     }
 
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return false
     }
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("showOnMap", sender: self)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showOnMap", sender: self)
     }
 
-    func configureCell(cell: UITableViewCell, withEvent event: EventViaDelegate) {
-        let eventTypeIntegerValue = event.type!.integerValue;
+    func configureCell(_ cell: UITableViewCell, withEvent event: EventViaDelegate) {
+        let eventTypeIntegerValue = event.type!.intValue;
         let eventType = PredictIOEventType(rawValue: eventTypeIntegerValue)
-        if (eventType == .TransportMode) {
-            let modeIntegerValue = event.mode!.integerValue
+        if (eventType == .transportMode) {
+            let modeIntegerValue = event.mode!.intValue
             cell.textLabel!.text = transportationModeLabels[modeIntegerValue]
         } else {
             cell.textLabel!.text = labels[eventTypeIntegerValue]
         }
-        cell.detailTextLabel!.text =  dateFormatter.stringFromDate(event.timeStamp!)
+        cell.detailTextLabel!.text =  dateFormatter.string(from: event.timeStamp! as Date)
     }
 
     // MARK: - Navigation
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if (segue.identifier == "showOnMap") {
             let indexPath = tableView.indexPathForSelectedRow!
-            let event = (fetchedResultsController.objectAtIndexPath(indexPath) as! EventViaDelegate)
+            let event = fetchedResultsController.object(at: indexPath)
             let coordinate = CLLocationCoordinate2DMake(event.latitude!.doubleValue, event.longitude!.doubleValue)
-            let location = CLLocation(coordinate: coordinate, altitude: 0.0, horizontalAccuracy: event.accuracy!.doubleValue , verticalAccuracy: 0.0, course: 0.0, speed: 0.0, timestamp: event.timeStamp!)
-            let controller = segue.destinationViewController as! PIOMapViewController
+            let location = CLLocation(coordinate: coordinate, altitude: 0.0, horizontalAccuracy: event.accuracy!.doubleValue , verticalAccuracy: 0.0, course: 0.0, speed: 0.0, timestamp: event.timeStamp! as Date)
+            let controller = segue.destination as! PIOMapViewController
             controller.location = location
         }
     }
 
     // MARK: - Fetched results controller
 
-    var fetchedResultsController: NSFetchedResultsController {
+    var fetchedResultsController: NSFetchedResultsController<EventViaDelegate> {
         if _fetchedResultsController != nil {
             return _fetchedResultsController!
         }
         
-        let fetchRequest = NSFetchRequest()
-        // Edit the entity name as appropriate.
-        let entity = NSEntityDescription.entityForName("EventViaDelegate", inManagedObjectContext: managedObjectContext)
-        fetchRequest.entity = entity
+        let fetchRequest: NSFetchRequest<EventViaDelegate> = EventViaDelegate.fetchRequest()
         
         // Set the batch size to a suitable number.
         fetchRequest.fetchBatchSize = 20
@@ -161,7 +159,7 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: "Master1")
+        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: "Master1")
         aFetchedResultsController.delegate = self
         _fetchedResultsController = aFetchedResultsController
         
@@ -169,45 +167,44 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
             try _fetchedResultsController!.performFetch()
         } catch {
              // Replace this implementation with code to handle the error appropriately.
-             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-             //print("Unresolved error \(error), \(error.userInfo)")
-             abort()
+             // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+             let nserror = error as NSError
+             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
         
         return _fetchedResultsController!
     }
+    var _fetchedResultsController: NSFetchedResultsController<EventViaDelegate>? = nil
 
-    var _fetchedResultsController: NSFetchedResultsController? = nil
-
-    func controllerWillChangeContent(controller: NSFetchedResultsController) {
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
     }
 
-    func controller(controller: NSFetchedResultsController, didChangeSection sectionInfo: NSFetchedResultsSectionInfo, atIndex sectionIndex: Int, forChangeType type: NSFetchedResultsChangeType) {
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
         switch type {
-            case .Insert:
-                tableView.insertSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Fade)
-            case .Delete:
-                tableView.deleteSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Fade)
+            case .insert:
+                tableView.insertSections(IndexSet(integer: sectionIndex), with: .fade)
+            case .delete:
+                tableView.deleteSections(IndexSet(integer: sectionIndex), with: .fade)
             default:
                 return
         }
     }
 
-    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {
-            case .Insert:
-                tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)
-            case .Delete:
-                tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
-            case .Update:
-                configureCell(tableView.cellForRowAtIndexPath(indexPath!)!, withEvent: anObject as! EventViaDelegate)
-            case .Move:
-                tableView.moveRowAtIndexPath(indexPath!, toIndexPath: newIndexPath!)
+            case .insert:
+                tableView.insertRows(at: [newIndexPath!], with: .fade)
+            case .delete:
+                tableView.deleteRows(at: [indexPath!], with: .fade)
+            case .update:
+                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! EventViaDelegate)
+            case .move:
+                tableView.moveRow(at: indexPath!, to: newIndexPath!)
         }
     }
 
-    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()
     }
 }
