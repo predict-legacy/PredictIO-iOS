@@ -19,7 +19,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>2016.10.14.0</string>
+	<string>2016.10.24.0</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
@@ -37,7 +37,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Data stays secure on your phone.</string>
+	<string>Data stays secure on your phone. GPS will help us to detect arrivals and departures. Data will be posted anonymously.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Data stays secure on your phone. Motion activity will help us to detect arrivals and departures. Data will be posted anonymously.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

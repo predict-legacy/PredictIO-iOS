@@ -2,9 +2,10 @@
 //  PIONotificationViewController.m
 //  ExampleObjectiveC
 //
-//  Created by ParkTAG on 8/26/16.
+//  Created by zee-pk on 26/08/2016.
 //  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
 //
+
 #import <UIKit/UIKit.h>
 #import "PIONotificationViewController.h"
 #import "AppDelegate.h"
@@ -99,7 +100,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    id <NSFetchedResultsSectionInfo> sectionInfo = self.fetchedResultsController.sections[section];
+    id <NSFetchedResultsSectionInfo> sectionInfo = self.fetchedResultsController.sections[(NSUInteger) section];
     return sectionInfo.numberOfObjects;
 }
 
@@ -130,7 +131,7 @@
 - (void)configureCell:(UITableViewCell *)cell withEvent:(EventViaNotification *)event {
     enum PredictIOEventType eventType = (enum PredictIOEventType) event.type.integerValue;
     if (eventType == TransportMode) {
-        cell.textLabel.text = self.transportationModeLabels[event.mode.integerValue];
+        cell.textLabel.text = self.transportationModeLabels[(NSUInteger) event.mode.integerValue];
     } else {
         cell.textLabel.text = self.labels[eventType];
     }
