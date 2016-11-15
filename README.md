@@ -52,7 +52,7 @@ If you are upgrading from the ParkTAG SDK v2.1.2 or lower, please make sure that
 * [Swift Migration Guide](https://github.com/predict-io/PredictIO-iOS/wiki/Swift-Migration-Guide-for-predict.io-3.0)
 
 ## FAQ
-Look through the [FAQ](https://github.com/predict-io/PredictIO-iOS/wiki/FAQs) for answers to the most commonly-asked questions about predict.io.
+Look through the [FAQ](https://support.predict.io/) for answers to the most commonly-asked questions about predict.io.
 
 ## Communication 
 If you need help, visit our [Help Center] (https://support.predict.io)
