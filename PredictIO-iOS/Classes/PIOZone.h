@@ -2,9 +2,9 @@
 //  PIOZone.h
 //  PredictIOSDK
 //
-//  Created by Umer on 9/6/16.
-//  Copyright © 2016 ParkTAG GmbH. All rights reserved.
-//  Version 3.2.0
+//  Created by Umer on 09/06/2016.
+//  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
+//  SDK Version 3.2.0
 //
 
 #import <Foundation/Foundation.h>

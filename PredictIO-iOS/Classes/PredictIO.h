@@ -4,7 +4,7 @@
 //
 //  Created by Zee on 28/02/2013.
 //  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
-//  Version 3.2.0
+//  SDK Version 3.2.0
 
 #import <Foundation/Foundation.h>
 #import "PIOTripSegment.h"
