@@ -197,12 +197,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88F04B581D6CA1790012B98D /* Build configuration list for PBXNativeTarget "ExampleObjectiveC" */;
 			buildPhases = (
-				F4E6F5591D59B22CFB548D1B /* [CP] Check Pods Manifest.lock */,
 				88F04B371D6CA1790012B98D /* Sources */,
 				88F04B381D6CA1790012B98D /* Frameworks */,
 				88F04B391D6CA1790012B98D /* Resources */,
-				7ED0C19E709A0A3EC774015A /* [CP] Embed Pods Frameworks */,
-				C5C9A02E22D1CF3778A7AEA2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,54 +267,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		7ED0C19E709A0A3EC774015A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExampleObjectiveC/Pods-ExampleObjectiveC-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C5C9A02E22D1CF3778A7AEA2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExampleObjectiveC/Pods-ExampleObjectiveC-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F4E6F5591D59B22CFB548D1B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		88F04B371D6CA1790012B98D /* Sources */ = {
@@ -454,7 +403,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 8U4UA34F86;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ExampleObjectiveC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -469,8 +417,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 8U4UA34F86;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ExampleObjectiveC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
