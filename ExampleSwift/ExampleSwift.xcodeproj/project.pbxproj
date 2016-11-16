@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8854E3A01DDC8C0200E5FAAE /* EventViaNotification+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854E39E1DDC8C0200E5FAAE /* EventViaNotification+CoreDataProperties.swift */; };
-		8854E3A11DDC8C0200E5FAAE /* EventViaDelegate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854E39F1DDC8C0200E5FAAE /* EventViaDelegate+CoreDataProperties.swift */; };
 		88636F821D738AF400C8D396 /* PIONotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88636F811D738AF400C8D396 /* PIONotificationViewController.swift */; };
 		88F04B191D6C90400012B98D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F04B181D6C90400012B98D /* AppDelegate.swift */; };
 		88F04B1C1D6C90400012B98D /* ExampleSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88F04B1A1D6C90400012B98D /* ExampleSwift.xcdatamodeld */; };
@@ -18,8 +16,9 @@
 		88F04B281D6C90400012B98D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88F04B261D6C90400012B98D /* LaunchScreen.storyboard */; };
 		88F04B311D6C97490012B98D /* PredictIOService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F04B301D6C97490012B98D /* PredictIOService.swift */; };
 		8916ABD51DBE31D900DACB59 /* EventViaDelegate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8916ABD11DBE31D900DACB59 /* EventViaDelegate+CoreDataClass.swift */; };
+		8916ABD61DBE31D900DACB59 /* EventViaDelegate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8916ABD21DBE31D900DACB59 /* EventViaDelegate+CoreDataProperties.swift */; };
 		8916ABD71DBE31D900DACB59 /* EventViaNotification+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8916ABD31DBE31D900DACB59 /* EventViaNotification+CoreDataClass.swift */; };
-		892AB5571DDCAC8200A45485 /* PIOZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892AB5561DDCAC8200A45485 /* PIOZoneViewController.swift */; };
+		8916ABD81DBE31D900DACB59 /* EventViaNotification+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8916ABD41DBE31D900DACB59 /* EventViaNotification+CoreDataProperties.swift */; };
 		897BE2A31D8306E300514A10 /* app-icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 897BE2971D8306E300514A10 /* app-icon-29@2x.png */; };
 		897BE2A41D8306E300514A10 /* app-icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 897BE2981D8306E300514A10 /* app-icon-29@3x.png */; };
 		897BE2A51D8306E300514A10 /* app-icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 897BE2991D8306E300514A10 /* app-icon-40@2x.png */; };
@@ -36,10 +35,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8854E3971DDC86FF00E5FAAE /* ExampleSwift 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ExampleSwift 2.xcdatamodel"; sourceTree = "<group>"; };
-		8854E39E1DDC8C0200E5FAAE /* EventViaNotification+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventViaNotification+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		8854E39F1DDC8C0200E5FAAE /* EventViaDelegate+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventViaDelegate+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		8854E3B21DDCAEB100E5FAAE /* ExampleSwift 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ExampleSwift 3.xcdatamodel"; sourceTree = "<group>"; };
 		88636F811D738AF400C8D396 /* PIONotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIONotificationViewController.swift; sourceTree = "<group>"; };
 		88F04B151D6C90400012B98D /* ExampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F04B181D6C90400012B98D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,8 +46,9 @@
 		88F04B291D6C90400012B98D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ExampleSwift/Info.plist; sourceTree = "<group>"; };
 		88F04B301D6C97490012B98D /* PredictIOService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictIOService.swift; sourceTree = "<group>"; };
 		8916ABD11DBE31D900DACB59 /* EventViaDelegate+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventViaDelegate+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8916ABD21DBE31D900DACB59 /* EventViaDelegate+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventViaDelegate+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8916ABD31DBE31D900DACB59 /* EventViaNotification+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventViaNotification+CoreDataClass.swift"; sourceTree = "<group>"; };
-		892AB5561DDCAC8200A45485 /* PIOZoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIOZoneViewController.swift; sourceTree = "<group>"; };
+		8916ABD41DBE31D900DACB59 /* EventViaNotification+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventViaNotification+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		897BE2971D8306E300514A10 /* app-icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-29@2x.png"; sourceTree = "<group>"; };
 		897BE2981D8306E300514A10 /* app-icon-29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-29@3x.png"; sourceTree = "<group>"; };
 		897BE2991D8306E300514A10 /* app-icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-40@2x.png"; sourceTree = "<group>"; };
@@ -82,10 +78,10 @@
 		884ABBA51D6F00A0003A9A12 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				8854E39E1DDC8C0200E5FAAE /* EventViaNotification+CoreDataProperties.swift */,
-				8854E39F1DDC8C0200E5FAAE /* EventViaDelegate+CoreDataProperties.swift */,
 				8916ABD11DBE31D900DACB59 /* EventViaDelegate+CoreDataClass.swift */,
+				8916ABD21DBE31D900DACB59 /* EventViaDelegate+CoreDataProperties.swift */,
 				8916ABD31DBE31D900DACB59 /* EventViaNotification+CoreDataClass.swift */,
+				8916ABD41DBE31D900DACB59 /* EventViaNotification+CoreDataProperties.swift */,
 				88F04B1A1D6C90400012B98D /* ExampleSwift.xcdatamodeld */,
 			);
 			name = CoreData;
@@ -125,7 +121,6 @@
 				88F04B1D1D6C90400012B98D /* PIODelegateViewController.swift */,
 				88636F811D738AF400C8D396 /* PIONotificationViewController.swift */,
 				897BE2B21D832F1200514A10 /* PIOMapViewController.swift */,
-				892AB5561DDCAC8200A45485 /* PIOZoneViewController.swift */,
 				88F04B211D6C90400012B98D /* Main.storyboard */,
 				88F04B261D6C90400012B98D /* LaunchScreen.storyboard */,
 				897BE2AF1D8306EB00514A10 /* Images */,
@@ -247,14 +242,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8854E3A11DDC8C0200E5FAAE /* EventViaDelegate+CoreDataProperties.swift in Sources */,
 				8916ABD51DBE31D900DACB59 /* EventViaDelegate+CoreDataClass.swift in Sources */,
 				88F04B1C1D6C90400012B98D /* ExampleSwift.xcdatamodeld in Sources */,
+				8916ABD81DBE31D900DACB59 /* EventViaNotification+CoreDataProperties.swift in Sources */,
 				88636F821D738AF400C8D396 /* PIONotificationViewController.swift in Sources */,
 				897BE2B31D832F1200514A10 /* PIOMapViewController.swift in Sources */,
-				8854E3A01DDC8C0200E5FAAE /* EventViaNotification+CoreDataProperties.swift in Sources */,
+				8916ABD61DBE31D900DACB59 /* EventViaDelegate+CoreDataProperties.swift in Sources */,
 				8916ABD71DBE31D900DACB59 /* EventViaNotification+CoreDataClass.swift in Sources */,
-				892AB5571DDCAC8200A45485 /* PIOZoneViewController.swift in Sources */,
 				88F04B191D6C90400012B98D /* AppDelegate.swift in Sources */,
 				88F04B1E1D6C90400012B98D /* PIODelegateViewController.swift in Sources */,
 				88F04B311D6C97490012B98D /* PredictIOService.swift in Sources */,
@@ -433,11 +427,9 @@
 		88F04B1A1D6C90400012B98D /* ExampleSwift.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				8854E3B21DDCAEB100E5FAAE /* ExampleSwift 3.xcdatamodel */,
-				8854E3971DDC86FF00E5FAAE /* ExampleSwift 2.xcdatamodel */,
 				88F04B1B1D6C90400012B98D /* ExampleSwift.xcdatamodel */,
 			);
-			currentVersion = 8854E3B21DDCAEB100E5FAAE /* ExampleSwift 3.xcdatamodel */;
+			currentVersion = 88F04B1B1D6C90400012B98D /* ExampleSwift.xcdatamodel */;
 			path = ExampleSwift.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
