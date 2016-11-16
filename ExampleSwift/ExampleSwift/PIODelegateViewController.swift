@@ -18,6 +18,8 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
     let labels = ["Departing", "Departed", "Departure Cancelled", "STMP Callback", "Arrival Suspected", "Arrived", "Searching in perimeter", "Stationary after arrival", "TraveledByAirPlane"]
     
     let transportationModeLabels = ["TransportationMode: Undetermined", "TransportationMode: Car", "TransportationMode: NonCar"];
+    let stationaryStates = ["Stationary: NO", "Stationary: YES"]
+    
     
     let managedObjectContext: NSManagedObjectContext = {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -121,6 +123,9 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
         if (eventType == .transportMode) {
             let modeIntegerValue = event.mode!.intValue
             cell.textLabel!.text = transportationModeLabels[modeIntegerValue]
+        } else if (eventType == .stationary) {
+            let stationaryIntegerValue = event.stationary!.intValue
+            cell.textLabel!.text = stationaryStates[stationaryIntegerValue]
         } else {
             cell.textLabel!.text = labels[eventTypeIntegerValue]
         }

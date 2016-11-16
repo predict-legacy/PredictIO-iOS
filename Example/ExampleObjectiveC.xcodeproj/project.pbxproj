@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8854E3A81DDC989B00E5FAAE /* EventViaDelegate+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8854E3A61DDC989B00E5FAAE /* EventViaDelegate+CoreDataProperties.m */; };
 		88F04B401D6CA1790012B98D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F04B3F1D6CA1790012B98D /* main.m */; };
 		88F04B431D6CA1790012B98D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F04B421D6CA1790012B98D /* AppDelegate.m */; };
 		88F04B461D6CA1790012B98D /* ExampleObjectiveC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88F04B441D6CA1790012B98D /* ExampleObjectiveC.xcdatamodeld */; };
@@ -32,11 +33,13 @@
 		899908131D79B4AB00CE90E5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899908121D79B4AB00CE90E5 /* MapKit.framework */; };
 		899908281D79BFBF00CE90E5 /* EventViaNotification+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 899908211D79BFBF00CE90E5 /* EventViaNotification+CoreDataProperties.m */; };
 		899908291D79BFBF00CE90E5 /* EventViaNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 899908231D79BFBF00CE90E5 /* EventViaNotification.m */; };
-		8999082A1D79BFBF00CE90E5 /* EventViaDelegate+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 899908251D79BFBF00CE90E5 /* EventViaDelegate+CoreDataProperties.m */; };
 		8999082B1D79BFBF00CE90E5 /* EventViaDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 899908271D79BFBF00CE90E5 /* EventViaDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8854E3A21DDC97C700E5FAAE /* ExampleObjectiveC 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ExampleObjectiveC 2.xcdatamodel"; sourceTree = "<group>"; };
+		8854E3A51DDC989B00E5FAAE /* EventViaDelegate+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EventViaDelegate+CoreDataProperties.h"; sourceTree = "<group>"; };
+		8854E3A61DDC989B00E5FAAE /* EventViaDelegate+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EventViaDelegate+CoreDataProperties.m"; sourceTree = "<group>"; };
 		88F04B3B1D6CA1790012B98D /* ExampleObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleObjectiveC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F04B3F1D6CA1790012B98D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88F04B411D6CA1790012B98D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,8 +74,6 @@
 		899908211D79BFBF00CE90E5 /* EventViaNotification+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EventViaNotification+CoreDataProperties.m"; sourceTree = "<group>"; };
 		899908221D79BFBF00CE90E5 /* EventViaNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViaNotification.h; sourceTree = "<group>"; };
 		899908231D79BFBF00CE90E5 /* EventViaNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViaNotification.m; sourceTree = "<group>"; };
-		899908241D79BFBF00CE90E5 /* EventViaDelegate+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EventViaDelegate+CoreDataProperties.h"; sourceTree = "<group>"; };
-		899908251D79BFBF00CE90E5 /* EventViaDelegate+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EventViaDelegate+CoreDataProperties.m"; sourceTree = "<group>"; };
 		899908261D79BFBF00CE90E5 /* EventViaDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViaDelegate.h; sourceTree = "<group>"; };
 		899908271D79BFBF00CE90E5 /* EventViaDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViaDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,8 +155,8 @@
 				899908211D79BFBF00CE90E5 /* EventViaNotification+CoreDataProperties.m */,
 				899908221D79BFBF00CE90E5 /* EventViaNotification.h */,
 				899908231D79BFBF00CE90E5 /* EventViaNotification.m */,
-				899908241D79BFBF00CE90E5 /* EventViaDelegate+CoreDataProperties.h */,
-				899908251D79BFBF00CE90E5 /* EventViaDelegate+CoreDataProperties.m */,
+				8854E3A51DDC989B00E5FAAE /* EventViaDelegate+CoreDataProperties.h */,
+				8854E3A61DDC989B00E5FAAE /* EventViaDelegate+CoreDataProperties.m */,
 				899908261D79BFBF00CE90E5 /* EventViaDelegate.h */,
 				899908271D79BFBF00CE90E5 /* EventViaDelegate.m */,
 			);
@@ -330,7 +331,7 @@
 				88F9560B1D70654C00E4579F /* PIONotificationViewController.m in Sources */,
 				88F04B401D6CA1790012B98D /* main.m in Sources */,
 				8999082B1D79BFBF00CE90E5 /* EventViaDelegate.m in Sources */,
-				8999082A1D79BFBF00CE90E5 /* EventViaDelegate+CoreDataProperties.m in Sources */,
+				8854E3A81DDC989B00E5FAAE /* EventViaDelegate+CoreDataProperties.m in Sources */,
 				88F04B461D6CA1790012B98D /* ExampleObjectiveC.xcdatamodeld in Sources */,
 				88F04B5D1D6CA1A40012B98D /* PredictIOService.m in Sources */,
 				899907E81D7718E400CE90E5 /* PIOMapViewController.m in Sources */,
@@ -507,9 +508,10 @@
 		88F04B441D6CA1790012B98D /* ExampleObjectiveC.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				8854E3A21DDC97C700E5FAAE /* ExampleObjectiveC 2.xcdatamodel */,
 				88F04B451D6CA1790012B98D /* ExampleObjectiveC.xcdatamodel */,
 			);
-			currentVersion = 88F04B451D6CA1790012B98D /* ExampleObjectiveC.xcdatamodel */;
+			currentVersion = 8854E3A21DDC97C700E5FAAE /* ExampleObjectiveC 2.xcdatamodel */;
 			path = ExampleObjectiveC.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

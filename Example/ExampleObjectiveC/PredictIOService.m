@@ -111,47 +111,47 @@
 #pragma mark - PredictIO Delegate methods
 
 - (void)departing:(PIOTripSegment *)tripSegment {
-    [self insertEventViaDelegate:Departing location:tripSegment.departureLocation mode:tripSegment.transportationMode];
+    [self insertEventViaDelegate:Departing location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
     NSLog(@"Delegate - departing");
 }
 
 - (void)departed:(PIOTripSegment *)tripSegment {
-    [self insertEventViaDelegate:Departed location:tripSegment.departureLocation mode:tripSegment.transportationMode];
+    [self insertEventViaDelegate:Departed location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
     NSLog(@"Delegate - departed");
 }
 
 - (void)canceledDeparture:(PIOTripSegment *)tripSegment {
-    [self insertEventViaDelegate:DepartureCanceled location:tripSegment.departureLocation mode:tripSegment.transportationMode];
+    [self insertEventViaDelegate:DepartureCanceled location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
     NSLog(@"Delegate - departureCanceled");
 }
 
 - (void)detectedTransportationMode:(PIOTripSegment *)tripSegment {
-    [self insertEventViaDelegate:TransportMode location:tripSegment.departureLocation mode:tripSegment.transportationMode];
+    [self insertEventViaDelegate:TransportMode location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
     NSLog(@"Delegate - transportationMode: %d", tripSegment.transportationMode);
 }
 
 - (void)suspectedArrival:(PIOTripSegment *)tripSegment {
-    [self insertEventViaDelegate:ArrivalSuspected location:tripSegment.arrivalLocation mode:tripSegment.transportationMode];
+    [self insertEventViaDelegate:ArrivalSuspected location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
     NSLog(@"Delegate - arrivalSuspected");
 }
 
 - (void)arrived:(PIOTripSegment *)tripSegment {
-    [self insertEventViaDelegate:Arrived location:tripSegment.arrivalLocation mode:tripSegment.transportationMode];
+    [self insertEventViaDelegate:Arrived location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
     NSLog(@"Delegate - arrived");
 }
 
 - (void)searchingInPerimeter:(CLLocation *)searchingLocation {
-    [self insertEventViaDelegate:Searching location:searchingLocation mode:TransportationModeUndetermined];
+    [self insertEventViaDelegate:Searching location:searchingLocation mode:TransportationModeUndetermined stationary:NO];
     NSLog(@"Delegate - searchingInPerimeter");
 }
 
 - (void)beingStationaryAfterArrival:(PIOTripSegment *)tripSegment {
-    [self insertEventViaDelegate:Stationary location:tripSegment.arrivalLocation mode:tripSegment.transportationMode];
+    [self insertEventViaDelegate:Stationary location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
     NSLog(@"Delegate - beingStationaryAfterArrival");
 }
 
 - (void)traveledByAirplane:(PIOTripSegment *)tripSegment {
-    [self insertEventViaDelegate:TraveledByAirPlane location:tripSegment.arrivalLocation mode:tripSegment.transportationMode];
+    [self insertEventViaDelegate:TraveledByAirPlane location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
     NSLog(@"Delegate - traveledByAirplane");
 }
 
@@ -164,69 +164,69 @@
 - (void)departingViaNotification:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     PIOTripSegment *tripSegment = userInfo[@"tripSegment"];
-    [self insertEventViaNotification:Departing location:tripSegment.departureLocation mode:tripSegment.transportationMode];
+    [self insertEventViaNotification:Departing location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
     NSLog(@"Notification - departing");
 }
 
 - (void)departedViaNotification:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     PIOTripSegment *tripSegment = userInfo[@"tripSegment"];
-    [self insertEventViaNotification:Departed location:tripSegment.departureLocation mode:tripSegment.transportationMode];
+    [self insertEventViaNotification:Departed location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
     NSLog(@"Notification - departed");
 }
 
 - (void)departureCanceledViaNotification:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     PIOTripSegment *tripSegment = userInfo[@"tripSegment"];
-    [self insertEventViaNotification:DepartureCanceled location:tripSegment.departureLocation mode:tripSegment.transportationMode];
+    [self insertEventViaNotification:DepartureCanceled location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
     NSLog(@"Notification - departedCanceled");
 }
 
 - (void)transportationModeViaNotification:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     PIOTripSegment *tripSegment = userInfo[@"tripSegment"];
-    [self insertEventViaNotification:TransportMode location:nil mode:tripSegment.transportationMode];
+    [self insertEventViaNotification:TransportMode location:nil mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
     NSLog(@"Notification - transportationMode: %d", tripSegment.transportationMode);
 }
 
 - (void)arrivalSuspectedViaNotification:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     PIOTripSegment *tripSegment = userInfo[@"tripSegment"];
-    [self insertEventViaNotification:ArrivalSuspected location:tripSegment.arrivalLocation mode:tripSegment.transportationMode];
+    [self insertEventViaNotification:ArrivalSuspected location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
     NSLog(@"Notification - arrived suspected");
 }
 
 - (void)arrivedViaNotification:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     PIOTripSegment *tripSegment = userInfo[@"tripSegment"];
-    [self insertEventViaNotification:Arrived location:tripSegment.arrivalLocation mode:tripSegment.transportationMode];
+    [self insertEventViaNotification:Arrived location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
     NSLog(@"Notification - arrived");
 }
 
 - (void)searchingInPerimeterViaNotification:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     CLLocation *location = userInfo[@"location"];
-    [self insertEventViaNotification:Searching location:location mode:TransportationModeUndetermined];
+    [self insertEventViaNotification:Searching location:location mode:TransportationModeUndetermined stationary:NO];
     NSLog(@"Notification - searchingInPerimeter");
 }
 
 - (void)beingStationaryAfterArrivalViaNotification:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     PIOTripSegment *tripSegment = userInfo[@"tripSegment"];
-    [self insertEventViaNotification:Stationary location:tripSegment.arrivalLocation mode:tripSegment.transportationMode];
+    [self insertEventViaNotification:Stationary location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
     NSLog(@"Notification - beingStationaryAfterArrival");
 }
 
 - (void)traveledByAirplaneViaNotification:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     PIOTripSegment *tripSegment = userInfo[@"tripSegment"];
-    [self insertEventViaNotification:TraveledByAirPlane location:tripSegment.arrivalLocation mode:tripSegment.transportationMode];
+    [self insertEventViaNotification:TraveledByAirPlane location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
     NSLog(@"Notification - traveledByAirplane");
 }
 
 #pragma - mark core data
 
-- (void)insertEventViaDelegate:(PredictIOEventType)type location:(CLLocation *)location mode:(TransportationMode)transportationMode {
+- (void)insertEventViaDelegate:(PredictIOEventType)type location:(CLLocation *)location mode:(TransportationMode)transportationMode stationary:(BOOL)stationary {
     AppDelegate *appDelegate = (AppDelegate *) [UIApplication sharedApplication].delegate;
     NSManagedObjectContext *context = appDelegate.managedObjectContext;
     EventViaDelegate *event = [NSEntityDescription insertNewObjectForEntityForName:@"EventViaDelegate" inManagedObjectContext:context];
@@ -236,7 +236,8 @@
     event.timeStamp = [NSDate new];
     event.type = @(type);
     event.mode = @(transportationMode);
-
+    event.stationary = @(stationary);
+    
     NSError *error = nil;
     if (![context save:&error]) {
         // Replace this implementation with code to handle the error appropriately.
@@ -246,7 +247,7 @@
     }
 }
 
-- (void)insertEventViaNotification:(PredictIOEventType)type location:(CLLocation *)location mode:(TransportationMode)transportationMode {
+- (void)insertEventViaNotification:(PredictIOEventType)type location:(CLLocation *)location mode:(TransportationMode)transportationMode stationary:(BOOL)stationary{
     AppDelegate *appDelegate = (AppDelegate *) [UIApplication sharedApplication].delegate;
     NSManagedObjectContext *context = appDelegate.managedObjectContext;
     EventViaNotification *event = [NSEntityDescription insertNewObjectForEntityForName:@"EventViaNotification" inManagedObjectContext:context];
@@ -256,7 +257,8 @@
     event.timeStamp = [NSDate new];
     event.type = @(type);
     event.mode = @(transportationMode);
-
+    event.stationary = @(stationary);
+    
     NSError *error = nil;
     if (![context save:&error]) {
         // Replace this implementation with code to handle the error appropriately.

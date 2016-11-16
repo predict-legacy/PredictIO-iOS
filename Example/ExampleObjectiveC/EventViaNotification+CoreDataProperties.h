@@ -2,7 +2,7 @@
 //  EventViaNotification+CoreDataProperties.h
 //  ExampleObjectiveC
 //
-//  Created by zee-pk on 02/09/2016.
+//  Created by Abdul Haseeb on 11/16/16.
 //  Copyright © 2016 predict.io by ParkTAG GmbH. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,12 +15,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface EventViaNotification (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSNumber *latitude;
-@property (nullable, nonatomic, retain) NSNumber *longitude;
-@property (nullable, nonatomic, retain) NSDate *timeStamp;
-@property (nullable, nonatomic, retain) NSNumber *type;
-@property (nullable, nonatomic, retain) NSNumber *mode;
-@property (nullable, nonatomic, retain) NSNumber *accuracy;
++ (NSFetchRequest<EventViaNotification *> *)fetchRequest;
+
+@property (nullable, nonatomic, copy) NSNumber *accuracy;
+@property (nullable, nonatomic, copy) NSNumber *latitude;
+@property (nullable, nonatomic, copy) NSNumber *longitude;
+@property (nullable, nonatomic, copy) NSNumber *mode;
+@property (nullable, nonatomic, copy) NSDate *timeStamp;
+@property (nullable, nonatomic, copy) NSNumber *type;
+@property (nullable, nonatomic, copy) NSNumber *stationary;
 
 @end
 

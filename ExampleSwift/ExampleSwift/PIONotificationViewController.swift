@@ -19,6 +19,8 @@ class PIONotificationViewController: UITableViewController, NSFetchedResultsCont
     
     let transportationModeLabels = ["TransportationMode: Undetermined", "TransportationMode: Car", "TransportationMode: NonCar"];
     
+    let stationaryStates = ["Stationary: NO", "Stationary: YES"]
+
     let managedObjectContext: NSManagedObjectContext = {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.managedObjectContext
@@ -121,6 +123,9 @@ class PIONotificationViewController: UITableViewController, NSFetchedResultsCont
         if (eventType == .transportMode) {
             let modeIntegerValue = event.mode!.intValue
             cell.textLabel!.text = transportationModeLabels[modeIntegerValue]
+        } else if (eventType == .stationary) {
+            let stationaryIntegerValue = event.stationary!.intValue
+            cell.textLabel!.text = stationaryStates[stationaryIntegerValue]
         } else {
             cell.textLabel!.text = labels[eventTypeIntegerValue]
         }

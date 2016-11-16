@@ -2,7 +2,7 @@
 //  EventViaDelegate+CoreDataProperties.m
 //  ExampleObjectiveC
 //
-//  Created by zee-pk on 02/09/2016.
+//  Created by Abdul Haseeb on 11/16/2016.
 //  Copyright © 2016 predict.io by ParkTAG GmbH. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,11 +13,16 @@
 
 @implementation EventViaDelegate (CoreDataProperties)
 
++ (NSFetchRequest<EventViaDelegate *> *)fetchRequest {
+	return [[NSFetchRequest alloc] initWithEntityName:@"EventViaDelegate"];
+}
+
+@dynamic accuracy;
 @dynamic latitude;
 @dynamic longitude;
+@dynamic mode;
 @dynamic timeStamp;
 @dynamic type;
-@dynamic accuracy;
-@dynamic mode;
+@dynamic stationary;
 
 @end

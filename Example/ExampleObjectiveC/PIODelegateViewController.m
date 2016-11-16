@@ -18,6 +18,7 @@
 @property (strong, nonatomic) PredictIOService *predictIOService;
 @property (strong, nonatomic) NSArray *transportationModeLabels;
 @property (strong, nonatomic) NSArray *labels;
+@property (strong, nonatomic) NSArray *stationaryStates;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
@@ -36,6 +37,7 @@
     self.dateFormatter.dateFormat = @"dd/MM hh:mm a";
     self.labels = @[@"Departing", @"Departed", @"Departure Cancel", @"STMP Callback", @"Arrival Suspected", @"Arrived", @"Searching in perimeter", @"Stationary after arrival", @"Traveled by airplane"];
     self.transportationModeLabels = @[@"TransportationMode: Undetermined", @"TransportationMode: Car", @"TransportationMode: NonCar"];
+    self.stationaryStates = @[@"Stationary: NO",@"Stationary: YES"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -132,6 +134,8 @@
     enum PredictIOEventType eventType = (enum PredictIOEventType) event.type.integerValue;
     if (eventType == TransportMode) {
         cell.textLabel.text = self.transportationModeLabels[(NSUInteger) event.mode.integerValue];
+    } else if (eventType == Stationary) {
+        cell.textLabel.text = self.stationaryStates[(NSUInteger) event.stationary.integerValue];
     } else {
         cell.textLabel.text = self.labels[eventType];
     }
