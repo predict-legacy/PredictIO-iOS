@@ -27,7 +27,7 @@ Look through the [Use Cases](https://github.com/predict-io/PredictIO-iOS/wiki/Us
 ### Using CocoaPods
 [CocoaPods](http://cocoapods.org/) is a dependency manager for Cocoa projects. Copy and paste the following lines into your podfile:
 ```ruby
-platform :ios, '7.0'
+platform :ios, '8.0'
 pod 'PredictIO'
 ```
 > You should not use TextEdit to edit the podfile because TextEdit likes to replace standard quotes with more graphically appealing quotes. This can cause CocoaPods to get confused and display errors, so it’s best to just use Xcode or another programming text editor.
@@ -36,7 +36,8 @@ pod 'PredictIO'
 If you don't use CocoaPods, you can manually add predict.io lib to your Xcode project, check the [Manual Integration Guide](https://github.com/predict-io/PredictIO-iOS/wiki/Manual-integration-of-predict.io) for more details.
 
 ### Example
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run `pod install` from the Example directory first. 
+> Your local Pod spec-repo should be upto date to get the latest version of predict.io, if you are unsure about it then please run `pod repo update` before `pod install`. Find more information at [CocoaPods](https://guides.cocoapods.org/terminal/commands.html#pod_repo_update).
 
 ### Getting Location Events in the Background
 predict.io requires location updates even when your application is in the background. Check out [Getting Location Events in the Background](https://github.com/predict-io/PredictIO-iOS/wiki/Getting-Location-Events-in-the-Background) for more details.
@@ -52,7 +53,7 @@ If you are upgrading from the ParkTAG SDK v2.1.2 or lower, please make sure that
 * [Swift Migration Guide](https://github.com/predict-io/PredictIO-iOS/wiki/Swift-Migration-Guide-for-predict.io-3.0)
 
 ## FAQ
-Look through the [FAQ](https://github.com/predict-io/PredictIO-iOS/wiki/FAQs) for answers to the most commonly-asked questions about predict.io.
+Look through the [FAQ](https://support.predict.io/) for answers to the most commonly-asked questions about predict.io.
 
 ## Communication 
 If you need help, visit our [Help Center] (https://support.predict.io)
