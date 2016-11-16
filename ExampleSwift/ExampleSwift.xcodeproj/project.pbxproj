@@ -19,6 +19,7 @@
 		8916ABD61DBE31D900DACB59 /* EventViaDelegate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8916ABD21DBE31D900DACB59 /* EventViaDelegate+CoreDataProperties.swift */; };
 		8916ABD71DBE31D900DACB59 /* EventViaNotification+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8916ABD31DBE31D900DACB59 /* EventViaNotification+CoreDataClass.swift */; };
 		8916ABD81DBE31D900DACB59 /* EventViaNotification+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8916ABD41DBE31D900DACB59 /* EventViaNotification+CoreDataProperties.swift */; };
+		892AB55B1DDCC72000A45485 /* PIOZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892AB55A1DDCC72000A45485 /* PIOZoneViewController.swift */; };
 		897BE2A31D8306E300514A10 /* app-icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 897BE2971D8306E300514A10 /* app-icon-29@2x.png */; };
 		897BE2A41D8306E300514A10 /* app-icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 897BE2981D8306E300514A10 /* app-icon-29@3x.png */; };
 		897BE2A51D8306E300514A10 /* app-icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 897BE2991D8306E300514A10 /* app-icon-40@2x.png */; };
@@ -49,6 +50,8 @@
 		8916ABD21DBE31D900DACB59 /* EventViaDelegate+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventViaDelegate+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8916ABD31DBE31D900DACB59 /* EventViaNotification+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventViaNotification+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8916ABD41DBE31D900DACB59 /* EventViaNotification+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventViaNotification+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		892AB5591DDCC6AE00A45485 /* ExampleSwift 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ExampleSwift 2.xcdatamodel"; sourceTree = "<group>"; };
+		892AB55A1DDCC72000A45485 /* PIOZoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIOZoneViewController.swift; sourceTree = "<group>"; };
 		897BE2971D8306E300514A10 /* app-icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-29@2x.png"; sourceTree = "<group>"; };
 		897BE2981D8306E300514A10 /* app-icon-29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-29@3x.png"; sourceTree = "<group>"; };
 		897BE2991D8306E300514A10 /* app-icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-40@2x.png"; sourceTree = "<group>"; };
@@ -121,6 +124,7 @@
 				88F04B1D1D6C90400012B98D /* PIODelegateViewController.swift */,
 				88636F811D738AF400C8D396 /* PIONotificationViewController.swift */,
 				897BE2B21D832F1200514A10 /* PIOMapViewController.swift */,
+				892AB55A1DDCC72000A45485 /* PIOZoneViewController.swift */,
 				88F04B211D6C90400012B98D /* Main.storyboard */,
 				88F04B261D6C90400012B98D /* LaunchScreen.storyboard */,
 				897BE2AF1D8306EB00514A10 /* Images */,
@@ -185,7 +189,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = "Abdul Haseeb";
+				ORGANIZATIONNAME = "predict.io by ParkTAG GmbH";
 				TargetAttributes = {
 					88F04B141D6C90400012B98D = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -252,6 +256,7 @@
 				88F04B191D6C90400012B98D /* AppDelegate.swift in Sources */,
 				88F04B1E1D6C90400012B98D /* PIODelegateViewController.swift in Sources */,
 				88F04B311D6C97490012B98D /* PredictIOService.swift in Sources */,
+				892AB55B1DDCC72000A45485 /* PIOZoneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,9 +432,10 @@
 		88F04B1A1D6C90400012B98D /* ExampleSwift.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				892AB5591DDCC6AE00A45485 /* ExampleSwift 2.xcdatamodel */,
 				88F04B1B1D6C90400012B98D /* ExampleSwift.xcdatamodel */,
 			);
-			currentVersion = 88F04B1B1D6C90400012B98D /* ExampleSwift.xcdatamodel */;
+			currentVersion = 892AB5591DDCC6AE00A45485 /* ExampleSwift 2.xcdatamodel */;
 			path = ExampleSwift.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

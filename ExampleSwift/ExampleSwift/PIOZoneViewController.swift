@@ -2,15 +2,15 @@
 //  PIOZoneViewController.swift
 //  ExampleSwift
 //
-//  Created by Zee on 16/11/2016.
-//  Copyright © 2016 Abdul Haseeb. All rights reserved.
+//  Created by zee-pk on 16/11/2016.
+//  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
 //
 
 import UIKit
 import MapKit
 import PredictIO
 
-class PIOZoneViewController: UIViewController {
+class PIOZoneViewController: UIViewController, MKMapViewDelegate {
     
     let homeZoneAnnotationTitle = "Home Zone"
     let workZoneAnnotationTitle = "Work Zone"
@@ -41,6 +41,10 @@ class PIOZoneViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.mapView.showAnnotations(mapView.annotations, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -61,7 +65,7 @@ class PIOZoneViewController: UIViewController {
         var annotationView: MKAnnotationView? = nil
         if !(annotation is MKUserLocation) {
             let pinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "zone")
-            annotationView!.canShowCallout = true
+            pinAnnotationView.canShowCallout = true
             if (annotation.title! == homeZoneAnnotationTitle) {
                 pinAnnotationView.pinTintColor = UIColor.orange
             } else {

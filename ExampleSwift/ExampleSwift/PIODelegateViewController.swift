@@ -160,8 +160,6 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
             let controller = segue.destination as! PIOZoneViewController
             controller.homeZone = PredictIO.sharedInstance().homeZone
             controller.workZone = PredictIO.sharedInstance().workZone
-            controller.workZone = PIOZone(center: CLLocationCoordinate2DMake(31.466236, 74.236595), radius: 100, zoneType: .work)
-            controller.homeZone = PIOZone(center: CLLocationCoordinate2DMake(31.5546, 74.3572), radius: 100, zoneType: .home)
         }
     }
 
