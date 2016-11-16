@@ -2,5 +2,5 @@ platform :ios, '8.0'
 
 target 'ExampleSwift' do
    use_frameworks!
-   pod 'PredictIO'
+   pod 'PredictIO', path: '/Users/zee/Work/ParkTAG/PredictIO-iOS'
 end

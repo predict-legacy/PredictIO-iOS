@@ -78,6 +78,19 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
         }
     }
 
+    @IBAction func showHomeWorkZones(_ sender: Any) {
+        let homeZone = PredictIO.sharedInstance().homeZone
+        let workZone = PredictIO.sharedInstance().workZone
+        
+        if ((homeZone != nil) || (workZone != nil)) {
+            performSegue(withIdentifier: "showZones", sender: self)
+        } else {
+            let alertController = UIAlertController(title: "Home/Work Zones", message: "No zone information available at this moment.\nPlease check again after some trips.", preferredStyle: .alert)
+            let alertActionOK = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(alertActionOK)
+            present(alertController, animated: true, completion: nil)
+        }
+    }
     // MARK: - Table View
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -142,6 +155,13 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
             let location = CLLocation(coordinate: coordinate, altitude: 0.0, horizontalAccuracy: event.accuracy!.doubleValue , verticalAccuracy: 0.0, course: 0.0, speed: 0.0, timestamp: event.timeStamp! as Date)
             let controller = segue.destination as! PIOMapViewController
             controller.location = location
+            controller.zoneType = PIOZoneType(rawValue: event.zoneType as! Int32)!
+        } else if (segue.identifier == "showZones") {
+            let controller = segue.destination as! PIOZoneViewController
+            controller.homeZone = PredictIO.sharedInstance().homeZone
+            controller.workZone = PredictIO.sharedInstance().workZone
+            controller.workZone = PIOZone(center: CLLocationCoordinate2DMake(31.466236, 74.236595), radius: 100, zoneType: .work)
+            controller.homeZone = PIOZone(center: CLLocationCoordinate2DMake(31.5546, 74.3572), radius: 100, zoneType: .home)
         }
     }
 

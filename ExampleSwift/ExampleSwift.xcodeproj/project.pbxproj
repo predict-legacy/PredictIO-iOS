@@ -19,6 +19,7 @@
 		88F04B311D6C97490012B98D /* PredictIOService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F04B301D6C97490012B98D /* PredictIOService.swift */; };
 		8916ABD51DBE31D900DACB59 /* EventViaDelegate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8916ABD11DBE31D900DACB59 /* EventViaDelegate+CoreDataClass.swift */; };
 		8916ABD71DBE31D900DACB59 /* EventViaNotification+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8916ABD31DBE31D900DACB59 /* EventViaNotification+CoreDataClass.swift */; };
+		892AB5571DDCAC8200A45485 /* PIOZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892AB5561DDCAC8200A45485 /* PIOZoneViewController.swift */; };
 		897BE2A31D8306E300514A10 /* app-icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 897BE2971D8306E300514A10 /* app-icon-29@2x.png */; };
 		897BE2A41D8306E300514A10 /* app-icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 897BE2981D8306E300514A10 /* app-icon-29@3x.png */; };
 		897BE2A51D8306E300514A10 /* app-icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 897BE2991D8306E300514A10 /* app-icon-40@2x.png */; };
@@ -51,6 +52,7 @@
 		88F04B301D6C97490012B98D /* PredictIOService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictIOService.swift; sourceTree = "<group>"; };
 		8916ABD11DBE31D900DACB59 /* EventViaDelegate+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventViaDelegate+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8916ABD31DBE31D900DACB59 /* EventViaNotification+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventViaNotification+CoreDataClass.swift"; sourceTree = "<group>"; };
+		892AB5561DDCAC8200A45485 /* PIOZoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIOZoneViewController.swift; sourceTree = "<group>"; };
 		897BE2971D8306E300514A10 /* app-icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-29@2x.png"; sourceTree = "<group>"; };
 		897BE2981D8306E300514A10 /* app-icon-29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-29@3x.png"; sourceTree = "<group>"; };
 		897BE2991D8306E300514A10 /* app-icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-40@2x.png"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				88F04B1D1D6C90400012B98D /* PIODelegateViewController.swift */,
 				88636F811D738AF400C8D396 /* PIONotificationViewController.swift */,
 				897BE2B21D832F1200514A10 /* PIOMapViewController.swift */,
+				892AB5561DDCAC8200A45485 /* PIOZoneViewController.swift */,
 				88F04B211D6C90400012B98D /* Main.storyboard */,
 				88F04B261D6C90400012B98D /* LaunchScreen.storyboard */,
 				897BE2AF1D8306EB00514A10 /* Images */,
@@ -166,12 +169,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88F04B2C1D6C90400012B98D /* Build configuration list for PBXNativeTarget "ExampleSwift" */;
 			buildPhases = (
-				29B480EF4C38D91D05F4E1AC /* [CP] Check Pods Manifest.lock */,
 				88F04B111D6C90400012B98D /* Sources */,
 				88F04B121D6C90400012B98D /* Frameworks */,
 				88F04B131D6C90400012B98D /* Resources */,
-				7FD66394B8B49676B44CFA45 /* [CP] Embed Pods Frameworks */,
-				5992248633DB8B185C2B09CA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,54 +242,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		29B480EF4C38D91D05F4E1AC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5992248633DB8B185C2B09CA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExampleSwift/Pods-ExampleSwift-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7FD66394B8B49676B44CFA45 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExampleSwift/Pods-ExampleSwift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		88F04B111D6C90400012B98D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -302,6 +254,7 @@
 				897BE2B31D832F1200514A10 /* PIOMapViewController.swift in Sources */,
 				8854E3A01DDC8C0200E5FAAE /* EventViaNotification+CoreDataProperties.swift in Sources */,
 				8916ABD71DBE31D900DACB59 /* EventViaNotification+CoreDataClass.swift in Sources */,
+				892AB5571DDCAC8200A45485 /* PIOZoneViewController.swift in Sources */,
 				88F04B191D6C90400012B98D /* AppDelegate.swift in Sources */,
 				88F04B1E1D6C90400012B98D /* PIODelegateViewController.swift in Sources */,
 				88F04B311D6C97490012B98D /* PredictIOService.swift in Sources */,
