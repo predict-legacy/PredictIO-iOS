@@ -18,8 +18,9 @@
 @dynamic latitude;
 @dynamic longitude;
 @dynamic mode;
+@dynamic stationary;
 @dynamic timeStamp;
 @dynamic type;
-@dynamic stationary;
+@dynamic zoneType;
 
 @end

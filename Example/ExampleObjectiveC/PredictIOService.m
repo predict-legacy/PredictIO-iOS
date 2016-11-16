@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "PredictIOService.h"
 #import "AppDelegate.h"
-#import "EventViaNotification.h"
-#import "EventViaDelegate.h"
+#import "EventViaNotification+CoreDataClass.h"
+#import "EventViaDelegate+CoreDataClass.h"
 
 #define API_KEY      @"YOUR-API-KEY"
 
@@ -111,47 +111,47 @@
 #pragma mark - PredictIO Delegate methods
 
 - (void)departing:(PIOTripSegment *)tripSegment {
-    [self insertEventViaDelegate:Departing location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
+    [self insertEventViaDelegate:Departing location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival zoneType:tripSegment.departureZone.zoneType];
     NSLog(@"Delegate - departing");
 }
 
 - (void)departed:(PIOTripSegment *)tripSegment {
-    [self insertEventViaDelegate:Departed location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
+    [self insertEventViaDelegate:Departed location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival zoneType:tripSegment.departureZone.zoneType];
     NSLog(@"Delegate - departed");
 }
 
 - (void)canceledDeparture:(PIOTripSegment *)tripSegment {
-    [self insertEventViaDelegate:DepartureCanceled location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
+    [self insertEventViaDelegate:DepartureCanceled location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival zoneType:tripSegment.departureZone.zoneType];
     NSLog(@"Delegate - departureCanceled");
 }
 
 - (void)detectedTransportationMode:(PIOTripSegment *)tripSegment {
-    [self insertEventViaDelegate:TransportMode location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
+    [self insertEventViaDelegate:TransportMode location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival zoneType:tripSegment.departureZone.zoneType];
     NSLog(@"Delegate - transportationMode: %d", tripSegment.transportationMode);
 }
 
 - (void)suspectedArrival:(PIOTripSegment *)tripSegment {
-    [self insertEventViaDelegate:ArrivalSuspected location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
+    [self insertEventViaDelegate:ArrivalSuspected location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival zoneType:tripSegment.arrivalZone.zoneType];
     NSLog(@"Delegate - arrivalSuspected");
 }
 
 - (void)arrived:(PIOTripSegment *)tripSegment {
-    [self insertEventViaDelegate:Arrived location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
+    [self insertEventViaDelegate:Arrived location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival zoneType:tripSegment.arrivalZone.zoneType];
     NSLog(@"Delegate - arrived");
 }
 
 - (void)searchingInPerimeter:(CLLocation *)searchingLocation {
-    [self insertEventViaDelegate:Searching location:searchingLocation mode:TransportationModeUndetermined stationary:NO];
+    [self insertEventViaDelegate:Searching location:searchingLocation mode:TransportationModeUndetermined stationary:NO zoneType:PIOZoneTypeOther];
     NSLog(@"Delegate - searchingInPerimeter");
 }
 
 - (void)beingStationaryAfterArrival:(PIOTripSegment *)tripSegment {
-    [self insertEventViaDelegate:Stationary location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
+    [self insertEventViaDelegate:Stationary location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival zoneType:tripSegment.arrivalZone.zoneType];
     NSLog(@"Delegate - beingStationaryAfterArrival");
 }
 
 - (void)traveledByAirplane:(PIOTripSegment *)tripSegment {
-    [self insertEventViaDelegate:TraveledByAirPlane location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
+    [self insertEventViaDelegate:TraveledByAirPlane location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival zoneType:tripSegment.arrivalZone.zoneType];
     NSLog(@"Delegate - traveledByAirplane");
 }
 
@@ -164,69 +164,69 @@
 - (void)departingViaNotification:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     PIOTripSegment *tripSegment = userInfo[@"tripSegment"];
-    [self insertEventViaNotification:Departing location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
+    [self insertEventViaNotification:Departing location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival zoneType: tripSegment.departureZone.zoneType];
     NSLog(@"Notification - departing");
 }
 
 - (void)departedViaNotification:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     PIOTripSegment *tripSegment = userInfo[@"tripSegment"];
-    [self insertEventViaNotification:Departed location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
+    [self insertEventViaNotification:Departed location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival zoneType: tripSegment.departureZone.zoneType];
     NSLog(@"Notification - departed");
 }
 
 - (void)departureCanceledViaNotification:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     PIOTripSegment *tripSegment = userInfo[@"tripSegment"];
-    [self insertEventViaNotification:DepartureCanceled location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
+    [self insertEventViaNotification:DepartureCanceled location:tripSegment.departureLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival zoneType: tripSegment.departureZone.zoneType];
     NSLog(@"Notification - departedCanceled");
 }
 
 - (void)transportationModeViaNotification:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     PIOTripSegment *tripSegment = userInfo[@"tripSegment"];
-    [self insertEventViaNotification:TransportMode location:nil mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
+    [self insertEventViaNotification:TransportMode location:nil mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival zoneType: tripSegment.departureZone.zoneType];
     NSLog(@"Notification - transportationMode: %d", tripSegment.transportationMode);
 }
 
 - (void)arrivalSuspectedViaNotification:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     PIOTripSegment *tripSegment = userInfo[@"tripSegment"];
-    [self insertEventViaNotification:ArrivalSuspected location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
+    [self insertEventViaNotification:ArrivalSuspected location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival zoneType: tripSegment.arrivalZone.zoneType];
     NSLog(@"Notification - arrived suspected");
 }
 
 - (void)arrivedViaNotification:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     PIOTripSegment *tripSegment = userInfo[@"tripSegment"];
-    [self insertEventViaNotification:Arrived location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
+    [self insertEventViaNotification:Arrived location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival zoneType: tripSegment.arrivalZone.zoneType];
     NSLog(@"Notification - arrived");
 }
 
 - (void)searchingInPerimeterViaNotification:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     CLLocation *location = userInfo[@"location"];
-    [self insertEventViaNotification:Searching location:location mode:TransportationModeUndetermined stationary:NO];
+    [self insertEventViaNotification:Searching location:location mode:TransportationModeUndetermined stationary:NO zoneType:PIOZoneTypeOther];
     NSLog(@"Notification - searchingInPerimeter");
 }
 
 - (void)beingStationaryAfterArrivalViaNotification:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     PIOTripSegment *tripSegment = userInfo[@"tripSegment"];
-    [self insertEventViaNotification:Stationary location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
+    [self insertEventViaNotification:Stationary location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival zoneType: tripSegment.arrivalZone.zoneType];
     NSLog(@"Notification - beingStationaryAfterArrival");
 }
 
 - (void)traveledByAirplaneViaNotification:(NSNotification *)notification {
     NSDictionary *userInfo = notification.userInfo;
     PIOTripSegment *tripSegment = userInfo[@"tripSegment"];
-    [self insertEventViaNotification:TraveledByAirPlane location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival];
+    [self insertEventViaNotification:TraveledByAirPlane location:tripSegment.arrivalLocation mode:tripSegment.transportationMode stationary:tripSegment.stationaryAfterArrival zoneType:tripSegment.arrivalZone.zoneType];
     NSLog(@"Notification - traveledByAirplane");
 }
 
 #pragma - mark core data
 
-- (void)insertEventViaDelegate:(PredictIOEventType)type location:(CLLocation *)location mode:(TransportationMode)transportationMode stationary:(BOOL)stationary {
+- (void)insertEventViaDelegate:(PredictIOEventType)type location:(CLLocation *)location mode:(TransportationMode)transportationMode stationary:(BOOL)stationary zoneType:(PIOZoneType)zoneType {
     AppDelegate *appDelegate = (AppDelegate *) [UIApplication sharedApplication].delegate;
     NSManagedObjectContext *context = appDelegate.managedObjectContext;
     EventViaDelegate *event = [NSEntityDescription insertNewObjectForEntityForName:@"EventViaDelegate" inManagedObjectContext:context];
@@ -237,6 +237,7 @@
     event.type = @(type);
     event.mode = @(transportationMode);
     event.stationary = @(stationary);
+    event.zoneType = @(zoneType);
     
     NSError *error = nil;
     if (![context save:&error]) {
@@ -247,7 +248,7 @@
     }
 }
 
-- (void)insertEventViaNotification:(PredictIOEventType)type location:(CLLocation *)location mode:(TransportationMode)transportationMode stationary:(BOOL)stationary{
+- (void)insertEventViaNotification:(PredictIOEventType)type location:(CLLocation *)location mode:(TransportationMode)transportationMode stationary:(BOOL)stationary zoneType:(PIOZoneType)zoneType {
     AppDelegate *appDelegate = (AppDelegate *) [UIApplication sharedApplication].delegate;
     NSManagedObjectContext *context = appDelegate.managedObjectContext;
     EventViaNotification *event = [NSEntityDescription insertNewObjectForEntityForName:@"EventViaNotification" inManagedObjectContext:context];
@@ -258,6 +259,7 @@
     event.type = @(type);
     event.mode = @(transportationMode);
     event.stationary = @(stationary);
+    event.zoneType = @(zoneType);
     
     NSError *error = nil;
     if (![context save:&error]) {

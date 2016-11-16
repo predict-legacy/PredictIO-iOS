@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8854E3A81DDC989B00E5FAAE /* EventViaDelegate+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8854E3A61DDC989B00E5FAAE /* EventViaDelegate+CoreDataProperties.m */; };
+		8854E3C21DDCB45F00E5FAAE /* EventViaNotification+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8854E3BB1DDCB45F00E5FAAE /* EventViaNotification+CoreDataClass.m */; };
+		8854E3C31DDCB45F00E5FAAE /* EventViaNotification+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8854E3BD1DDCB45F00E5FAAE /* EventViaNotification+CoreDataProperties.m */; };
+		8854E3C41DDCB45F00E5FAAE /* EventViaDelegate+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8854E3BF1DDCB45F00E5FAAE /* EventViaDelegate+CoreDataClass.m */; };
+		8854E3C51DDCB45F00E5FAAE /* EventViaDelegate+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8854E3C11DDCB45F00E5FAAE /* EventViaDelegate+CoreDataProperties.m */; };
 		88F04B401D6CA1790012B98D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F04B3F1D6CA1790012B98D /* main.m */; };
 		88F04B431D6CA1790012B98D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F04B421D6CA1790012B98D /* AppDelegate.m */; };
 		88F04B461D6CA1790012B98D /* ExampleObjectiveC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88F04B441D6CA1790012B98D /* ExampleObjectiveC.xcdatamodeld */; };
@@ -31,15 +34,19 @@
 		897BE2961D83005D00514A10 /* icon-notification@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 897BE2921D83005D00514A10 /* icon-notification@3x.png */; };
 		899907E81D7718E400CE90E5 /* PIOMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 899907E71D7718E400CE90E5 /* PIOMapViewController.m */; };
 		899908131D79B4AB00CE90E5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 899908121D79B4AB00CE90E5 /* MapKit.framework */; };
-		899908281D79BFBF00CE90E5 /* EventViaNotification+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 899908211D79BFBF00CE90E5 /* EventViaNotification+CoreDataProperties.m */; };
-		899908291D79BFBF00CE90E5 /* EventViaNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 899908231D79BFBF00CE90E5 /* EventViaNotification.m */; };
-		8999082B1D79BFBF00CE90E5 /* EventViaDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 899908271D79BFBF00CE90E5 /* EventViaDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8854E3A21DDC97C700E5FAAE /* ExampleObjectiveC 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ExampleObjectiveC 2.xcdatamodel"; sourceTree = "<group>"; };
-		8854E3A51DDC989B00E5FAAE /* EventViaDelegate+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EventViaDelegate+CoreDataProperties.h"; sourceTree = "<group>"; };
-		8854E3A61DDC989B00E5FAAE /* EventViaDelegate+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EventViaDelegate+CoreDataProperties.m"; sourceTree = "<group>"; };
+		8854E3B31DDCB35400E5FAAE /* ExampleObjectiveC 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ExampleObjectiveC 3.xcdatamodel"; sourceTree = "<group>"; };
+		8854E3BA1DDCB45F00E5FAAE /* EventViaNotification+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EventViaNotification+CoreDataClass.h"; sourceTree = "<group>"; };
+		8854E3BB1DDCB45F00E5FAAE /* EventViaNotification+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EventViaNotification+CoreDataClass.m"; sourceTree = "<group>"; };
+		8854E3BC1DDCB45F00E5FAAE /* EventViaNotification+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EventViaNotification+CoreDataProperties.h"; sourceTree = "<group>"; };
+		8854E3BD1DDCB45F00E5FAAE /* EventViaNotification+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EventViaNotification+CoreDataProperties.m"; sourceTree = "<group>"; };
+		8854E3BE1DDCB45F00E5FAAE /* EventViaDelegate+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EventViaDelegate+CoreDataClass.h"; sourceTree = "<group>"; };
+		8854E3BF1DDCB45F00E5FAAE /* EventViaDelegate+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EventViaDelegate+CoreDataClass.m"; sourceTree = "<group>"; };
+		8854E3C01DDCB45F00E5FAAE /* EventViaDelegate+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EventViaDelegate+CoreDataProperties.h"; sourceTree = "<group>"; };
+		8854E3C11DDCB45F00E5FAAE /* EventViaDelegate+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EventViaDelegate+CoreDataProperties.m"; sourceTree = "<group>"; };
 		88F04B3B1D6CA1790012B98D /* ExampleObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleObjectiveC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F04B3F1D6CA1790012B98D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88F04B411D6CA1790012B98D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,12 +77,6 @@
 		899907E61D7718E400CE90E5 /* PIOMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIOMapViewController.h; sourceTree = "<group>"; };
 		899907E71D7718E400CE90E5 /* PIOMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIOMapViewController.m; sourceTree = "<group>"; };
 		899908121D79B4AB00CE90E5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		899908201D79BFBF00CE90E5 /* EventViaNotification+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EventViaNotification+CoreDataProperties.h"; sourceTree = "<group>"; };
-		899908211D79BFBF00CE90E5 /* EventViaNotification+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EventViaNotification+CoreDataProperties.m"; sourceTree = "<group>"; };
-		899908221D79BFBF00CE90E5 /* EventViaNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViaNotification.h; sourceTree = "<group>"; };
-		899908231D79BFBF00CE90E5 /* EventViaNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViaNotification.m; sourceTree = "<group>"; };
-		899908261D79BFBF00CE90E5 /* EventViaDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViaDelegate.h; sourceTree = "<group>"; };
-		899908271D79BFBF00CE90E5 /* EventViaDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViaDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,14 +152,14 @@
 			isa = PBXGroup;
 			children = (
 				88F04B441D6CA1790012B98D /* ExampleObjectiveC.xcdatamodeld */,
-				899908201D79BFBF00CE90E5 /* EventViaNotification+CoreDataProperties.h */,
-				899908211D79BFBF00CE90E5 /* EventViaNotification+CoreDataProperties.m */,
-				899908221D79BFBF00CE90E5 /* EventViaNotification.h */,
-				899908231D79BFBF00CE90E5 /* EventViaNotification.m */,
-				8854E3A51DDC989B00E5FAAE /* EventViaDelegate+CoreDataProperties.h */,
-				8854E3A61DDC989B00E5FAAE /* EventViaDelegate+CoreDataProperties.m */,
-				899908261D79BFBF00CE90E5 /* EventViaDelegate.h */,
-				899908271D79BFBF00CE90E5 /* EventViaDelegate.m */,
+				8854E3BA1DDCB45F00E5FAAE /* EventViaNotification+CoreDataClass.h */,
+				8854E3BB1DDCB45F00E5FAAE /* EventViaNotification+CoreDataClass.m */,
+				8854E3BC1DDCB45F00E5FAAE /* EventViaNotification+CoreDataProperties.h */,
+				8854E3BD1DDCB45F00E5FAAE /* EventViaNotification+CoreDataProperties.m */,
+				8854E3BE1DDCB45F00E5FAAE /* EventViaDelegate+CoreDataClass.h */,
+				8854E3BF1DDCB45F00E5FAAE /* EventViaDelegate+CoreDataClass.m */,
+				8854E3C01DDCB45F00E5FAAE /* EventViaDelegate+CoreDataProperties.h */,
+				8854E3C11DDCB45F00E5FAAE /* EventViaDelegate+CoreDataProperties.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -197,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88F04B581D6CA1790012B98D /* Build configuration list for PBXNativeTarget "ExampleObjectiveC" */;
 			buildPhases = (
+				2739D2A6F9EFBE664DA416BE /* [CP] Check Pods Manifest.lock */,
 				88F04B371D6CA1790012B98D /* Sources */,
 				88F04B381D6CA1790012B98D /* Frameworks */,
 				88F04B391D6CA1790012B98D /* Resources */,
+				319D31A04479A94ED333CE01 /* [CP] Embed Pods Frameworks */,
+				131647E1CAD150B7CFD981C6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,19 +272,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		131647E1CAD150B7CFD981C6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExampleObjectiveC/Pods-ExampleObjectiveC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2739D2A6F9EFBE664DA416BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		319D31A04479A94ED333CE01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExampleObjectiveC/Pods-ExampleObjectiveC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		88F04B371D6CA1790012B98D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				899908281D79BFBF00CE90E5 /* EventViaNotification+CoreDataProperties.m in Sources */,
+				8854E3C31DDCB45F00E5FAAE /* EventViaNotification+CoreDataProperties.m in Sources */,
+				8854E3C51DDCB45F00E5FAAE /* EventViaDelegate+CoreDataProperties.m in Sources */,
 				88F04B491D6CA1790012B98D /* PIODelegateViewController.m in Sources */,
-				899908291D79BFBF00CE90E5 /* EventViaNotification.m in Sources */,
 				88F04B431D6CA1790012B98D /* AppDelegate.m in Sources */,
 				88F9560B1D70654C00E4579F /* PIONotificationViewController.m in Sources */,
+				8854E3C41DDCB45F00E5FAAE /* EventViaDelegate+CoreDataClass.m in Sources */,
 				88F04B401D6CA1790012B98D /* main.m in Sources */,
-				8999082B1D79BFBF00CE90E5 /* EventViaDelegate.m in Sources */,
-				8854E3A81DDC989B00E5FAAE /* EventViaDelegate+CoreDataProperties.m in Sources */,
+				8854E3C21DDCB45F00E5FAAE /* EventViaNotification+CoreDataClass.m in Sources */,
 				88F04B461D6CA1790012B98D /* ExampleObjectiveC.xcdatamodeld in Sources */,
 				88F04B5D1D6CA1A40012B98D /* PredictIOService.m in Sources */,
 				899907E81D7718E400CE90E5 /* PIOMapViewController.m in Sources */,
@@ -455,10 +507,11 @@
 		88F04B441D6CA1790012B98D /* ExampleObjectiveC.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				8854E3B31DDCB35400E5FAAE /* ExampleObjectiveC 3.xcdatamodel */,
 				8854E3A21DDC97C700E5FAAE /* ExampleObjectiveC 2.xcdatamodel */,
 				88F04B451D6CA1790012B98D /* ExampleObjectiveC.xcdatamodel */,
 			);
-			currentVersion = 8854E3A21DDC97C700E5FAAE /* ExampleObjectiveC 2.xcdatamodel */;
+			currentVersion = 8854E3B31DDCB35400E5FAAE /* ExampleObjectiveC 3.xcdatamodel */;
 			path = ExampleObjectiveC.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

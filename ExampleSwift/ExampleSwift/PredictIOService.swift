@@ -91,37 +91,37 @@ class PredictIOService: NSObject, PredictIODelegate {
     // Mark - PredictIO Delegate methods
 
     func departing(_ tripSegment: PIOTripSegment!) {
-        self.insertEventViaDelegate(.departing, location: tripSegment.departureLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival);
+        self.insertEventViaDelegate(.departing, location: tripSegment.departureLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival, zoneType: tripSegment.departureZone.zoneType);
         print("Delegate - departing")
     }
 
     func departed(_ tripSegment: PIOTripSegment) {
-        self.insertEventViaDelegate(.departed, location: tripSegment.departureLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival);
+        self.insertEventViaDelegate(.departed, location: tripSegment.departureLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival, zoneType: tripSegment.departureZone.zoneType);
         print("Delegate - departed")
     }
 
     func departureCanceled(_ tripSegment: PIOTripSegment) {
-        self.insertEventViaDelegate(.departureCanceled, location: tripSegment.departureLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival);
+        self.insertEventViaDelegate(.departureCanceled, location: tripSegment.departureLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival, zoneType: tripSegment.departureZone.zoneType);
         print("Delegate - departureCanceled")
     }
 
     func transportationMode(_ tripSegment: PIOTripSegment) {
-        self.insertEventViaDelegate(.transportMode, location: tripSegment.departureLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival);
+        self.insertEventViaDelegate(.transportMode, location: tripSegment.departureLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival, zoneType: tripSegment.departureZone.zoneType);
         print("Delegate - transportationMode \(tripSegment.transportationMode.rawValue)")
     }
 
     func arrivalSuspected(_ tripSegment: PIOTripSegment) {
-        self.insertEventViaDelegate(.arrivalSuspected, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival);
+        self.insertEventViaDelegate(.arrivalSuspected, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival, zoneType: tripSegment.arrivalZone.zoneType);
         print("Delegate - arrivalSuspected")
     }
 
     func arrived(_ tripSegment: PIOTripSegment) {
-        self.insertEventViaDelegate(.arrived, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival);
+        self.insertEventViaDelegate(.arrived, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival, zoneType: tripSegment.arrivalZone.zoneType);
         print("Delegate - arrived")
     }
 
     func searching(inPerimeter searchingLocation: CLLocation!) {
-        self.insertEventViaDelegate(.searching, location: searchingLocation, transportationMode: TransportationMode.undetermined, stationary: false);
+        self.insertEventViaDelegate(.searching, location: searchingLocation, transportationMode: TransportationMode.undetermined, stationary: false, zoneType: .other);
         print("Delegate - searchingInPerimeter")
     }
 
@@ -130,12 +130,12 @@ class PredictIOService: NSObject, PredictIODelegate {
     }
     
     func beingStationary(afterArrival tripSegment: PIOTripSegment!) {
-        self.insertEventViaDelegate(.stationary, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival);
+        self.insertEventViaDelegate(.stationary, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival, zoneType: tripSegment.arrivalZone.zoneType);
         print("Delegate - searchingInPerimeter")
     }
 
     func traveled(byAirplane tripSegment: PIOTripSegment!) {
-        self.insertEventViaDelegate(.traveledByAirplane, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival);
+        self.insertEventViaDelegate(.traveledByAirplane, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival, zoneType: tripSegment.arrivalZone.zoneType);
         print("Delegate - searchingInPerimeter")
     }
     
@@ -144,69 +144,69 @@ class PredictIOService: NSObject, PredictIODelegate {
     func departingViaNotification(_ notification: Notification) {
         let userInfo = (notification as NSNotification).userInfo! as NSDictionary
         let tripSegment = userInfo["tripSegment"] as! PIOTripSegment
-        self.insertEventViaNotification(.departing, location: tripSegment.departureLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival);
+        self.insertEventViaNotification(.departing, location: tripSegment.departureLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival, zoneType: tripSegment.departureZone.zoneType);
         print("Notification - departing")
     }
 
     func departedViaNotification(_ notification: Notification) {
         let userInfo = (notification as NSNotification).userInfo! as NSDictionary
         let tripSegment = userInfo["tripSegment"] as! PIOTripSegment
-        self.insertEventViaNotification(.departed, location: tripSegment.departureLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival);
+        self.insertEventViaNotification(.departed, location: tripSegment.departureLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival, zoneType: tripSegment.departureZone.zoneType);
         print("Notification - departed")
     }
 
     func departureCanceledViaNotification(_ notification: Notification) {
         let userInfo = (notification as NSNotification).userInfo! as NSDictionary
         let tripSegment = userInfo["tripSegment"] as! PIOTripSegment
-        self.insertEventViaNotification(.departureCanceled, location: tripSegment.departureLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival);
+        self.insertEventViaNotification(.departureCanceled, location: tripSegment.departureLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival, zoneType: tripSegment.departureZone.zoneType);
         print("Notification - departureCanceled")
     }
 
     func transportationModeViaNotification(_ notification: Notification) {
         let userInfo = (notification as NSNotification).userInfo! as NSDictionary
         let tripSegment = userInfo["tripSegment"] as! PIOTripSegment
-        self.insertEventViaNotification(.transportMode, location: tripSegment.departureLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival);
+        self.insertEventViaNotification(.transportMode, location: tripSegment.departureLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival, zoneType: tripSegment.departureZone.zoneType);
         print("transportationMode \(tripSegment.transportationMode)")
     }
 
     func arrivalSuspectedViaNotification(_ notification: Notification) {
         let userInfo = (notification as NSNotification).userInfo! as NSDictionary
         let tripSegment = userInfo["tripSegment"] as! PIOTripSegment
-        self.insertEventViaNotification(.arrivalSuspected, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival);
+        self.insertEventViaNotification(.arrivalSuspected, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival, zoneType: tripSegment.arrivalZone.zoneType);
         print("Notification - arrivalSuspected")
     }
 
     func arrivedViaNotification(_ notification: Notification) {
         let userInfo = (notification as NSNotification).userInfo! as NSDictionary
         let tripSegment = userInfo["tripSegment"] as! PIOTripSegment
-        self.insertEventViaNotification(.arrived, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival);
+        self.insertEventViaNotification(.arrived, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival, zoneType: tripSegment.arrivalZone.zoneType);
         print("Notification - arrived")
     }
 
     func searchingInPerimeterViaNotification(_ notification: Notification) {
         let userInfo = (notification as NSNotification).userInfo! as NSDictionary
         let searchingLocation = userInfo["location"] as! CLLocation
-        self.insertEventViaNotification(.searching, location: searchingLocation, transportationMode: TransportationMode.undetermined, stationary: false);
+        self.insertEventViaNotification(.searching, location: searchingLocation, transportationMode: TransportationMode.undetermined, stationary: false, zoneType:.other);
         print("!Notification - searchingInPerimeter")
     }
 
     func stationaryAfterArrivalViaNotification(_ notification: Notification) {
         let userInfo = (notification as NSNotification).userInfo! as NSDictionary
         let tripSegment = userInfo["tripSegment"] as! PIOTripSegment
-        self.insertEventViaNotification(.stationary, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival);
+        self.insertEventViaNotification(.stationary, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival, zoneType: tripSegment.arrivalZone.zoneType);
         print("Notification - arrived")
     }
 
     func traveledByAirplaneViaNotification(_ notification: Notification) {
         let userInfo = (notification as NSNotification).userInfo! as NSDictionary
         let tripSegment = userInfo["tripSegment"] as! PIOTripSegment
-        self.insertEventViaNotification(.traveledByAirplane, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival);
+        self.insertEventViaNotification(.traveledByAirplane, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode, stationary: tripSegment.stationaryAfterArrival, zoneType: tripSegment.arrivalZone.zoneType);
         print("Notification - arrived")
     }
     
     // Mark: Core data
 
-    func insertEventViaDelegate(_ type: PredictIOEventType, location: CLLocation, transportationMode: TransportationMode, stationary: Bool) {
+    func insertEventViaDelegate(_ type: PredictIOEventType, location: CLLocation, transportationMode: TransportationMode, stationary: Bool, zoneType:PIOZoneType) {
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedObjectContext = appDelegate.managedObjectContext
@@ -219,6 +219,8 @@ class PredictIOService: NSObject, PredictIODelegate {
         event.timeStamp = Date() as NSDate?
         event.mode = NSNumber(value: transportationMode.rawValue as Int32);
         event.stationary = stationary as NSNumber?
+        event.zoneType = zoneType.rawValue as NSNumber?
+        
         do {
             try managedObjectContext.save()
         } catch {
@@ -230,7 +232,7 @@ class PredictIOService: NSObject, PredictIODelegate {
         }
     }
 
-    func insertEventViaNotification(_ type: PredictIOEventType, location: CLLocation, transportationMode: TransportationMode, stationary: Bool) {
+    func insertEventViaNotification(_ type: PredictIOEventType, location: CLLocation, transportationMode: TransportationMode, stationary: Bool, zoneType:PIOZoneType) {
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedObjectContext = appDelegate.managedObjectContext
@@ -243,6 +245,7 @@ class PredictIOService: NSObject, PredictIODelegate {
         event.timeStamp = Date() as NSDate?
         event.mode = NSNumber(value: transportationMode.rawValue as Int32)
         event.stationary = stationary as NSNumber?
+        event.zoneType = zoneType.rawValue as NSNumber?
         
         do {
             try managedObjectContext.save()

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PIONotificationViewController.h"
 #import "AppDelegate.h"
-#import "EventViaNotification.h"
+#import "EventViaNotification+CoreDataClass.h"
 #import "PIOMapViewController.h"
 
 @interface PIONotificationViewController ()

@@ -1,8 +1,8 @@
 //
-//  EventViaNotification.h
+//  EventViaNotification+CoreDataClass.h
 //  ExampleObjectiveC
 //
-//  Created by zee-pk on 02/09/2016.
+//  Created by Abdul Haseeb on 11/16/16.
 //  Copyright © 2016 predict.io by ParkTAG GmbH. All rights reserved.
 //
 
@@ -12,8 +12,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface EventViaNotification : NSManagedObject
-
-// Insert code here to declare functionality of your managed object subclass
 
 @end
 

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PIODelegateViewController.h"
 #import "AppDelegate.h"
-#import "EventViaDelegate.h"
+#import "EventViaDelegate+CoreDataClass.h"
 #import "PIOMapViewController.h"
 
 @interface PIODelegateViewController ()

@@ -38,6 +38,7 @@
 		8854E3971DDC86FF00E5FAAE /* ExampleSwift 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ExampleSwift 2.xcdatamodel"; sourceTree = "<group>"; };
 		8854E39E1DDC8C0200E5FAAE /* EventViaNotification+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventViaNotification+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8854E39F1DDC8C0200E5FAAE /* EventViaDelegate+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EventViaDelegate+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8854E3B21DDCAEB100E5FAAE /* ExampleSwift 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ExampleSwift 3.xcdatamodel"; sourceTree = "<group>"; };
 		88636F811D738AF400C8D396 /* PIONotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIONotificationViewController.swift; sourceTree = "<group>"; };
 		88F04B151D6C90400012B98D /* ExampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F04B181D6C90400012B98D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,9 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88F04B2C1D6C90400012B98D /* Build configuration list for PBXNativeTarget "ExampleSwift" */;
 			buildPhases = (
+				29B480EF4C38D91D05F4E1AC /* [CP] Check Pods Manifest.lock */,
 				88F04B111D6C90400012B98D /* Sources */,
 				88F04B121D6C90400012B98D /* Frameworks */,
 				88F04B131D6C90400012B98D /* Resources */,
+				7FD66394B8B49676B44CFA45 /* [CP] Embed Pods Frameworks */,
+				5992248633DB8B185C2B09CA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,6 +241,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29B480EF4C38D91D05F4E1AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5992248633DB8B185C2B09CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExampleSwift/Pods-ExampleSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FD66394B8B49676B44CFA45 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExampleSwift/Pods-ExampleSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		88F04B111D6C90400012B98D /* Sources */ = {
@@ -428,10 +480,11 @@
 		88F04B1A1D6C90400012B98D /* ExampleSwift.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				8854E3B21DDCAEB100E5FAAE /* ExampleSwift 3.xcdatamodel */,
 				8854E3971DDC86FF00E5FAAE /* ExampleSwift 2.xcdatamodel */,
 				88F04B1B1D6C90400012B98D /* ExampleSwift.xcdatamodel */,
 			);
-			currentVersion = 8854E3971DDC86FF00E5FAAE /* ExampleSwift 2.xcdatamodel */;
+			currentVersion = 8854E3B21DDCAEB100E5FAAE /* ExampleSwift 3.xcdatamodel */;
 			path = ExampleSwift.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
