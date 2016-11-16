@@ -15,7 +15,7 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
     
     let dateFormatter = DateFormatter()
 
-    let labels = ["Departing", "Departed", "Departure Cancelled", "STMP Callback", "Arrival Suspected", "Arrived", "Searching in perimeter"]
+    let labels = ["Departing", "Departed", "Departure Cancelled", "STMP Callback", "Arrival Suspected", "Arrived", "Searching in perimeter", "Stationary after arrival", "TraveledByAirPlane"]
     
     let transportationModeLabels = ["TransportationMode: Undetermined", "TransportationMode: Car", "TransportationMode: NonCar"];
     

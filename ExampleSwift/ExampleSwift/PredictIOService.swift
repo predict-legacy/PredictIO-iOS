@@ -19,6 +19,8 @@ enum PredictIOEventType: Int {
     case arrivalSuspected
     case arrived
     case searching
+    case stationary
+    case traveledByAirplane
 }
 
 class PredictIOService: NSObject, PredictIODelegate {
@@ -34,11 +36,13 @@ class PredictIOService: NSObject, PredictIODelegate {
 
         NotificationCenter.default.addObserver(self, selector:#selector(departingViaNotification), name:NSNotification.Name.PIODeparting, object:nil)
         NotificationCenter.default.addObserver(self, selector:#selector(departedViaNotification), name:NSNotification.Name.PIODeparted, object:nil)
-        NotificationCenter.default.addObserver(self, selector:#selector(departureCanceledViaNotification), name:NSNotification.Name.PIODepartureCanceled, object:nil)
-        NotificationCenter.default.addObserver(self, selector:#selector(transportationModeViaNotification), name:NSNotification.Name.PIOTransportationMode, object:nil)
-        NotificationCenter.default.addObserver(self, selector:#selector(arrivalSuspectedViaNotification), name:NSNotification.Name.PIOArrivalSuspected, object:nil)
+        NotificationCenter.default.addObserver(self, selector:#selector(departureCanceledViaNotification), name:NSNotification.Name.PIOCanceledDeparture, object:nil)
+        NotificationCenter.default.addObserver(self, selector:#selector(transportationModeViaNotification), name:NSNotification.Name.PIODetectedTransportationMode, object:nil)
+        NotificationCenter.default.addObserver(self, selector:#selector(arrivalSuspectedViaNotification), name:NSNotification.Name.PIOSuspectedArrival, object:nil)
         NotificationCenter.default.addObserver(self, selector:#selector(arrivedViaNotification), name:NSNotification.Name.PIOArrived, object:nil)
         NotificationCenter.default.addObserver(self, selector:#selector(searchingInPerimeterViaNotification), name:NSNotification.Name.PIOSearchingParking, object:nil)
+        NotificationCenter.default.addObserver(self, selector:#selector(stationaryAfterArrivalViaNotification), name:NSNotification.Name.PIOBeingStationaryAfterArrival, object:nil)
+        NotificationCenter.default.addObserver(self, selector:#selector(traveledByAirplaneViaNotification), name:NSNotification.Name.PIOTraveledByAirplane, object:nil)
     }
 
     func resume() -> Void {
@@ -124,7 +128,17 @@ class PredictIOService: NSObject, PredictIODelegate {
     func didUpdate(_ location: CLLocation!) {
         // print("Delegate - didUpdateLocation")
     }
+    
+    func beingStationary(afterArrival tripSegment: PIOTripSegment!) {
+        self.insertEventViaDelegate(.stationary, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode);
+        print("Delegate - searchingInPerimeter")
+    }
 
+    func traveled(byAirplane tripSegment: PIOTripSegment!) {
+        self.insertEventViaDelegate(.traveledByAirplane, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode);
+        print("Delegate - searchingInPerimeter")
+    }
+    
     // Mark: Notifications
 
     func departingViaNotification(_ notification: Notification) {
@@ -176,6 +190,20 @@ class PredictIOService: NSObject, PredictIODelegate {
         print("!Notification - searchingInPerimeter")
     }
 
+    func stationaryAfterArrivalViaNotification(_ notification: Notification) {
+        let userInfo = (notification as NSNotification).userInfo! as NSDictionary
+        let tripSegment = userInfo["tripSegment"] as! PIOTripSegment
+        self.insertEventViaNotification(.stationary, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode);
+        print("Notification - arrived")
+    }
+
+    func traveledByAirplaneViaNotification(_ notification: Notification) {
+        let userInfo = (notification as NSNotification).userInfo! as NSDictionary
+        let tripSegment = userInfo["tripSegment"] as! PIOTripSegment
+        self.insertEventViaNotification(.traveledByAirplane, location: tripSegment.arrivalLocation, transportationMode: tripSegment.transportationMode);
+        print("Notification - arrived")
+    }
+    
     // Mark: Core data
 
     func insertEventViaDelegate(_ type: PredictIOEventType, location: CLLocation, transportationMode: TransportationMode) {

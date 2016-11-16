@@ -40,19 +40,26 @@
                                                  name:PIODepartedNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(departureCanceledViaNotification:)
-                                                 name:PIODepartureCanceledNotification object:nil];
+                                                 name:PIOCanceledDepartureNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(transportationModeViaNotification:)
-                                                 name:PIOTransportationModeNotification object:nil];
+                                                 name:PIODetectedTransportationModeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(arrivalSuspectedViaNotification:)
-                                                 name:PIOArrivalSuspectedNotification object:nil];
+                                                 name:PIOSuspectedArrivalNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(arrivedViaNotification:)
                                                  name:PIOArrivedNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(searchingInPerimeterViaNotification:)
-                                                 name:PIOSearchingParkingNotification object:nil];}
+                                                 name:PIOSearchingParkingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(beingStationaryAfterArrivalViaNotification:)
+                                                 name:PIOBeingStationaryAfterArrivalNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(traveledByAirplaneViaNotification:)
+                                                 name:PIOTraveledByAirplaneNotification object:nil];
+}
 
 - (void)resume {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -113,17 +120,17 @@
     NSLog(@"Delegate - departed");
 }
 
-- (void)departureCanceled:(PIOTripSegment *)tripSegment {
+- (void)canceledDeparture:(PIOTripSegment *)tripSegment {
     [self insertEventViaDelegate:DepartureCanceled location:tripSegment.departureLocation mode:tripSegment.transportationMode];
     NSLog(@"Delegate - departureCanceled");
 }
 
-- (void)transportationMode:(PIOTripSegment *)tripSegment {
+- (void)detectedTransportationMode:(PIOTripSegment *)tripSegment {
     [self insertEventViaDelegate:TransportMode location:tripSegment.departureLocation mode:tripSegment.transportationMode];
     NSLog(@"Delegate - transportationMode: %d", tripSegment.transportationMode);
 }
 
-- (void)arrivalSuspected:(PIOTripSegment *)tripSegment {
+- (void)suspectedArrival:(PIOTripSegment *)tripSegment {
     [self insertEventViaDelegate:ArrivalSuspected location:tripSegment.arrivalLocation mode:tripSegment.transportationMode];
     NSLog(@"Delegate - arrivalSuspected");
 }
@@ -136,6 +143,16 @@
 - (void)searchingInPerimeter:(CLLocation *)searchingLocation {
     [self insertEventViaDelegate:Searching location:searchingLocation mode:TransportationModeUndetermined];
     NSLog(@"Delegate - searchingInPerimeter");
+}
+
+- (void)beingStationaryAfterArrival:(PIOTripSegment *)tripSegment {
+    [self insertEventViaDelegate:Stationary location:tripSegment.arrivalLocation mode:tripSegment.transportationMode];
+    NSLog(@"Delegate - beingStationaryAfterArrival");
+}
+
+- (void)traveledByAirplane:(PIOTripSegment *)tripSegment {
+    [self insertEventViaDelegate:TraveledByAirPlane location:tripSegment.arrivalLocation mode:tripSegment.transportationMode];
+    NSLog(@"Delegate - traveledByAirplane");
 }
 
 - (void)didUpdateLocation:(CLLocation *)location {
@@ -191,6 +208,20 @@
     CLLocation *location = userInfo[@"location"];
     [self insertEventViaNotification:Searching location:location mode:TransportationModeUndetermined];
     NSLog(@"Notification - searchingInPerimeter");
+}
+
+- (void)beingStationaryAfterArrivalViaNotification:(NSNotification *)notification {
+    NSDictionary *userInfo = notification.userInfo;
+    PIOTripSegment *tripSegment = userInfo[@"tripSegment"];
+    [self insertEventViaNotification:Stationary location:tripSegment.arrivalLocation mode:tripSegment.transportationMode];
+    NSLog(@"Notification - beingStationaryAfterArrival");
+}
+
+- (void)traveledByAirplaneViaNotification:(NSNotification *)notification {
+    NSDictionary *userInfo = notification.userInfo;
+    PIOTripSegment *tripSegment = userInfo[@"tripSegment"];
+    [self insertEventViaNotification:TraveledByAirPlane location:tripSegment.arrivalLocation mode:tripSegment.transportationMode];
+    NSLog(@"Notification - traveledByAirplane");
 }
 
 #pragma - mark core data
