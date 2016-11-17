@@ -7,13 +7,10 @@
 //
 
 #import "PIOZoneViewController.h"
-#import <PredictIO-iOS/PredictIO.h>
 #import <MapKit/MapKit.h>
 
 @interface PIOZoneViewController ()<MKMapViewDelegate>
 
-@property (strong, nonatomic) PIOZone *homeZone;
-@property (strong, nonatomic) PIOZone *workZone;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end

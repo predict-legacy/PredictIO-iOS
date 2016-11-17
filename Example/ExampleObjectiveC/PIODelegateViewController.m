@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "EventViaDelegate+CoreDataClass.h"
 #import "PIOMapViewController.h"
+#import "PIOZoneViewController.h"
 
 @interface PIODelegateViewController ()
 
@@ -58,6 +59,11 @@
         CLLocation *location = [[CLLocation alloc] initWithCoordinate:CLLocationCoordinate2DMake(event.latitude.doubleValue, event.longitude.doubleValue) altitude:0.0 horizontalAccuracy:event.accuracy.doubleValue verticalAccuracy:0.0 course:0.0 speed:0.0 timestamp:event.timeStamp];
         PIOMapViewController *controller = [segue destinationViewController];
         controller.location = location;
+        controller.zoneType = (PIOZoneType) event.zoneType.integerValue;
+    } else if ([[segue identifier] isEqualToString:@"showZones"]) {
+        PIOZoneViewController *controller = [segue destinationViewController];
+        controller.homeZone = PredictIO.sharedInstance.homeZone;
+        controller.workZone = PredictIO.sharedInstance.workZone;
     }
 }
 
@@ -103,7 +109,7 @@
         [self performSegueWithIdentifier:@"showZones" sender:self];
     } else {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Home/Work Zones"
-                                                                                 message:@"No zone information available at this moment.\nPlease check again after some trips."
+                                                                                 message:@"No zone information available at this moment. Please check again after some trips."
                                                                           preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *alertActionOk = [UIAlertAction actionWithTitle:@"Ok"
                                                                 style:UIAlertActionStyleDefault
@@ -186,7 +192,7 @@
     
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;
     

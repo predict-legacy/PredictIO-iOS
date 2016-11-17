@@ -315,7 +315,7 @@
         <!--Zone View Controller-->
         <scene sceneID="wJ1-1f-VQP">
             <objects>
-                <viewController id="aVN-wK-51W" customClass="PIOZoneViewController" customModule="ExampleObjectiveC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aVN-wK-51W" customClass="PIOZoneViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9RO-al-xXj"/>
                         <viewControllerLayoutGuide type="bottom" id="JZ7-fN-QnH"/>

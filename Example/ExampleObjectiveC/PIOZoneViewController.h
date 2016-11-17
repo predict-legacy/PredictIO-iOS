@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <PredictIO-iOS/PredictIO.h>
 
 @interface PIOZoneViewController : UIViewController
+
+@property (strong, nonatomic) PIOZone *homeZone;
+@property (strong, nonatomic) PIOZone *workZone;
 
 @end

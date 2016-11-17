@@ -55,7 +55,7 @@
             self.zoneView.hidden = NO;
             break;
         case PIOZoneTypeWork:
-            self.zoneLabel.text = @"Event triggered within Home zone";
+            self.zoneLabel.text = @"Event triggered within Work zone";
             self.zoneView.hidden = NO;
             break;
         case PIOZoneTypeOther:

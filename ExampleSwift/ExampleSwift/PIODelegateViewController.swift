@@ -85,7 +85,7 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
         if ((homeZone != nil) || (workZone != nil)) {
             performSegue(withIdentifier: "showZones", sender: self)
         } else {
-            let alertController = UIAlertController(title: "Home/Work Zones", message: "No zone information available at this moment.\nPlease check again after some trips.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Home/Work Zones", message: "No zone information available at this moment. Please check again after some trips.", preferredStyle: .alert)
             let alertActionOK = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(alertActionOK)
             present(alertController, animated: true, completion: nil)
@@ -182,7 +182,7 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: "Master1")
+        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         aFetchedResultsController.delegate = self
         _fetchedResultsController = aFetchedResultsController
         
