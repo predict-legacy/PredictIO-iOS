@@ -95,6 +95,24 @@
     }
 }
 
+- (IBAction)showHomeWorkZones:(id)sender {
+    PIOZone *homeZone = [PredictIO sharedInstance].homeZone;
+    PIOZone *workZone = [PredictIO sharedInstance].workZone;
+    
+    if (homeZone || workZone) {
+        [self performSegueWithIdentifier:@"showZones" sender:self];
+    } else {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Home/Work Zones"
+                                                                                 message:@"No zone information available at this moment.\nPlease check again after some trips."
+                                                                          preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *alertActionOk = [UIAlertAction actionWithTitle:@"Ok"
+                                                                style:UIAlertActionStyleDefault
+                                                              handler:nil];
+        [alertController addAction:alertActionOk];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+}
+
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

@@ -11,6 +11,7 @@
 		8854E3C31DDCB45F00E5FAAE /* EventViaNotification+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8854E3BD1DDCB45F00E5FAAE /* EventViaNotification+CoreDataProperties.m */; };
 		8854E3C41DDCB45F00E5FAAE /* EventViaDelegate+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8854E3BF1DDCB45F00E5FAAE /* EventViaDelegate+CoreDataClass.m */; };
 		8854E3C51DDCB45F00E5FAAE /* EventViaDelegate+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8854E3C11DDCB45F00E5FAAE /* EventViaDelegate+CoreDataProperties.m */; };
+		8854E3C81DDD816D00E5FAAE /* PIOZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8854E3C71DDD816D00E5FAAE /* PIOZoneViewController.m */; };
 		88F04B401D6CA1790012B98D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F04B3F1D6CA1790012B98D /* main.m */; };
 		88F04B431D6CA1790012B98D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F04B421D6CA1790012B98D /* AppDelegate.m */; };
 		88F04B461D6CA1790012B98D /* ExampleObjectiveC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88F04B441D6CA1790012B98D /* ExampleObjectiveC.xcdatamodeld */; };
@@ -47,6 +48,8 @@
 		8854E3BF1DDCB45F00E5FAAE /* EventViaDelegate+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EventViaDelegate+CoreDataClass.m"; sourceTree = "<group>"; };
 		8854E3C01DDCB45F00E5FAAE /* EventViaDelegate+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EventViaDelegate+CoreDataProperties.h"; sourceTree = "<group>"; };
 		8854E3C11DDCB45F00E5FAAE /* EventViaDelegate+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EventViaDelegate+CoreDataProperties.m"; sourceTree = "<group>"; };
+		8854E3C61DDD816D00E5FAAE /* PIOZoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PIOZoneViewController.h; sourceTree = "<group>"; };
+		8854E3C71DDD816D00E5FAAE /* PIOZoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PIOZoneViewController.m; sourceTree = "<group>"; };
 		88F04B3B1D6CA1790012B98D /* ExampleObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleObjectiveC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F04B3F1D6CA1790012B98D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88F04B411D6CA1790012B98D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -121,6 +124,8 @@
 				88F9560A1D70654C00E4579F /* PIONotificationViewController.m */,
 				899907E61D7718E400CE90E5 /* PIOMapViewController.h */,
 				899907E71D7718E400CE90E5 /* PIOMapViewController.m */,
+				8854E3C61DDD816D00E5FAAE /* PIOZoneViewController.h */,
+				8854E3C71DDD816D00E5FAAE /* PIOZoneViewController.m */,
 				88F04B4D1D6CA1790012B98D /* Main.storyboard */,
 				88F04B521D6CA1790012B98D /* LaunchScreen.storyboard */,
 				88F04B3E1D6CA1790012B98D /* Supporting Files */,
@@ -326,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8854E3C31DDCB45F00E5FAAE /* EventViaNotification+CoreDataProperties.m in Sources */,
+				8854E3C81DDD816D00E5FAAE /* PIOZoneViewController.m in Sources */,
 				8854E3C51DDCB45F00E5FAAE /* EventViaDelegate+CoreDataProperties.m in Sources */,
 				88F04B491D6CA1790012B98D /* PIODelegateViewController.m in Sources */,
 				88F04B431D6CA1790012B98D /* AppDelegate.m in Sources */,
