@@ -2,25 +2,27 @@
 //  EventViaDelegate+CoreDataProperties.h
 //  ExampleObjectiveC
 //
-//  Created by zee-pk on 02/09/2016.
-//  Copyright © 2016 predict.io by ParkTAG GmbH. All rights reserved.
-//
-//  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
-//  to delete and recreate this implementation file for your updated model.
+//  Created by zee-pk on 17/11/2016.
+//  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
 //
 
-#import "EventViaDelegate.h"
+#import "EventViaDelegate+CoreDataClass.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface EventViaDelegate (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSNumber *latitude;
-@property (nullable, nonatomic, retain) NSNumber *longitude;
-@property (nullable, nonatomic, retain) NSDate *timeStamp;
-@property (nullable, nonatomic, retain) NSNumber *type;
-@property (nullable, nonatomic, retain) NSNumber *accuracy;
-@property (nullable, nonatomic, retain) NSNumber *mode;
++ (NSFetchRequest<EventViaDelegate *> *)fetchRequest;
+
+@property (nullable, nonatomic, copy) NSNumber *accuracy;
+@property (nullable, nonatomic, copy) NSNumber *latitude;
+@property (nullable, nonatomic, copy) NSNumber *longitude;
+@property (nullable, nonatomic, copy) NSNumber *mode;
+@property (nullable, nonatomic, copy) NSDate *timeStamp;
+@property (nullable, nonatomic, copy) NSNumber *type;
+@property (nullable, nonatomic, copy) NSNumber *stationary;
+@property (nullable, nonatomic, copy) NSNumber *zoneType;
 
 @end
 

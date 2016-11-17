@@ -17,7 +17,9 @@ typedef NS_ENUM(int, PredictIOEventType) {
     TransportMode,
     ArrivalSuspected,
     Arrived,
-    Searching
+    Searching,
+    Stationary,
+    TraveledByAirPlane
 };
 
 @interface PredictIOService : NSObject

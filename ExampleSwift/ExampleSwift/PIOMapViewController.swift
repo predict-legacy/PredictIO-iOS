@@ -10,12 +10,16 @@ import UIKit
 import CoreData
 import Foundation
 import MapKit
+import PredictIO
 
 class PIOMapViewController: UIViewController, MKMapViewDelegate {
     
     var location: CLLocation!
+    var zoneType = PIOZoneType.other
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var zoneLabel: UILabel!
+    @IBOutlet weak var zoneView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +29,11 @@ class PIOMapViewController: UIViewController, MKMapViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.mapView.delegate = self;
         let coordinate = self.location.coordinate
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
         annotation.title = "Event location" //You can set the subtitle too
-        self.mapView.addAnnotation(annotation)
+        mapView.addAnnotation(annotation)
         
         mapView.add(MKCircle(center: coordinate, radius: self.location.horizontalAccuracy))
         
@@ -38,6 +41,21 @@ class PIOMapViewController: UIViewController, MKMapViewDelegate {
         let span = MKCoordinateSpanMake(coordinateDelta, coordinateDelta)
         let region = MKCoordinateRegionMake(coordinate, span)
         mapView.setRegion(region, animated: true)
+        
+        // display zone information if available
+        switch zoneType {
+        case .home:
+            zoneLabel.text = "Event triggered within Home zone"
+            zoneView.isHidden = false
+            break
+        case .work:
+            zoneLabel.text = "Event triggered within Work zone"
+            zoneView.isHidden = false
+            break
+        case .other:
+            zoneView.isHidden = true
+            break
+        }
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {

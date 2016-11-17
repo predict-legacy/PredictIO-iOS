@@ -2,11 +2,8 @@
 //  EventViaNotification+CoreDataProperties.swift
 //  ExampleSwift
 //
-//  Created by zee-pk on 02/09/2016.
+//  Created by zee-pk on 16/11/2016.
 //  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
-//
-//  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
-//  to delete and recreate this implementation file for your updated model.
 //
 
 import Foundation
@@ -25,5 +22,7 @@ extension EventViaNotification {
     @NSManaged public var mode: NSNumber?
     @NSManaged public var timeStamp: NSDate?
     @NSManaged public var type: NSNumber?
+    @NSManaged public var stationary: NSNumber?
+    @NSManaged public var zoneType: NSNumber?
 
 }

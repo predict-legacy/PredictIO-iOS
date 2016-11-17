@@ -2,12 +2,13 @@
 //  PIOTripSegment.h
 //  PredictIOSDK
 //
-//  Created by Abdul Haseeb on 8/8/16.
+//  Created by Abdul Haseeb on 08/08/2016.
 //  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
-//  SDK Version 3.1.0
+//  SDK Version 3.2.0
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import "PIOZone.h"
 
 /*
  * PredictIOStatus
@@ -70,11 +71,23 @@ typedef NS_ENUM(int, LogLevel)  {
 /** @brief Predicted mode of transport */
 @property (assign, readonly) TransportationMode transportationMode;
 
-- (id)initWithUUID:(NSString *)UUID
- departureLocation:(CLLocation *)departureLocation
-   arrivalLocation:(CLLocation *)arrivalLocation
-     departureTime:(NSDate *)departureTime
-       arrivalTime:(NSDate *)arrivalTime
-transportationMode:(TransportationMode)transportationMode;
+/** @brief Departure Zone */
+@property (strong, readonly) PIOZone *departureZone;
+
+/** @brief Arrival Zone */
+@property (strong, readonly) PIOZone *arrivalZone;
+
+/** @brief Stationary after arrival at destination **/
+@property (assign, readonly) BOOL stationaryAfterArrival;
+
+- (instancetype)initWithUUID:(NSString *)UUID
+           departureLocation:(CLLocation *)departureLocation
+             arrivalLocation:(CLLocation *)arrivalLocation
+               departureTime:(NSDate *)departureTime
+                 arrivalTime:(NSDate *)arrivalTime
+          transportationMode:(TransportationMode)transportationMode
+               departureZone:(PIOZone *)departureZone
+                 arrivalZone:(PIOZone *)arrivalZone
+      stationaryAfterArrival:(BOOL)stationaryAfterArrival;
 
 @end

@@ -15,10 +15,12 @@ class PIONotificationViewController: UITableViewController, NSFetchedResultsCont
     
     let dateFormatter = DateFormatter()
     
-    let labels = ["Departing", "Departed", "Departure Cancelled", "STMP Callback", "Arrival Suspected", "Arrived", "Searching in perimeter"]
+    let labels = ["Departing", "Departed", "Departure Cancelled", "STMP Callback", "Arrival Suspected", "Arrived", "Searching in perimeter", "Stationary after arrival", "TraveledByAirPlane"]
     
     let transportationModeLabels = ["TransportationMode: Undetermined", "TransportationMode: Car", "TransportationMode: NonCar"];
     
+    let stationaryStates = ["Stationary: NO", "Stationary: YES"]
+
     let managedObjectContext: NSManagedObjectContext = {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.managedObjectContext
@@ -76,6 +78,19 @@ class PIONotificationViewController: UITableViewController, NSFetchedResultsCont
         }
     }
     
+    @IBAction func showHomeWorkZones(_ sender: Any) {
+        let homeZone = PredictIO.sharedInstance().homeZone
+        let workZone = PredictIO.sharedInstance().workZone
+        
+        if ((homeZone != nil) || (workZone != nil)) {
+            performSegue(withIdentifier: "showZones", sender: self)
+        } else {
+            let alertController = UIAlertController(title: "Home/Work Zones", message: "No zone information available at this moment. Please check again after some trips.", preferredStyle: .alert)
+            let alertActionOK = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(alertActionOK)
+            present(alertController, animated: true, completion: nil)
+        }
+    }
     // MARK: - Table View
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -121,6 +136,9 @@ class PIONotificationViewController: UITableViewController, NSFetchedResultsCont
         if (eventType == .transportMode) {
             let modeIntegerValue = event.mode!.intValue
             cell.textLabel!.text = transportationModeLabels[modeIntegerValue]
+        } else if (eventType == .stationary) {
+            let stationaryIntegerValue = event.stationary!.intValue
+            cell.textLabel!.text = stationaryStates[stationaryIntegerValue]
         } else {
             cell.textLabel!.text = labels[eventTypeIntegerValue]
         }
@@ -133,9 +151,15 @@ class PIONotificationViewController: UITableViewController, NSFetchedResultsCont
         if (segue.identifier == "showOnMap") {
             let indexPath = tableView.indexPathForSelectedRow!
             let event = fetchedResultsController.object(at: indexPath)
-            let location = CLLocation(coordinate: CLLocationCoordinate2DMake(event.latitude!.doubleValue, event.longitude!.doubleValue), altitude: 0.0, horizontalAccuracy: event.accuracy!.doubleValue , verticalAccuracy: 0.0, course: 0.0, speed: 0.0, timestamp: event.timeStamp! as Date)
+            let coordinate = CLLocationCoordinate2DMake(event.latitude!.doubleValue, event.longitude!.doubleValue)
+            let location = CLLocation(coordinate: coordinate, altitude: 0.0, horizontalAccuracy: event.accuracy!.doubleValue , verticalAccuracy: 0.0, course: 0.0, speed: 0.0, timestamp: event.timeStamp! as Date)
             let controller = segue.destination as! PIOMapViewController
             controller.location = location
+            controller.zoneType = PIOZoneType(rawValue: event.zoneType as! Int32)!
+        } else if (segue.identifier == "showZones") {
+            let controller = segue.destination as! PIOZoneViewController
+            controller.homeZone = PredictIO.sharedInstance().homeZone
+            controller.workZone = PredictIO.sharedInstance().workZone
         }
     }
 
@@ -158,7 +182,7 @@ class PIONotificationViewController: UITableViewController, NSFetchedResultsCont
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: "Master2")
+        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         aFetchedResultsController.delegate = self
         _fetchedResultsController = aFetchedResultsController
         

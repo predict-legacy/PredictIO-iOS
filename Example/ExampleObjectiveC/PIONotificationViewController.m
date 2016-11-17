@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "PIONotificationViewController.h"
 #import "AppDelegate.h"
-#import "EventViaNotification.h"
+#import "EventViaNotification+CoreDataClass.h"
 #import "PIOMapViewController.h"
+#import "PIOZoneViewController.h"
 
 @interface PIONotificationViewController ()
 
@@ -18,6 +19,7 @@
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
 @property (strong, nonatomic) NSArray *transportationModeLabels;
 @property (strong, nonatomic) NSArray *labels;
+@property (strong, nonatomic) NSArray *stationaryStates;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
@@ -34,8 +36,9 @@
     
     self.dateFormatter = [[NSDateFormatter alloc] init];
     self.dateFormatter.dateFormat = @"dd/MM hh:mm a";
-    self.labels = @[@"Departing", @"Departed", @"Departure Cancel", @"STMP Callback", @"Arrival Suspected", @"Arrived", @"Searching in perimeter"];
+    self.labels = @[@"Departing", @"Departed", @"Departure Cancel", @"STMP Callback", @"Arrival Suspected", @"Arrived", @"Searching in perimeter", @"Stationary after arrival", @"Traveled by airplane"];
     self.transportationModeLabels = @[@"TransportationMode: Undetermined", @"TransportationMode: Car", @"TransportationMode: NonCar"];
+    self.stationaryStates = @[@"Stationary: NO",@"Stationary: YES"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -56,6 +59,11 @@
         CLLocation *location = [[CLLocation alloc] initWithCoordinate:CLLocationCoordinate2DMake(event.latitude.doubleValue, event.longitude.doubleValue) altitude:0.0 horizontalAccuracy:event.accuracy.doubleValue verticalAccuracy:0.0 course:0.0 speed:0.0 timestamp:event.timeStamp];
         PIOMapViewController *controller = [segue destinationViewController];
         controller.location = location;
+        controller.zoneType = (PIOZoneType) event.zoneType.integerValue;
+    } else if ([[segue identifier] isEqualToString:@"showZones"]) {
+        PIOZoneViewController *controller = [segue destinationViewController];
+        controller.homeZone = PredictIO.sharedInstance.homeZone;
+        controller.workZone = PredictIO.sharedInstance.workZone;
     }
 }
 
@@ -90,6 +98,20 @@
                 NSLog(@"Started predict.io...");
             }
         }];
+    }
+}
+
+- (IBAction)showHomeWorkZones:(id)sender {
+    PIOZone *homeZone = [PredictIO sharedInstance].homeZone;
+    PIOZone *workZone = [PredictIO sharedInstance].workZone;
+    
+    if (homeZone || workZone) {
+        [self performSegueWithIdentifier:@"showZones" sender:self];
+    } else {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Home/Work Zones" message:@"No zone information available at this moment. Please check again after some trips." preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *alertActionOk = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
+        [alertController addAction:alertActionOk];
+        [self presentViewController:alertController animated:YES completion:nil];
     }
 }
 
@@ -132,6 +154,8 @@
     enum PredictIOEventType eventType = (enum PredictIOEventType) event.type.integerValue;
     if (eventType == TransportMode) {
         cell.textLabel.text = self.transportationModeLabels[(NSUInteger) event.mode.integerValue];
+    } else if (eventType == Stationary) {
+        cell.textLabel.text = self.stationaryStates[(NSUInteger) event.stationary.integerValue];
     } else {
         cell.textLabel.text = self.labels[eventType];
     }
@@ -164,7 +188,7 @@
 
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;
 
