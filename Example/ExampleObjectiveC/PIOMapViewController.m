@@ -12,6 +12,8 @@
 @interface PIOMapViewController ()
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UIView *zoneView;
+@property (weak, nonatomic) IBOutlet UILabel *zoneLabel;
 
 @end
 
@@ -45,6 +47,21 @@
     MKCoordinateSpan span = MKCoordinateSpanMake(coordinateDelta, coordinateDelta);
     MKCoordinateRegion region = MKCoordinateRegionMake(coordinate, span);
     [self.mapView setRegion:region animated:YES];
+    
+    // display zone information if available
+    switch (self.zoneType) {
+        case PIOZoneTypeHome:
+            self.zoneLabel.text = @"Event triggered within Home zone";
+            self.zoneView.hidden = NO;
+            break;
+        case PIOZoneTypeWork:
+            self.zoneLabel.text = @"Event triggered within Home zone";
+            self.zoneView.hidden = NO;
+            break;
+        case PIOZoneTypeOther:
+            self.zoneView.hidden = YES;
+            break;
+    }
 }
 
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay {

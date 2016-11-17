@@ -2,8 +2,8 @@
 //  EventViaNotification+CoreDataProperties.h
 //  ExampleObjectiveC
 //
-//  Created by Abdul Haseeb on 11/16/16.
-//  Copyright © 2016 predict.io by ParkTAG GmbH. All rights reserved.
+//  Created by zee-pk on 17/11/2016.
+//  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
 //
 
 #import "EventViaNotification+CoreDataClass.h"
@@ -19,10 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSNumber *latitude;
 @property (nullable, nonatomic, copy) NSNumber *longitude;
 @property (nullable, nonatomic, copy) NSNumber *mode;
-@property (nullable, nonatomic, copy) NSNumber *stationary;
 @property (nullable, nonatomic, copy) NSDate *timeStamp;
 @property (nullable, nonatomic, copy) NSNumber *type;
-@property (nullable, nonatomic, retain) NSObject *zoneType;
+@property (nullable, nonatomic, copy) NSNumber *zoneType;
+@property (nullable, nonatomic, copy) NSNumber *stationary;
 
 @end
 

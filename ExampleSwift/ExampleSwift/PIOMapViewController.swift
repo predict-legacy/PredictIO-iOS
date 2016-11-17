@@ -44,9 +44,6 @@ class PIOMapViewController: UIViewController, MKMapViewDelegate {
         
         // display zone information if available
         switch zoneType {
-        case .other:
-            zoneView.isHidden = true
-            break
         case .home:
             zoneLabel.text = "Event triggered within Home zone"
             zoneView.isHidden = false
@@ -54,6 +51,9 @@ class PIOMapViewController: UIViewController, MKMapViewDelegate {
         case .work:
             zoneLabel.text = "Event triggered within Work zone"
             zoneView.isHidden = false
+            break
+        case .other:
+            zoneView.isHidden = true
             break
         }
     }

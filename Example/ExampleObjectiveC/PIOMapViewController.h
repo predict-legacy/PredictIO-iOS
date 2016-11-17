@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <PredictIO-iOS/PredictIO.h>
 
 @interface PIOMapViewController : UIViewController
 
 @property (strong, nonatomic) CLLocation *location;
+@property (assign, nonatomic) PIOZoneType zoneType;
 
 @end

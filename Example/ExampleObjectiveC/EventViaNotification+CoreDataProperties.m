@@ -2,8 +2,8 @@
 //  EventViaNotification+CoreDataProperties.m
 //  ExampleObjectiveC
 //
-//  Created by Abdul Haseeb on 11/16/16.
-//  Copyright © 2016 predict.io by ParkTAG GmbH. All rights reserved.
+//  Created by zee-pk on 17/11/2016.
+//  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
 //
 
 #import "EventViaNotification+CoreDataProperties.h"
@@ -18,9 +18,9 @@
 @dynamic latitude;
 @dynamic longitude;
 @dynamic mode;
-@dynamic stationary;
 @dynamic timeStamp;
 @dynamic type;
 @dynamic zoneType;
+@dynamic stationary;
 
 @end
