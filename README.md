@@ -26,7 +26,7 @@ Detects when a user arrives after air travel.
 Send all detected events to your own backend using webhooks.
 
 ##### Use Cases
-Look through the [Use Cases](https://github.com/predict-io/PredictIO-iOS/wiki/Use-Cases) where this SDK can be used.
+Look through the [Use Cases](https://www.predict.io/use-cases/) where this SDK can be used.
 
 ## Requirements
 * [Sign up](http://www.predict.io/sdk-sign-up/) for API key
