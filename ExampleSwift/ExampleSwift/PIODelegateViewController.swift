@@ -137,7 +137,7 @@ class PIODelegateViewController: UITableViewController, NSFetchedResultsControll
             let modeIntegerValue = event.mode!.intValue
             cell.textLabel!.text = transportationModeLabels[modeIntegerValue]
         } else if (eventType == .stationary) {
-            let stationaryIntegerValue = event.stationary!.intValue
+            let stationaryIntegerValue = event.stationary?.intValue ?? 0
             cell.textLabel!.text = stationaryStates[stationaryIntegerValue]
         } else {
             cell.textLabel!.text = labels[eventTypeIntegerValue]
