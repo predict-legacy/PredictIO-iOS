@@ -51,9 +51,9 @@ class PredictIOService: NSObject, PredictIODelegate {
         let predictIOEnabled = defaults.bool(forKey: "PredictIOEnabled")
         if predictIOEnabled {
             PredictIO.sharedInstance().start(completionHandler: { (error) -> (Void) in
-                if error != nil {
+                if let error = error {
                     OperationQueue.main.addOperation({
-                        let userInfo = error!._userInfo as! NSDictionary
+                        let userInfo = error._userInfo as! NSDictionary
                         let errorTitle = userInfo["NSLocalizedFailureReason"] as! String
                         let errorDescription = userInfo["NSLocalizedDescription"] as! String
                         let rootViewController = UIApplication.shared.keyWindow?.rootViewController;
@@ -66,7 +66,7 @@ class PredictIOService: NSObject, PredictIODelegate {
                         defaults.synchronize()
                     })
                 } else {
-                    print("Started predict.io...")
+                    print("Started predict.io... \(PredictIO.sharedInstance().deviceIdentifier() ?? "")")
                 }
             })
         }

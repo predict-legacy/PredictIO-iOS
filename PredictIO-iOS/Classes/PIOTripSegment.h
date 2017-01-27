@@ -4,7 +4,7 @@
 //
 //  Created by Abdul Haseeb on 08/08/2016.
 //  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
-//  SDK Version 3.2.0
+//  SDK Version 3.3.0-beta.1
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
@@ -17,13 +17,13 @@
 typedef NS_ENUM(int, PredictIOStatus) {
     // predict.io is in a working/active state
     PredictIOStatusActive = 0,
-    
+
     // predict.io not in a working state as the location services are disabled
     PredictIOStatusLocationServicesDisabled,
-    
+
     // predict.io has not been authorized by user to use location services at any time (kCLAuthorizationStatusAuthorizedAlways)
     PredictIOStatusInsufficientPermission,
-    
+
     // predict.io has not been started. It is in inactive state.
     PredictIOStatusInActive
 };
@@ -35,10 +35,10 @@ typedef NS_ENUM(int, PredictIOStatus) {
 typedef NS_ENUM(int, TransportationMode) {
     // current transportation mode is Undetermined
     TransportationModeUndetermined = 0,
-    
+
     // current transportation mode is Car
     TransportationModeCar,
-    
+
     // current transportation mode is other than Car
     TransportationModeNonCar
 };
