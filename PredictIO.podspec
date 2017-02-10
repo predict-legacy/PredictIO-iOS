@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
     s.requires_arc = true
 
   # 2
-    s.version = "3.3.0-beta.2"
+    s.version = "3.3.0"
 
   # 3
     s.license          = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
