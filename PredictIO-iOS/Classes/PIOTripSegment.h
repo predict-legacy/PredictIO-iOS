@@ -4,7 +4,7 @@
 //
 //  Created by Abdul Haseeb on 08/08/2016.
 //  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
-//  SDK Version 3.3.0
+//  SDK Version 4.0.0-beta.1
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
@@ -31,6 +31,8 @@ typedef NS_ENUM(int, PredictIOStatus) {
 /*
  * TransportationMode
  * Discussion: Represents the vehicle transportation mode, determined by the predict.io
+ * The classes overlap partially (car is part of the non-train, but non-train contains
+ * more than train only) and depend on the transportation mode classifier in use.
  */
 typedef NS_ENUM(int, TransportationMode) {
     // current transportation mode is Undetermined
@@ -40,7 +42,13 @@ typedef NS_ENUM(int, TransportationMode) {
     TransportationModeCar,
 
     // current transportation mode is other than Car
-    TransportationModeNonCar
+    TransportationModeNonCar,
+
+    // current transportation mode is Train
+    TransportationModeTrain,
+
+    // current transportation mode is other than Train
+    TransportationModeNonTrain
 };
 
 /*
