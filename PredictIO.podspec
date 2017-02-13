@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
     s.requires_arc = true
 
   # 2
-    s.version = "4.0.0-beta.1"
+    s.version = "4.0.0-beta.2"
 
   # 3
     s.license          = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
     s.source_files = 'PredictIO-iOS/**/*.h', 'PredictIO-iOS/Classes/*.m'
     s.preserve_paths = 'PredictIO-iOS/**/*.h'
     s.vendored_library = 'PredictIO-iOS/libPredictIOSDK.a'
-    s.frameworks = 'UIKit', 'CoreLocation', 'CoreTelephony', 'AdSupport', 'AVFoundation', 'CoreBluetooth', 'SystemConfiguration'
+    s.frameworks = 'UIKit', 'CoreMotion', 'CoreLocation', 'CoreTelephony', 'AdSupport', 'AVFoundation', 'CoreBluetooth', 'SystemConfiguration'
     s.module_map = 'PredictIO-iOS/PredictIO.modulemap'
     s.header_dir = 'PredictIO-iOS'
     s.module_name = 'PredictIO'
