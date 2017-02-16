@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <PredictIO-iOS/PredictIO.h>
+#import <PredictIO/PredictIO.h>
 
 @interface PIOZoneViewController : UIViewController
 
