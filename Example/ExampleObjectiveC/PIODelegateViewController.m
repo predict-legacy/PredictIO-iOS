@@ -37,7 +37,7 @@
     self.dateFormatter = [[NSDateFormatter alloc] init];
     self.dateFormatter.dateFormat = @"dd/MM hh:mm a";
     self.labels = @[@"Departing", @"Departed", @"Departure Cancel", @"STMP Callback", @"Arrival Suspected", @"Arrived", @"Searching in perimeter", @"Stationary after arrival", @"Traveled by airplane"];
-    self.transportationModeLabels = @[@"TransportationMode: Undetermined", @"TransportationMode: Car", @"TransportationMode: NonCar"];
+    self.transportationModeLabels = @[@"TransportationMode: Undetermined", @"TransportationMode: Car", @"TransportationMode: NonCar", @"TransportationMode: Train", @"TransportationMode: NonTrain"];
     self.stationaryStates = @[@"Stationary: NO",@"Stationary: YES"];
 }
 
