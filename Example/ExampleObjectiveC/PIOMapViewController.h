@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-#import <PredictIO-iOS/PredictIO.h>
+#import <PredictIO/PredictIO.h>
 
 @interface PIOMapViewController : UIViewController
 
