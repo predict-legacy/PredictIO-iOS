@@ -29,7 +29,7 @@ Send all detected events to your own backend using webhooks.
 Look through the [Use Cases](https://www.predict.io/use-cases/) where this SDK can be used.
 
 ## Requirements
-* [Sign up](http://www.predict.io/sdk-sign-up/) for API key
+* [Sign up](http://www.predict.io/service/registration/?level=1) for API key
 * iOS 7.0+
 * ARC
 
