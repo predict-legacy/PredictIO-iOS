@@ -4,7 +4,7 @@
 //
 //  Created by Abdul Haseeb on 08/08/2016.
 //  Copyright (c) 2016 predict.io by ParkTAG GmbH. All rights reserved.
-//  SDK Version 4.0.0-beta.4
+//  SDK Version 4.0.0-beta.5
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
@@ -46,7 +46,7 @@ typedef NS_ENUM(int, TransportationMode) {
 
     // current transportation mode is Train
     TransportationModeTrain,
-
+    
     // current transportation mode is other than Train
     TransportationModeNonTrain
 };

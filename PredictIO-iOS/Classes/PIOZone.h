@@ -4,7 +4,7 @@
 //
 //  Created by Umer on 09/06/2016.
 //  Copyright © 2016 ParkTAG GmbH. All rights reserved.
-//  SDK Version 4.0.0-beta.4
+//  SDK Version 4.0.0-beta.5
 //
 
 #import <Foundation/Foundation.h>
