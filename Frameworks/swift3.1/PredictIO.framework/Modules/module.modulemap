@@ -1,0 +1,10 @@
+framework module PredictIO {
+  umbrella header "PredictIO.h"
+
+  export *
+  module * { export * }
+}
+
+module PredictIO.Swift {
+    header "PredictIO-Swift.h"
+}

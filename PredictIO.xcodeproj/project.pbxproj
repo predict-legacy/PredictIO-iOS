@@ -1,0 +1,378 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		664192CD1F8E4B7B007D8FD7 /* Pods_Dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 664192CC1F8E4B77007D8FD7 /* Pods_Dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6633A4911F8E5BF200985E70 /* PredictIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PredictIO.framework; sourceTree = "<group>"; };
+		6633A4931F8E5BF200985E70 /* PredictIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PredictIO.framework; sourceTree = "<group>"; };
+		664192CC1F8E4B77007D8FD7 /* Pods_Dummy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pods_Dummy.m; sourceTree = "<group>"; };
+		6675ABBE1F33C0B9006095BD /* PredictIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PredictIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6675ABC11F33C0B9006095BD /* PredictIO_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PredictIO_iOS.h; sourceTree = "<group>"; };
+		6675ABC21F33C0B9006095BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6675ABBA1F33C0B9006095BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6633A4901F8E5BF200985E70 /* swift4.0 */ = {
+			isa = PBXGroup;
+			children = (
+				6633A4911F8E5BF200985E70 /* PredictIO.framework */,
+			);
+			path = swift4.0;
+			sourceTree = "<group>";
+		};
+		6633A4921F8E5BF200985E70 /* swift3.1 */ = {
+			isa = PBXGroup;
+			children = (
+				6633A4931F8E5BF200985E70 /* PredictIO.framework */,
+			);
+			path = swift3.1;
+			sourceTree = "<group>";
+		};
+		664192CB1F8E4B77007D8FD7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				664192CC1F8E4B77007D8FD7 /* Pods_Dummy.m */,
+			);
+			name = Classes;
+			path = "PredictIO-iOS/Classes";
+			sourceTree = "<group>";
+		};
+		6675AB9B1F339843006095BD = {
+			isa = PBXGroup;
+			children = (
+				664192CB1F8E4B77007D8FD7 /* Classes */,
+				6675ABC01F33C0B9006095BD /* PredictIO-iOS */,
+				6675ABAB1F33B110006095BD /* Frameworks */,
+				6675ABBF1F33C0B9006095BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6675ABAB1F33B110006095BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6633A4921F8E5BF200985E70 /* swift3.1 */,
+				6633A4901F8E5BF200985E70 /* swift4.0 */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		6675ABBF1F33C0B9006095BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6675ABBE1F33C0B9006095BD /* PredictIO.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6675ABC01F33C0B9006095BD /* PredictIO-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6675ABC11F33C0B9006095BD /* PredictIO_iOS.h */,
+				6675ABC21F33C0B9006095BD /* Info.plist */,
+			);
+			path = "PredictIO-iOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6675ABBB1F33C0B9006095BD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6675ABBD1F33C0B9006095BD /* PredictIO-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6675ABC41F33C0B9006095BD /* Build configuration list for PBXNativeTarget "PredictIO-iOS" */;
+			buildPhases = (
+				6675ABB91F33C0B9006095BD /* Sources */,
+				6675ABBA1F33C0B9006095BD /* Frameworks */,
+				6675ABBB1F33C0B9006095BD /* Headers */,
+				6675ABBC1F33C0B9006095BD /* Resources */,
+				6675ABCE1F33C29A006095BD /* Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PredictIO-iOS";
+			productName = "PredictIO-iOS";
+			productReference = 6675ABBE1F33C0B9006095BD /* PredictIO.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6675AB9C1F339843006095BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				TargetAttributes = {
+					6675ABBD1F33C0B9006095BD = {
+						CreatedOnToolsVersion = 9.0;
+					};
+				};
+			};
+			buildConfigurationList = 6675AB9F1F339843006095BD /* Build configuration list for PBXProject "PredictIO" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6675AB9B1F339843006095BD;
+			productRefGroup = 6675ABBF1F33C0B9006095BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6675ABBD1F33C0B9006095BD /* PredictIO-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6675ABBC1F33C0B9006095BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6675ABCE1F33C29A006095BD /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6675ABB91F33C0B9006095BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				664192CD1F8E4B7B007D8FD7 /* Pods_Dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6675ABA01F339843006095BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos11.0;
+			};
+			name = Debug;
+		};
+		6675ABA11F339843006095BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos11.0;
+			};
+			name = Release;
+		};
+		6675ABC51F33C0B9006095BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "PredictIO-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.predict.PredictIO-iOS";
+				PRODUCT_NAME = PredictIO;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6675ABC61F33C0B9006095BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "PredictIO-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.predict.PredictIO-iOS";
+				PRODUCT_NAME = PredictIO;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6675AB9F1F339843006095BD /* Build configuration list for PBXProject "PredictIO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6675ABA01F339843006095BD /* Debug */,
+				6675ABA11F339843006095BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6675ABC41F33C0B9006095BD /* Build configuration list for PBXNativeTarget "PredictIO-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6675ABC51F33C0B9006095BD /* Debug */,
+				6675ABC61F33C0B9006095BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6675AB9C1F339843006095BD /* Project object */;
+}
