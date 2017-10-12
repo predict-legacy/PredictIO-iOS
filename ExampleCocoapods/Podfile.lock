@@ -12,6 +12,7 @@ PODS:
     - ReachabilitySwift (~> 4.0.0)
     - Realm (~> 2.10.0)
     - RealmSwift (~> 2.10.0)
+    - RxCocoa (~> 3.6.0)
     - RxCoreMotion (~> 1.2.0)
     - RxSwift (~> 3.6.0)
     - RxSwiftExt (~> 2.5.0)
@@ -24,6 +25,8 @@ PODS:
   - RealmSwift (2.10.2):
     - Realm (= 2.10.2)
   - Result (3.2.4)
+  - RxCocoa (3.6.1):
+    - RxSwift (~> 3.6)
   - RxCoreMotion (1.2.1):
     - RxSwift
   - RxSwift (3.6.1)
@@ -44,17 +47,18 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PredictIO:
-    :commit: 0377373798868f3e07e6aa5bb64fcca416d51092
+    :commit: f1e3eb35ec0e9f1dd5b2a9ddb892a2217ba1a607
     :git: git@github.com:predict-io/PredictIO-iOS.git
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   Moya: c37eec09a098ba9991b5a963b291fc5704bdb9ef
-  PredictIO: 720cd1b9c9406a26ca2e93588492795dea15a04f
+  PredictIO: 6c3daa463315b20b4c3e03283ffa94792d9f3b90
   ReachabilitySwift: e67b2cab4d5386053673d8a7421b5981e5f08259
   Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
   RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
   RxCoreMotion: d4edac149ab1e9c4d5bf0e22d786e8169e22a274
   RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
   RxSwiftExt: ec25c6df68d15ad6fe326792d60452b52e83d606

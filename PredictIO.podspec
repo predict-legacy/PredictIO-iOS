@@ -33,8 +33,8 @@ Pod::Spec.new do |s|
 
     s.dependency "Alamofire", "~> 4.5.0"
     s.dependency "Moya/RxSwift", "~> 8.0.0"
-    s.dependency "RxSwift", "~> 3.6.0"
-    s.dependency "RxCocoa", "~> 3.6.0"
+    s.dependency "RxSwift", "~> 3.6.2"
+    s.dependency "RxCocoa", "~> 3.6.2"
     s.dependency "RxCoreMotion", "~> 1.2.0"
     s.dependency "RxSwiftExt", "~> 2.5.0"
     s.dependency "SwiftyJSON", "~> 3.1.0"

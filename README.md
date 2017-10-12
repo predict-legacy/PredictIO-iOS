@@ -23,6 +23,24 @@ pod 'PredictIO/Swift3.1', git: "git@github.com:predict-io/PredictIO-iOS.git", br
 
 > **NOTE**: Only choose one of the options above!
 
+### Caveat
+
+Running a `Debug` build of your app will result in a runtime crash that looks like:
+
+```
+dyld: lazy symbol binding failed: Symbol not found: __T07RxSwift14ObservableTypePAAE9subscribeAA10Disposable_py1EQzcSg6onNext_ys5Error_pcSg0gI0yycSg0G9CompletedAM0G8DisposedtFfA1_
+  Referenced from: /Application/83EC76A2-5F00-444D-B524-3C1EF370ED43/Example.app/Frameworks/MyFramework.framework/MyFramework
+  Expected in: /Application/83EC76A2-5F00-444D-B524-3C1EF370ED43/Example.app/Frameworks/RxSwift.framework/RxSwift
+
+dyld: Symbol not found: __T07RxSwift14ObservableTypePAAE9subscribeAA10Disposable_py1EQzcSg6onNext_ys5Error_pcSg0gI0yycSg0G9CompletedAM0G8DisposedtFfA1_
+  Referenced from: /Application/83EC76A2-5F00-444D-B524-3C1EF370ED43/Example.app/Frameworks/MyFramework.framework/MyFramework
+  Expected in: /Application/83EC76A2-5F00-444D-B524-3C1EF370ED43/Example.app/Frameworks/RxSwift.framework/RxSwift
+```
+
+It's related to a dependency we have on RxSwift that will hopefully soon incorporate [the fix into a new release](https://github.com/ReactiveX/RxSwift/pull/1454).
+
+Building your application in `Release` configuration resolves the problem. You can built your app's scheme in `Release` configuration by going to **Product > Scheme > Edit Scheme** and changing the _Build Configuration_ drop down menu to **Release**.
+
 ## Installation (Carthage)
 
 Add this to your `Cartfile`:
@@ -144,7 +162,36 @@ PredictIO.instance.start(apiKey) {
     // This may result in missed events!
     // NOTE: SDK still launches after this error!
     break
-
+    
+    case .locationPermission(let authStatus)?:
+    // There is a problem with the user's location permissions.
+    // They may need to be requested by your app or the permission
+    // is not available on this user's device.
+	switch authStatus {
+    	case .notDetermined:
+      	// Background location permission has not been requested yet.
+      	// You need to call `requestAlwaysAuthorization()` on your
+      	// CLLocationManager instance where it makes sense to ask for this 
+        // permission in your app.
+      	break
+      	
+      	case .restricted:
+		// This application is not authorized to use location services.  Due
+		// to active restrictions on location services, the user cannot change
+		// this status, and may not have personally denied authorization
+		break
+      
+      	case .authorizedWhenInUse:
+      	// User has only granted 'When In Use' location permission, and 
+        // with that it is not possible to determine trips which are made.
+      	break
+      
+      	case .denied:
+      	// User has flat out denied to give any location permission to
+      	// this application.
+      	break
+    }
+    
     case nil:
     // No error, SDK started with no problems
     print("Successfully started PredictIO SDK!") 
