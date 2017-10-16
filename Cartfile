@@ -1,11 +1,8 @@
 ### PredictIO Dependencies
 github "Alamofire/Alamofire" ~> 4.5.1
-github "Moya/Moya" ~> 8.0.5
 github "realm/realm-cocoa" ~> 2.10.1
-github "ReactiveX/RxSwift" ~> 3.6.1
-github "RxSwiftCommunity/RxSwiftExt" ~> 2.5.1
+github "ReactiveX/RxSwift" ~> 4.0.0
 github "SwiftyJSON/SwiftyJSON" ~> 3.1.4
 github "radex/SwiftyUserDefaults" ~> 3.0.1
 github "ashleymills/Reachability.swift" ~> 3.0
-github "RxSwiftCommunity/RxCoreMotion" ~> 1.2.1
 ### End PredictIO Dependencies

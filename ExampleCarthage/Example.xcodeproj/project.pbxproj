@@ -15,7 +15,6 @@
 		66322F0D1F866470001627AE /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66322F0C1F866470001627AE /* AdSupport.framework */; };
 		66322F0F1F866478001627AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66322F0E1F866478001627AE /* Foundation.framework */; };
 		66322F111F866480001627AE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 66322F101F86647F001627AE /* libz.tbd */; };
-		66322F131F866A05001627AE /* RxCoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66322F121F866A05001627AE /* RxCoreMotion.framework */; };
 		664CB16E1F867F830044B1BB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6616A75E1F3DF48700B76DA1 /* RxCocoa.framework */; };
 		664D12E51F3DC6ED0051AA4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664D12E41F3DC6ED0051AA4F /* AppDelegate.swift */; };
 		664D12E71F3DC6ED0051AA4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664D12E61F3DC6ED0051AA4F /* ViewController.swift */; };
@@ -23,13 +22,10 @@
 		664D12EC1F3DC6ED0051AA4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 664D12EB1F3DC6ED0051AA4F /* Assets.xcassets */; };
 		664D12EF1F3DC6ED0051AA4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 664D12ED1F3DC6ED0051AA4F /* LaunchScreen.storyboard */; };
 		66E9D2E91F3DE25100194084 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E9D2D71F3DE25100194084 /* Alamofire.framework */; };
-		66E9D2EA1F3DE25100194084 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E9D2D81F3DE25100194084 /* Moya.framework */; };
 		66E9D2EC1F3DE25100194084 /* PredictIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E9D2DA1F3DE25100194084 /* PredictIO.framework */; };
 		66E9D2EE1F3DE25100194084 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E9D2DC1F3DE25100194084 /* Realm.framework */; };
 		66E9D2EF1F3DE25100194084 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E9D2DD1F3DE25100194084 /* RealmSwift.framework */; };
-		66E9D2F01F3DE25100194084 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E9D2DE1F3DE25100194084 /* Result.framework */; };
 		66E9D2F21F3DE25100194084 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E9D2E01F3DE25100194084 /* RxSwift.framework */; };
-		66E9D2F31F3DE25100194084 /* RxSwiftExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E9D2E11F3DE25100194084 /* RxSwiftExt.framework */; };
 		66E9D2F71F3DE25100194084 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E9D2E51F3DE25100194084 /* SwiftyJSON.framework */; };
 		66E9D2F81F3DE25100194084 /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E9D2E61F3DE25100194084 /* SwiftyUserDefaults.framework */; };
 /* End PBXBuildFile section */
@@ -44,7 +40,6 @@
 		66322F0C1F866470001627AE /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		66322F0E1F866478001627AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		66322F101F86647F001627AE /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		66322F121F866A05001627AE /* RxCoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCoreMotion.framework; path = Carthage/Build/iOS/RxCoreMotion.framework; sourceTree = "<group>"; };
 		664D12E11F3DC6ED0051AA4F /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		664D12E41F3DC6ED0051AA4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		664D12E61F3DC6ED0051AA4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,14 +49,11 @@
 		664D12F01F3DC6ED0051AA4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66CD93341F3DD7A3003B7297 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		66E9D2D71F3DE25100194084 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		66E9D2D81F3DE25100194084 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
 		66E9D2DA1F3DE25100194084 /* PredictIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PredictIO.framework; path = Carthage/Build/iOS/PredictIO.framework; sourceTree = "<group>"; };
 		66E9D2DB1F3DE25100194084 /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
 		66E9D2DC1F3DE25100194084 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		66E9D2DD1F3DE25100194084 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		66E9D2DE1F3DE25100194084 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		66E9D2E01F3DE25100194084 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		66E9D2E11F3DE25100194084 /* RxSwiftExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwiftExt.framework; path = Carthage/Build/iOS/RxSwiftExt.framework; sourceTree = "<group>"; };
 		66E9D2E51F3DE25100194084 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		66E9D2E61F3DE25100194084 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,7 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66322F131F866A05001627AE /* RxCoreMotion.framework in Frameworks */,
 				66322F111F866480001627AE /* libz.tbd in Frameworks */,
 				66322F0F1F866478001627AE /* Foundation.framework in Frameworks */,
 				66322F0D1F866470001627AE /* AdSupport.framework in Frameworks */,
@@ -81,13 +72,10 @@
 				66322F071F866442001627AE /* CoreLocation.framework in Frameworks */,
 				66322F051F866438001627AE /* CoreMotion.framework in Frameworks */,
 				66E9D2E91F3DE25100194084 /* Alamofire.framework in Frameworks */,
-				66E9D2EA1F3DE25100194084 /* Moya.framework in Frameworks */,
 				66E9D2EC1F3DE25100194084 /* PredictIO.framework in Frameworks */,
 				66E9D2EE1F3DE25100194084 /* Realm.framework in Frameworks */,
 				66E9D2EF1F3DE25100194084 /* RealmSwift.framework in Frameworks */,
-				66E9D2F01F3DE25100194084 /* Result.framework in Frameworks */,
 				66E9D2F21F3DE25100194084 /* RxSwift.framework in Frameworks */,
-				66E9D2F31F3DE25100194084 /* RxSwiftExt.framework in Frameworks */,
 				66E9D2F71F3DE25100194084 /* SwiftyJSON.framework in Frameworks */,
 				660A862D1F866E2800991528 /* Reachability.framework in Frameworks */,
 				66E9D2F81F3DE25100194084 /* SwiftyUserDefaults.framework in Frameworks */,
@@ -132,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				660A862C1F866E2500991528 /* Reachability.framework */,
-				66322F121F866A05001627AE /* RxCoreMotion.framework */,
 				66322F101F86647F001627AE /* libz.tbd */,
 				66322F0E1F866478001627AE /* Foundation.framework */,
 				66322F0C1F866470001627AE /* AdSupport.framework */,
@@ -142,14 +129,11 @@
 				66322F041F866438001627AE /* CoreMotion.framework */,
 				6616A75E1F3DF48700B76DA1 /* RxCocoa.framework */,
 				66E9D2D71F3DE25100194084 /* Alamofire.framework */,
-				66E9D2D81F3DE25100194084 /* Moya.framework */,
 				66E9D2DA1F3DE25100194084 /* PredictIO.framework */,
 				66E9D2DB1F3DE25100194084 /* Reachability.framework */,
 				66E9D2DC1F3DE25100194084 /* Realm.framework */,
 				66E9D2DD1F3DE25100194084 /* RealmSwift.framework */,
-				66E9D2DE1F3DE25100194084 /* Result.framework */,
 				66E9D2E01F3DE25100194084 /* RxSwift.framework */,
-				66E9D2E11F3DE25100194084 /* RxSwiftExt.framework */,
 				66E9D2E51F3DE25100194084 /* SwiftyJSON.framework */,
 				66E9D2E61F3DE25100194084 /* SwiftyUserDefaults.framework */,
 			);
@@ -238,16 +222,12 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PredictIO.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwiftExt.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCoreMotion.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Reachability.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 			);

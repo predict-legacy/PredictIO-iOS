@@ -3,7 +3,7 @@
 ## Requirements
 
 * iOS 8.0+
-* Xcode 8.3.3 or Xcode 9.0
+* Xcode 9.0 or Xcode 9.1
 * Register for a [predict.io API key](http://www.predict.io/service/registration/?level=1)
 
 ## Installation (CocoaPods)
@@ -11,35 +11,21 @@
 Installation via CocoaPods can be accomplished by adding one of the following to your `Podfile`:
 
 ```ruby
-# Always latest versions (Swift 4.0/3.2 & Xcode 9.0)
+# Always latest stable versions (Swift 4.0/3.2 & Xcode 9.0)
 pod 'PredictIO', git: "git@github.com:predict-io/PredictIO-iOS.git", branch: "sdk5"
+
+# or #
+
+# Swift 4.1 & Xcode 9.1
+pod 'PredictIO/Swift4.1', git: "git@github.com:predict-io/PredictIO-iOS.git", branch: "sdk5"
+
+# or #
 
 # Swift 4.0/3.2 & Xcode 9.0
 pod 'PredictIO/Swift4.0', git: "git@github.com:predict-io/PredictIO-iOS.git", branch: "sdk5"
-
-# Swift 3.1 & Xcode 8.3.3
-pod 'PredictIO/Swift3.1', git: "git@github.com:predict-io/PredictIO-iOS.git", branch: "sdk5"
 ```
 
 > **NOTE**: Only choose one of the options above!
-
-### Caveat
-
-Running a `Debug` build of your app will result in a runtime crash that looks like:
-
-```
-dyld: lazy symbol binding failed: Symbol not found: __T07RxSwift14ObservableTypePAAE9subscribeAA10Disposable_py1EQzcSg6onNext_ys5Error_pcSg0gI0yycSg0G9CompletedAM0G8DisposedtFfA1_
-  Referenced from: /Application/83EC76A2-5F00-444D-B524-3C1EF370ED43/Example.app/Frameworks/MyFramework.framework/MyFramework
-  Expected in: /Application/83EC76A2-5F00-444D-B524-3C1EF370ED43/Example.app/Frameworks/RxSwift.framework/RxSwift
-
-dyld: Symbol not found: __T07RxSwift14ObservableTypePAAE9subscribeAA10Disposable_py1EQzcSg6onNext_ys5Error_pcSg0gI0yycSg0G9CompletedAM0G8DisposedtFfA1_
-  Referenced from: /Application/83EC76A2-5F00-444D-B524-3C1EF370ED43/Example.app/Frameworks/MyFramework.framework/MyFramework
-  Expected in: /Application/83EC76A2-5F00-444D-B524-3C1EF370ED43/Example.app/Frameworks/RxSwift.framework/RxSwift
-```
-
-It's related to a dependency we have on RxSwift that will hopefully soon incorporate [the fix into a new release](https://github.com/ReactiveX/RxSwift/pull/1454).
-
-Building your application in `Release` configuration resolves the problem. You can built your app's scheme in `Release` configuration by going to **Product > Scheme > Edit Scheme** and changing the _Build Configuration_ drop down menu to **Release**.
 
 ## Installation (Carthage)
 
@@ -73,17 +59,13 @@ Once you've run the previous Carthage command you can add the SDK and its depend
 
 1. `PredictIO.framework`
 2. `Alamofire.framework`
-3. `Moya.framework`
-4. `Reachability.framework`
-5. `Realm.framework`
-6. `RealmSwift.framework`
-7. `Result.framework`
-8. `RxCocoa.framework`
-9. `RxSwift.framework`
-10. `RxSwiftExt.framework`
-11. `RxCoreMotion.framework`
-12. `SwiftyJSON.framework`
-13. `SwiftyUserDefaults.framework`
+3. `Reachability.framework`
+4. `Realm.framework`
+5. `RealmSwift.framework`
+6. `RxCocoa.framework`
+7. `RxSwift.framework`
+8. `SwiftyJSON.framework`
+9. `SwiftyUserDefaults.framework`
 
 ![add-frameworks](docs/add-frameworks.gif)
 
@@ -101,17 +83,13 @@ Under *Input Files* add an entry for each of the following items:
 
 1. `$(SRCROOT)/Carthage/Build/iOS/PredictIO.framework`
 2. `$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework`
-3. `$(SRCROOT)/Carthage/Build/iOS/Moya.framework`
-4. `$(SRCROOT)/Carthage/Build/iOS/Reachability.framework`
-5. `$(SRCROOT)/Carthage/Build/iOS/Realm.framework`
-6. `$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework`
-7. `$(SRCROOT)/Carthage/Build/iOS/Result.framework`
-8. `$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework`
-9. `$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework`
-10. `$(SRCROOT)/Carthage/Build/iOS/RxSwiftExt.framework`
-11. `$(SRCROOT)/Carthage/Build/iOS/RxCoreMotion.framework`
-12. `$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework`
-13. `$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework`
+3. `$(SRCROOT)/Carthage/Build/iOS/Reachability.framework`
+4. `$(SRCROOT)/Carthage/Build/iOS/Realm.framework`
+5. `$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework`
+6. `$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework`
+7. `$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework`
+8. `$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework`
+9. `$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework`
 
 # Usage
 
@@ -143,10 +121,6 @@ let apiKey = "<YOUR_API_KEY>"
 
 PredictIO.instance.start(apiKey) {
   (error: PredictIOError?) in
-  
-  if let error = error {
-    print("Error starting PredictIO SDK => \(error)")  
-  }
     
   switch error {
     case .invalidKey?:
@@ -190,6 +164,10 @@ PredictIO.instance.start(apiKey) {
       	// User has flat out denied to give any location permission to
       	// this application.
       	break
+      
+      	// Reamining CLAuthorizationStatus are unused and switch
+      	// must be exhaustive!
+      	default:break
     }
     
     case nil:

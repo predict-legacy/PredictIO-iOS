@@ -1,21 +1,12 @@
 PODS:
   - Alamofire (4.5.1)
-  - Moya/Core (8.0.5):
-    - Alamofire (~> 4.1)
-    - Result (~> 3.0)
-  - Moya/RxSwift (8.0.5):
-    - Moya/Core
-    - RxSwift (~> 3.0)
-  - PredictIO/Swift4.0 (4.9.0-beta.1):
+  - PredictIO/Swift4.0 (4.9.0-beta.2):
     - Alamofire (~> 4.5.0)
-    - Moya/RxSwift (~> 8.0.0)
     - ReachabilitySwift (~> 4.0.0)
     - Realm (~> 2.10.0)
     - RealmSwift (~> 2.10.0)
-    - RxCocoa (~> 3.6.0)
-    - RxCoreMotion (~> 1.2.0)
-    - RxSwift (~> 3.6.0)
-    - RxSwiftExt (~> 2.5.0)
+    - RxCocoa (~> 4.0.0)
+    - RxSwift (~> 4.0.0)
     - SwiftyJSON (~> 3.1.0)
     - SwiftyUserDefaults (~> 3.0.0)
   - ReachabilitySwift (4.0.0)
@@ -24,16 +15,9 @@ PODS:
   - Realm/Headers (2.10.2)
   - RealmSwift (2.10.2):
     - Realm (= 2.10.2)
-  - Result (3.2.4)
-  - RxCocoa (3.6.1):
-    - RxSwift (~> 3.6)
-  - RxCoreMotion (1.2.1):
-    - RxSwift
-  - RxSwift (3.6.1)
-  - RxSwiftExt (2.5.1):
-    - RxSwiftExt/Core (= 2.5.1)
-  - RxSwiftExt/Core (2.5.1):
-    - RxSwift (~> 3.4)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
   - SwiftyJSON (3.1.4)
   - SwiftyUserDefaults (3.0.0)
 
@@ -47,21 +31,17 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PredictIO:
-    :commit: f1e3eb35ec0e9f1dd5b2a9ddb892a2217ba1a607
+    :commit: a2beb3014009060907fc2dc4cb136e82f212f9ce
     :git: git@github.com:predict-io/PredictIO-iOS.git
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  Moya: c37eec09a098ba9991b5a963b291fc5704bdb9ef
-  PredictIO: 6c3daa463315b20b4c3e03283ffa94792d9f3b90
+  PredictIO: c4321c9e999832f6b1d7957ee3ade6e92a95e698
   ReachabilitySwift: e67b2cab4d5386053673d8a7421b5981e5f08259
   Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
   RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
-  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
-  RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
-  RxCoreMotion: d4edac149ab1e9c4d5bf0e22d786e8169e22a274
-  RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
-  RxSwiftExt: ec25c6df68d15ad6fe326792d60452b52e83d606
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
 
