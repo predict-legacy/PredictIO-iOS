@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.5.1)
-  - PredictIO/Swift4.0 (4.9.0-beta.2):
+  - PredictIO/Swift4.0 (4.9.0-beta.3):
     - Alamofire (~> 4.5.0)
     - ReachabilitySwift (~> 4.0.0)
     - Realm (~> 2.10.0)
@@ -31,12 +31,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PredictIO:
-    :commit: b8ba023b49ed61c106233c301e9c649eeb89829f
+    :commit: d1244851df87d8fb36e793806c73e66781d70da6
     :git: git@github.com:predict-io/PredictIO-iOS.git
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  PredictIO: c4321c9e999832f6b1d7957ee3ade6e92a95e698
+  PredictIO: dd96c03d589075d3f315623730b69d1bcac53af1
   ReachabilitySwift: e67b2cab4d5386053673d8a7421b5981e5f08259
   Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
   RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
