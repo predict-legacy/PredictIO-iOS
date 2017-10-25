@@ -31,7 +31,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PredictIO:
-    :commit: a2beb3014009060907fc2dc4cb136e82f212f9ce
+    :commit: b8ba023b49ed61c106233c301e9c649eeb89829f
     :git: git@github.com:predict-io/PredictIO-iOS.git
 
 SPEC CHECKSUMS:
