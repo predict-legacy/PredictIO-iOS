@@ -20,8 +20,8 @@ Pod::Spec.new do |s|
     # Default to latest Swift version
     s.vendored_frameworks = 'Frameworks/swift4.0/PredictIO.framework'
 
-    s.subspec 'Swift3.1' do |sp|
-      sp.vendored_frameworks = 'Frameworks/swift3.1/PredictIO.framework'
+    s.subspec 'Swift4.1' do |sp|
+      sp.vendored_frameworks = 'Frameworks/swift4.1/PredictIO.framework'
     end
 
     s.subspec 'Swift4.0' do |sp|
