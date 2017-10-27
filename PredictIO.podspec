@@ -20,10 +20,6 @@ Pod::Spec.new do |s|
     # Default to latest Swift version
     s.vendored_frameworks = 'Frameworks/swift4.0/PredictIO.framework'
 
-    s.subspec 'Swift4.1' do |sp|
-      sp.vendored_frameworks = 'Frameworks/swift4.1/PredictIO.framework'
-    end
-
     s.dependency "Alamofire", "~> 4.5.0"
     s.dependency "RxSwift", "~> 4.0.0"
     s.dependency "RxCocoa", "~> 4.0.0"
