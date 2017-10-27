@@ -3,7 +3,7 @@
 ## Requirements
 
 * iOS 8.0+
-* Xcode 9.0 or Xcode 9.1
+* Xcode 9.0
 * Register for a [predict.io API key](http://www.predict.io/service/registration/?level=1)
 
 ## Installation (CocoaPods)
@@ -11,21 +11,8 @@
 Installation via CocoaPods can be accomplished by adding one of the following to your `Podfile`:
 
 ```ruby
-# Always latest stable versions (Swift 4.0/3.2 & Xcode 9.0)
-pod 'PredictIO', git: "git@github.com:predict-io/PredictIO-iOS.git", branch: "sdk5"
-
-# or #
-
-# Swift 4.1 & Xcode 9.1
-pod 'PredictIO/Swift4.1', git: "git@github.com:predict-io/PredictIO-iOS.git", branch: "sdk5"
-
-# or #
-
-# Swift 4.0/3.2 & Xcode 9.0
-pod 'PredictIO/Swift4.0', git: "git@github.com:predict-io/PredictIO-iOS.git", branch: "sdk5"
+pod 'PredictIO', '~> 5.0.0'
 ```
-
-> **NOTE**: Only choose one of the options above!
 
 ## Installation (Carthage)
 
