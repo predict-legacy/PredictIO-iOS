@@ -19,10 +19,10 @@ pod 'PredictIO', '~> 5.0.0'
 Add this to your `Cartfile`:
 
 ```
-github "predict-io/PredictIO-iOS" "sdk5"
+github "predict-io/PredictIO-iOS" ~> 5.0.0
 ```
 
-> **NOTE** It's important that you set the branch to `sdk5` in your `Cartfile`
+And install...
 
 ```
 $ carthage update --platform iOS  --cache-builds
