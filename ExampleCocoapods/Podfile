@@ -4,5 +4,5 @@ target 'Example' do
   use_frameworks!
 
   # pod 'PredictIO/Swift4.0', path: '../'
-  pod 'PredictIO', '5.0.0-beta.7'
+  pod 'PredictIO', '5.0.0-beta.8'
 end
