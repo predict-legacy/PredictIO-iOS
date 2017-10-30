@@ -9,9 +9,6 @@ Pod::Spec.new do |s|
     s.license = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
     s.author = { "predict.io" => "developer@predict.io" }
     s.homepage = 'https://github.com/predict-io/PredictIO-iOS'
-    s.public_header_files = 'PredictIO-iOS/**/*.h'
-    s.source_files = 'PredictIO-iOS/**/*.h', 'PredictIO-iOS/Classes/*.m'
-    s.preserve_paths = 'PredictIO-iOS/**/*.h'
     s.frameworks = 'UIKit', 'CoreMotion', 'CoreLocation', 'AdSupport', 'SystemConfiguration', 'Accelerate'
     s.header_dir = 'PredictIO-iOS'
     s.module_name = 'PredictIO'
