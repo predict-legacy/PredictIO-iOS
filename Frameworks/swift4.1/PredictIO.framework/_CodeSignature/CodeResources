@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/PredictIO-Swift.h</key>
 		<data>
-		Vq9QxJIAYEiz6KxINt1zVT8eV80=
+		7JZPJqlTlIhsVzHp7AXmHrgkIJI=
 		</data>
 		<key>Headers/PredictIO.h</key>
 		<data>
@@ -18,23 +18,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		FpNRE/CFnjRn4DptyGs4rqMb0YM=
+		OKG1mDbs0CgtGxbTAvpiHUOoDZU=
 		</data>
 		<key>Modules/PredictIO.swiftmodule/i386.swiftdoc</key>
 		<data>
-		7UwokRuex+ey+k/AY/pBtmS3pPs=
+		FnXrTMc+vlDVy1dQwd5Jl0oKegs=
 		</data>
 		<key>Modules/PredictIO.swiftmodule/i386.swiftmodule</key>
 		<data>
-		0nSE8JbYgLwPcZ3Fh4WhDrQz16Q=
+		gP1sePCoi/OHD4Nk6Qe1KCPYaZI=
 		</data>
 		<key>Modules/PredictIO.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		CGsZwpCloGjjPFgL53a8TH7/mK4=
+		++79tYqc1UJEsCFlUj01AsH+VSk=
 		</data>
 		<key>Modules/PredictIO.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		/0n+N/gfLi1z2c4IHh7937JqaGY=
+		Q8z+GWO1+1HEUdSXlm8pJlW+Vss=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -58,11 +58,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Vq9QxJIAYEiz6KxINt1zVT8eV80=
+			7JZPJqlTlIhsVzHp7AXmHrgkIJI=
 			</data>
 			<key>hash2</key>
 			<data>
-			XN/BVFd1D55UWmxn200dAliTJVAJTzd9nZfgeedRSCo=
+			p9vJ82FrL8/b4f3y+PI9m90v1+ad/eUCpT4F1odPWAk=
 			</data>
 		</dict>
 		<key>Headers/PredictIO.h</key>
@@ -80,44 +80,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			7UwokRuex+ey+k/AY/pBtmS3pPs=
+			FnXrTMc+vlDVy1dQwd5Jl0oKegs=
 			</data>
 			<key>hash2</key>
 			<data>
-			xA7ZPi0uW9wKB+3c1MAoUFbxH76+6KGQRJoNHJJEmG8=
+			sAfKQ7TjfgaHLTUc70zoFoOE4qKQfigK8okBAD+lXpU=
 			</data>
 		</dict>
 		<key>Modules/PredictIO.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0nSE8JbYgLwPcZ3Fh4WhDrQz16Q=
+			gP1sePCoi/OHD4Nk6Qe1KCPYaZI=
 			</data>
 			<key>hash2</key>
 			<data>
-			jANzfSUMsP/wiFXLgjKtC0+7Pf1WTtvnm1dQdQ+YeDw=
+			c7VBvw4NJwpEQ9+IAKyGUTy/RNnQ8WlYqGCGvo8t1x8=
 			</data>
 		</dict>
 		<key>Modules/PredictIO.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CGsZwpCloGjjPFgL53a8TH7/mK4=
+			++79tYqc1UJEsCFlUj01AsH+VSk=
 			</data>
 			<key>hash2</key>
 			<data>
-			rfP1kb3XdCfrm5x6iH4XXksk2ZVwNbYB0tzUZNLep9k=
+			eX/hZcDQiRELaOc6TN4Q9SMJEW+14lwO9PAJxjXi3L4=
 			</data>
 		</dict>
 		<key>Modules/PredictIO.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/0n+N/gfLi1z2c4IHh7937JqaGY=
+			Q8z+GWO1+1HEUdSXlm8pJlW+Vss=
 			</data>
 			<key>hash2</key>
 			<data>
-			h9/bs16hzbCAc3YWSn7CurEdzlKe34NSKS3/AO/F3fM=
+			U8txP8DzZ7MiFCl5kr8UORQRwMJ9nzOl6D5+54s4bqQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
