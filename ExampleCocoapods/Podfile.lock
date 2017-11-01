@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.5.1)
-  - PredictIO (5.0.1-beta.1):
+  - PredictIO (5.0.1-beta.2):
     - Alamofire (~> 4.5.0)
     - ReachabilitySwift (~> 4.0.0)
     - Realm (~> 2.10.0)
@@ -22,11 +22,15 @@ PODS:
   - SwiftyUserDefaults (3.0.0)
 
 DEPENDENCIES:
-  - PredictIO (= 5.0.1-beta.1)
+  - PredictIO (from `../`)
+
+EXTERNAL SOURCES:
+  PredictIO:
+    :path: ../
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  PredictIO: 1a336d72b6c5ee3925ea487a0430208948d3119a
+  PredictIO: 9d22b5e40724157a3a81f733a7c88c59fb7ad266
   ReachabilitySwift: e67b2cab4d5386053673d8a7421b5981e5f08259
   Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
   RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
@@ -35,6 +39,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
 
-PODFILE CHECKSUM: 1f1b4a959c2ab04d87c2f2260596825219413d0b
+PODFILE CHECKSUM: 38c3175bf06fd416e362b8c1072e7bedc4de3997
 
 COCOAPODS: 1.4.0.beta.2

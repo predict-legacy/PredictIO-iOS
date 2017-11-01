@@ -17,18 +17,6 @@ Pod::Spec.new do |s|
     # Default to latest Swift version
     s.vendored_framework = 'Frameworks/xcode9.0.1/PredictIO.framework'
 
-    s.subspec 'Xcode9.2' do |sub|
-        sub.vendored_framework = s.vendored_framework = 'Frameworks/xcode9.2/PredictIO.framework'
-    end
-
-    s.subspec 'Xcode9.1' do |sub|
-        sub.vendored_framework = s.vendored_framework = 'Frameworks/xcode9.1/PredictIO.framework'
-    end
-
-    s.subspec 'Xcode9.0.1' do |sub|
-        sub.vendored_framework = s.vendored_framework = 'Frameworks/xcode9.0.1/PredictIO.framework'
-    end
-
     s.dependency "Alamofire", "~> 4.5.0"
     s.dependency "RxSwift", "~> 4.0.0"
     s.dependency "RxCocoa", "~> 4.0.0"
