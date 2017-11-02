@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     s.source = { :git => 'https://github.com/predict-io/PredictIO-iOS.git', :tag => s.version.to_s.gsub(/^v/, "") }
 
     # Default to latest Swift version
-    s.vendored_framework = 'Frameworks/xcode9.0.1/PredictIO.framework'
+    s.vendored_framework = 'Frameworks/PredictIO.framework'
 
     s.dependency "Alamofire", "~> 4.5.0"
     s.dependency "RxSwift", "~> 4.0.0"
