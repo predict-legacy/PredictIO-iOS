@@ -11,9 +11,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		660DCF6C1FAA375200AC9FAC /* PredictIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PredictIO.framework; sourceTree = "<group>"; };
-		660DCF6E1FAA375200AC9FAC /* PredictIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PredictIO.framework; sourceTree = "<group>"; };
-		660DCF701FAA375200AC9FAC /* PredictIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PredictIO.framework; sourceTree = "<group>"; };
+		660DCF721FAA573F00AC9FAC /* PredictIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PredictIO.framework; sourceTree = "<group>"; };
 		664192CC1F8E4B77007D8FD7 /* Pods_Dummy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pods_Dummy.m; sourceTree = "<group>"; };
 		6675ABBE1F33C0B9006095BD /* PredictIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PredictIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6675ABC11F33C0B9006095BD /* PredictIO_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PredictIO_iOS.h; sourceTree = "<group>"; };
@@ -31,30 +29,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		660DCF6B1FAA375200AC9FAC /* xcode9.2 */ = {
-			isa = PBXGroup;
-			children = (
-				660DCF6C1FAA375200AC9FAC /* PredictIO.framework */,
-			);
-			path = xcode9.2;
-			sourceTree = "<group>";
-		};
-		660DCF6D1FAA375200AC9FAC /* xcode9.0.1 */ = {
-			isa = PBXGroup;
-			children = (
-				660DCF6E1FAA375200AC9FAC /* PredictIO.framework */,
-			);
-			path = xcode9.0.1;
-			sourceTree = "<group>";
-		};
-		660DCF6F1FAA375200AC9FAC /* xcode9.1 */ = {
-			isa = PBXGroup;
-			children = (
-				660DCF701FAA375200AC9FAC /* PredictIO.framework */,
-			);
-			path = xcode9.1;
-			sourceTree = "<group>";
-		};
 		664192CB1F8E4B77007D8FD7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,9 +51,7 @@
 		6675ABAB1F33B110006095BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				660DCF6D1FAA375200AC9FAC /* xcode9.0.1 */,
-				660DCF6F1FAA375200AC9FAC /* xcode9.1 */,
-				660DCF6B1FAA375200AC9FAC /* xcode9.2 */,
+				660DCF721FAA573F00AC9FAC /* PredictIO.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";

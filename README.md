@@ -3,7 +3,7 @@
 ## Requirements
 
 * iOS 8.0+
-* Xcode 9.0
+* Xcode 9.0.1
 * Register for a [predict.io API key](http://www.predict.io/service/registration/?level=1)
 
 ## Installation (CocoaPods)
