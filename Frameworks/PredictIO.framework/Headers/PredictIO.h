@@ -18,4 +18,5 @@ FOUNDATION_EXPORT const unsigned char PredictIOVersionString[];
 
 #if TARGET_OS_IPHONE
 #import <PredictIO/DeviceUID.h>
+#import <PredictIO/SMTWiFiStatus.h>
 #endif
