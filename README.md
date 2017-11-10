@@ -3,7 +3,7 @@
 ## Requirements
 
 * iOS 8.0+
-* Xcode 9.0.1
+* Xcode 9.1
 * Register for a [predict.io API key](http://www.predict.io/service/registration/?level=1)
 
 ## Installation (CocoaPods)
@@ -11,7 +11,7 @@
 Installation via CocoaPods can be accomplished by adding one of the following to your `Podfile`:
 
 ```ruby
-pod 'PredictIO', '~> 5.0.0'
+pod 'PredictIO', '~> 5.1.0'
 ```
 
 ## Installation (Carthage)
@@ -19,7 +19,7 @@ pod 'PredictIO', '~> 5.0.0'
 Add this to your `Cartfile`:
 
 ```
-github "predict-io/PredictIO-iOS" ~> 5.0.0
+github "predict-io/PredictIO-iOS" ~> 5.1.0
 ```
 
 And install...
@@ -32,7 +32,6 @@ $ carthage update --platform iOS  --cache-builds
 
 Link your app with the following _System Frameworks_:
 
-* `Accelerate.framework`
 * `AdSupport.framework`
 * `CoreLocation.framework`
 * `CoreMotion.framework`
@@ -49,10 +48,9 @@ Once you've run the previous Carthage command you can add the SDK and its depend
 3. `Reachability.framework`
 4. `Realm.framework`
 5. `RealmSwift.framework`
-6. `RxCocoa.framework`
-7. `RxSwift.framework`
-8. `SwiftyJSON.framework`
-9. `SwiftyUserDefaults.framework`
+6. `RxSwift.framework`
+7. `SwiftyJSON.framework`
+8. `SwiftyUserDefaults.framework`
 
 ![add-frameworks](docs/add-frameworks.gif)
 
@@ -73,10 +71,9 @@ Under *Input Files* add an entry for each of the following items:
 3. `$(SRCROOT)/Carthage/Build/iOS/Reachability.framework`
 4. `$(SRCROOT)/Carthage/Build/iOS/Realm.framework`
 5. `$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework`
-6. `$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework`
-7. `$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework`
-8. `$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework`
-9. `$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework`
+6. `$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework`
+7. `$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework`
+8. `$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework`
 
 # Usage
 
