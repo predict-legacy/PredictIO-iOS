@@ -1,3 +1,7 @@
+[![Version](https://img.shields.io/cocoapods/v/PredictIO.svg?style=flat)](http://cocoapods.org/pods/PredictIO)
+[![License](https://img.shields.io/cocoapods/l/PredictIO.svg?style=flat)](http://cocoapods.org/pods/PredictIO)
+[![Platform](https://img.shields.io/cocoapods/p/PredictIO.svg?style=flat)](http://cocoapods.org/pods/PredictIO)
+
 # Getting Started
 
 ## Requirements
