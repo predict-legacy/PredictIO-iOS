@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
     s.summary = "A battery-optimized SDK for iOS to get real-time updates with context information when a user starts or ends a journey."
     s.description = "predict.io offers mobile developers a battery-optimized SDK to get normalised sensor results. Available for iOS and Android. It gives you real-time updates when a user starts or ends a journey. With this trigger come contextual details for the mode of transportation (car vs. non-car)."
     s.requires_arc = true
-    s.version = "5.0.3"
+    s.version = "5.1.2-beta.1"
     s.license = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
     s.author = { "predict.io" => "developer@predict.io" }
     s.homepage = 'https://github.com/predict-io/PredictIO-iOS'
@@ -17,9 +17,7 @@ Pod::Spec.new do |s|
     # Default to latest Swift version
     s.vendored_framework = 'Frameworks/PredictIO.framework'
 
-    s.dependency "Alamofire", "~> 4.5.0"
     s.dependency "RxSwift", "~> 4.0.0"
-    s.dependency "RxCocoa", "~> 4.0.0"
     s.dependency "SwiftyJSON", "~> 3.1.0"
     s.dependency "ReachabilitySwift", "~> 4.0.0"
     s.dependency "SwiftyUserDefaults", "~> 3.0.0"
