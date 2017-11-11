@@ -17,6 +17,11 @@ FOUNDATION_EXPORT const unsigned char PredictIOVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <PredictIO/PublicHeader.h>
 
 #if TARGET_OS_IPHONE
-#import <PredictIO/DeviceUID.h>
-#import <PredictIO/SMTWiFiStatus.h>
+  #import <PredictIO/DeviceUID.h>
+  #import <PredictIO/SMTWiFiStatus.h>
+
+  #ifdef PUBLIC
+    #import <PredictIO/CURLLog.h>
+    #import <PredictIO/NSURLRequest+CURL.h>
+  #endif
 #endif
