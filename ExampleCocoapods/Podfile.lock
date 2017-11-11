@@ -1,11 +1,8 @@
 PODS:
-  - Alamofire (4.5.1)
-  - PredictIO (5.0.3):
-    - Alamofire (~> 4.5.0)
+  - PredictIO (5.1.2-beta.1):
     - ReachabilitySwift (~> 4.0.0)
     - Realm (~> 2.10.0)
     - RealmSwift (~> 2.10.0)
-    - RxCocoa (~> 4.0.0)
     - RxSwift (~> 4.0.0)
     - SwiftyJSON (~> 3.1.0)
     - SwiftyUserDefaults (~> 3.0.0)
@@ -15,26 +12,26 @@ PODS:
   - Realm/Headers (2.10.2)
   - RealmSwift (2.10.2):
     - Realm (= 2.10.2)
-  - RxCocoa (4.0.0):
-    - RxSwift (~> 4.0)
   - RxSwift (4.0.0)
   - SwiftyJSON (3.1.4)
   - SwiftyUserDefaults (3.0.0)
 
 DEPENDENCIES:
-  - PredictIO (= 5.0.3)
+  - PredictIO (from `../`)
+
+EXTERNAL SOURCES:
+  PredictIO:
+    :path: ../
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  PredictIO: d797defa8a516fde0091363052aff259dcb566cc
+  PredictIO: c9407908e0bb7871fa7ddd8dab4497dfcba3d076
   ReachabilitySwift: e67b2cab4d5386053673d8a7421b5981e5f08259
   Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
   RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
-  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
 
-PODFILE CHECKSUM: 588747159787804d3d7850e5208d2ce214e10acf
+PODFILE CHECKSUM: e4200d3bd5b2a579de94586710fe138903dbf5d5
 
 COCOAPODS: 1.3.1
