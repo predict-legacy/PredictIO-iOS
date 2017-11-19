@@ -15,13 +15,11 @@
 		66322F0D1F866470001627AE /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66322F0C1F866470001627AE /* AdSupport.framework */; };
 		66322F0F1F866478001627AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66322F0E1F866478001627AE /* Foundation.framework */; };
 		66322F111F866480001627AE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 66322F101F86647F001627AE /* libz.tbd */; };
-		664CB16E1F867F830044B1BB /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6616A75E1F3DF48700B76DA1 /* RxCocoa.framework */; };
 		664D12E51F3DC6ED0051AA4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664D12E41F3DC6ED0051AA4F /* AppDelegate.swift */; };
 		664D12E71F3DC6ED0051AA4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664D12E61F3DC6ED0051AA4F /* ViewController.swift */; };
 		664D12EA1F3DC6ED0051AA4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 664D12E81F3DC6ED0051AA4F /* Main.storyboard */; };
 		664D12EC1F3DC6ED0051AA4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 664D12EB1F3DC6ED0051AA4F /* Assets.xcassets */; };
 		664D12EF1F3DC6ED0051AA4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 664D12ED1F3DC6ED0051AA4F /* LaunchScreen.storyboard */; };
-		66E9D2E91F3DE25100194084 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E9D2D71F3DE25100194084 /* Alamofire.framework */; };
 		66E9D2EC1F3DE25100194084 /* PredictIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E9D2DA1F3DE25100194084 /* PredictIO.framework */; };
 		66E9D2EE1F3DE25100194084 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E9D2DC1F3DE25100194084 /* Realm.framework */; };
 		66E9D2EF1F3DE25100194084 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E9D2DD1F3DE25100194084 /* RealmSwift.framework */; };
@@ -67,11 +65,9 @@
 				66322F0F1F866478001627AE /* Foundation.framework in Frameworks */,
 				66322F0D1F866470001627AE /* AdSupport.framework in Frameworks */,
 				66322F0B1F866466001627AE /* Accelerate.framework in Frameworks */,
-				664CB16E1F867F830044B1BB /* RxCocoa.framework in Frameworks */,
 				66322F091F86644A001627AE /* SystemConfiguration.framework in Frameworks */,
 				66322F071F866442001627AE /* CoreLocation.framework in Frameworks */,
 				66322F051F866438001627AE /* CoreMotion.framework in Frameworks */,
-				66E9D2E91F3DE25100194084 /* Alamofire.framework in Frameworks */,
 				66E9D2EC1F3DE25100194084 /* PredictIO.framework in Frameworks */,
 				66E9D2EE1F3DE25100194084 /* Realm.framework in Frameworks */,
 				66E9D2EF1F3DE25100194084 /* RealmSwift.framework in Frameworks */,
@@ -221,7 +217,6 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PredictIO.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
@@ -229,7 +224,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Reachability.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 			);
 			outputPaths = (
 			);
