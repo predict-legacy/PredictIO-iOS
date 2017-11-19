@@ -1,5 +1,5 @@
 PODS:
-  - PredictIO (5.1.2-beta.1):
+  - PredictIO (5.1.2):
     - ReachabilitySwift (~> 4.0.0)
     - Realm (~> 2.10.0)
     - RealmSwift (~> 2.10.0)
@@ -24,7 +24,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  PredictIO: c9407908e0bb7871fa7ddd8dab4497dfcba3d076
+  PredictIO: b266894c216394190f20c6257a446c6d63a3ff87
   ReachabilitySwift: e67b2cab4d5386053673d8a7421b5981e5f08259
   Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
   RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
@@ -32,6 +32,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
 
-PODFILE CHECKSUM: e4200d3bd5b2a579de94586710fe138903dbf5d5
+PODFILE CHECKSUM: b543161f0b66349923b0605aba026c62d8519591
 
 COCOAPODS: 1.3.1
