@@ -21,6 +21,4 @@ Pod::Spec.new do |s|
     s.dependency "SwiftyJSON", "~> 3.1.0"
     s.dependency "ReachabilitySwift", "~> 4.0.0"
     s.dependency "SwiftyUserDefaults", "~> 3.0.0"
-    s.dependency "Realm", "~> 2.10.0"
-    s.dependency "RealmSwift", "~> 2.10.0"
 end
