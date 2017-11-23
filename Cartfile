@@ -1,6 +1,5 @@
 ### PredictIO Dependencies
 github "Alamofire/Alamofire" ~> 4.5.1
-github "realm/realm-cocoa" ~> 2.10.1
 github "ReactiveX/RxSwift" ~> 4.0.0
 github "SwiftyJSON/SwiftyJSON" ~> 3.1.4
 github "radex/SwiftyUserDefaults" ~> 3.0.1
