@@ -3,6 +3,6 @@ platform :ios, '8.0'
 target 'Example' do
   use_frameworks!
 
-  # pod 'PredictIO', path: '../'
-  pod 'PredictIO', '5.1.3-beta.1'
+   pod 'PredictIO', path: '../'
+#  pod 'PredictIO', '5.1.2'
 end
