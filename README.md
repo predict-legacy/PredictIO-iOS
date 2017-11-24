@@ -49,10 +49,9 @@ Link your app with the following _System Frameworks_:
 Once you've run the previous Carthage command you can add the SDK and its dependencies to your app also:
 
 1. `PredictIO.framework`
-2. `Reachability.framework`
-3. `RxSwift.framework`
-4. `SwiftyJSON.framework`
-5. `SwiftyUserDefaults.framework`
+2. `RxSwift.framework`
+3. `SwiftyJSON.framework`
+4. `SwiftyUserDefaults.framework`
 
 ![add-frameworks](docs/add-frameworks.gif)
 
@@ -69,10 +68,9 @@ Create a _'New Run Script Phase'_ with the following contents:
 Under *Input Files* add an entry for each of the following items:
 
 1. `$(SRCROOT)/Carthage/Build/iOS/PredictIO.framework`
-2. `$(SRCROOT)/Carthage/Build/iOS/Reachability.framework`
-3. `$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework`
-4. `$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework`
-5. `$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework`
+2. `$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework`
+3. `$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework`
+4. `$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework`
 
 # Usage
 
