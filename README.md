@@ -41,6 +41,7 @@ Link your app with the following _System Frameworks_:
 * `CoreMotion.framework`
 * `Foundation.framework`
 * `SystemConfiguration.framework`
+* `libsqlite3.tbd`
 * `libz.tbd`
 
 ![link-libraries](docs/link-libraries.png)
@@ -49,11 +50,9 @@ Once you've run the previous Carthage command you can add the SDK and its depend
 
 1. `PredictIO.framework`
 2. `Reachability.framework`
-3. `Realm.framework`
-4. `RealmSwift.framework`
-5. `RxSwift.framework`
-6. `SwiftyJSON.framework`
-7. `SwiftyUserDefaults.framework`
+3. `RxSwift.framework`
+4. `SwiftyJSON.framework`
+5. `SwiftyUserDefaults.framework`
 
 ![add-frameworks](docs/add-frameworks.gif)
 
@@ -71,11 +70,9 @@ Under *Input Files* add an entry for each of the following items:
 
 1. `$(SRCROOT)/Carthage/Build/iOS/PredictIO.framework`
 2. `$(SRCROOT)/Carthage/Build/iOS/Reachability.framework`
-3. `$(SRCROOT)/Carthage/Build/iOS/Realm.framework`
-4. `$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework`
-5. `$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework`
-6. `$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework`
-7. `$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework`
+3. `$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework`
+4. `$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework`
+5. `$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework`
 
 # Usage
 

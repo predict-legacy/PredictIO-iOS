@@ -175,8 +175,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import AVFoundation;
 @import CoreLocation;
 @import CoreMotion;
-@import UIKit;
 @import Foundation;
+@import UIKit;
 #endif
 
 #import <PredictIO/PredictIO.h>
@@ -190,6 +190,16 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wnullability"
 
 SWIFT_MODULE_NAMESPACE_PUSH("PredictIO")
+
+
+
+
+
+
+
+
+
+
 
 
 
