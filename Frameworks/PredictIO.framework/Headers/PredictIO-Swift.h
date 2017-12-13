@@ -222,5 +222,23 @@ SWIFT_MODULE_NAMESPACE_PUSH("PredictIO")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 SWIFT_MODULE_NAMESPACE_POP
 #pragma clang diagnostic pop
