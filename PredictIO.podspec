@@ -19,5 +19,4 @@ Pod::Spec.new do |s|
 
     s.dependency "RxSwift", "~> 4.0.0"
     s.dependency "SwiftyJSON", "~> 3.1.0"
-    s.dependency "SwiftyUserDefaults", "~> 3.0.0"
 end

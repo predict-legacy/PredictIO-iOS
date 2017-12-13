@@ -7,7 +7,7 @@
 ## Requirements
 
 * iOS 8.0+
-* Xcode 9.1
+* Xcode 9.2 (Swift 4.0.2)
 * Register for a [predict.io API key](http://www.predict.io/service/registration/?level=1)
 
 ## Installation (CocoaPods)
@@ -15,7 +15,7 @@
 Installation via CocoaPods can be accomplished by adding one of the following to your `Podfile`:
 
 ```ruby
-pod 'PredictIO', '~> 5.1.0'
+pod 'PredictIO', '~> 5.2.0'
 ```
 
 ## Installation (Carthage)
@@ -23,7 +23,7 @@ pod 'PredictIO', '~> 5.1.0'
 Add this to your `Cartfile`:
 
 ```
-github "predict-io/PredictIO-iOS" ~> 5.1.0
+github "predict-io/PredictIO-iOS" ~> 5.2.0
 ```
 
 And install...
@@ -51,7 +51,6 @@ Once you've run the previous Carthage command you can add the SDK and its depend
 1. `PredictIO.framework`
 2. `RxSwift.framework`
 3. `SwiftyJSON.framework`
-4. `SwiftyUserDefaults.framework`
 
 ![add-frameworks](docs/add-frameworks.gif)
 
@@ -70,7 +69,6 @@ Under *Input Files* add an entry for each of the following items:
 1. `$(SRCROOT)/Carthage/Build/iOS/PredictIO.framework`
 2. `$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework`
 3. `$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework`
-4. `$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework`
 
 # Usage
 
