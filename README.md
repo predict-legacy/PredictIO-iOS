@@ -95,12 +95,17 @@ iOS requires you provide the user with a meaningful description of why you will 
 
 ## Integrate the SDK
 
+> **NOTE:** The SDK `start()` method must be called _always_ when your app is launched (from background or foreground launch); a good place to do this would be in your `AppDelegate`, in the [`func applicationDidFinishLaunching(_ application: UIApplication)`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623053-applicationdidfinishlaunching) or [`func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application?language=objc) methods.
+
 ```swift
+// Import the SDK in your AppDelegate
 import PredictIO
 
-let apiKey = "<YOUR_API_KEY>"
-
-PredictIO.instance.start(apiKey: "") { (error) in
+// Start the SDK, inside your applicationDidFinishLaunching method
+// Or somewhere else that will ensure that it's always launched
+PredictIO.start(apiKey: "<YOUR_API_KEY>") { 
+  (error) in
+  
   switch error {
   case .invalidKey?:
     // Your API key is invalid (incorrect or deactivated)
