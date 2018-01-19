@@ -124,18 +124,18 @@ PredictIO.start(apiKey: "") { (error) in
     // permission in your app.
     print("Location permission: not yet determined")
 
-  case .locationPermissionRestricted:
+  case .locationPermissionRestricted?:
     // This application is not authorized to use location services.  Due
     // to active restrictions on location services, the user cannot change
     // this status, and may not have personally denied authorization
     print("Location permission: restricted")
 
-  case .locationPermissionWhenInUse:
+  case .locationPermissionWhenInUse?:
     // User has only granted 'When In Use' location permission, and
     // with that it is not possible to determine trips which are made.
     print("Location permission: when in use")
 
-  case .locationPermissionDenied:
+  case .locationPermissionDenied?:
     // User has flat out denied to give any location permission to
     // this application.
     print("Location permission: denied")
