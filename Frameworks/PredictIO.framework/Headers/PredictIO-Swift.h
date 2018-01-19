@@ -172,7 +172,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # define SWIFT_DEPRECATED_OBJC(Msg) SWIFT_DEPRECATED_MSG(Msg)
 #endif
 #if __has_feature(modules)
-@import AVFoundation;
 @import CoreLocation;
 @import CoreMotion;
 @import Foundation;
@@ -190,6 +189,20 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wnullability"
 
 SWIFT_MODULE_NAMESPACE_PUSH("PredictIO")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

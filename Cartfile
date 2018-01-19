@@ -1,5 +1,4 @@
 ### PredictIO Dependencies
 github "ReactiveX/RxSwift" ~> 4.0.0
 github "SwiftyJSON/SwiftyJSON" ~> 3.1.4
-github "radex/SwiftyUserDefaults" ~> 3.0.1
 ### End PredictIO Dependencies
