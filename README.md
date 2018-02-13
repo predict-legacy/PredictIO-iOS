@@ -159,6 +159,8 @@ PredictIO.setWebhookURL("https://api.yourapp.com/webhook")
 
 The predict.io SDK comes in two power levels which cater to different requirements of battery consumption and latency of events being detected.
 
+> **NOTE**: Power level won't take effect properly until a fresh app relaunch, it's not a setting which should be toggled at runtime.
+
 **High Power**
 
 * 5% typical battery usage in 24 hour period
