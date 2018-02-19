@@ -169,7 +169,10 @@ The predict.io SDK comes in two power levels which cater to different requiremen
 * Intention detection (coming soon in future beta)
 
 ```swift
-PredictIO.start(apiKey: apiKey, powerLevel: .highPower)
+PredictIO.start(apiKey: apiKey, powerLevel: .highPower) {
+  error in
+  // Handled as above
+}
 ```
 
 **Low Power**
@@ -226,6 +229,14 @@ public class PredictIOTripEvent: CustomStringConvertible {
   public let timestamp: Date
 }
 ```
+
+# Pre-flight Checklist
+
+1. Register for a [predict.io API key](http://www.predict.io/service/registration/?level=1)
+1. Request the 'Always' location permission in your app; **our SDK doesn't request location permission automatically!**
+1. [Integrate the SDK](#integrate-the-sdk) snippet into your app to start the SDK 
+1. Optionally, integrate the [webhooks](#webhooks)
+1. [Handle the callback events](#events)
 
 # Support
 
