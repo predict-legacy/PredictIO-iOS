@@ -241,6 +241,11 @@ PredictIO.setWebhookURL("https://api.yourapp.com/webhook")
 1. [Integrate the SDK](#integrate-the-sdk) snippet into your app to start the SDK 
 1. Optionally, integrate the [webhooks](#webhooks)
 1. [Handle the callback events](#events)
+1. When submitting your app, select the following options for the section *Advertising Identifier*:
+  * Does this app use the Advertising Identifier (IDFA)? **Yes**
+  * Serve advertisements within the app? **Our SDK DOES NOT serve adds** (choose what's appropriate for your app)
+  * Attribute this app installation to a previously served advertisement **Yes**
+  * Attribute an action taken within this app to a previously served advertisement **Yes**
 
 # Support
 
