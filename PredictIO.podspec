@@ -17,6 +17,6 @@ Pod::Spec.new do |s|
     # Default to latest Swift version
     s.vendored_framework = 'Frameworks/PredictIO.framework'
 
-    s.dependency "RxSwift", "~> 4.0.0"
+    s.dependency "RxSwift", "~> 4.1.2"
     s.dependency "SwiftyJSON", "~> 3.1.0"
 end
