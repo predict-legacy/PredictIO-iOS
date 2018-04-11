@@ -64,6 +64,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Successfully started PredictIO SDK!")
       }
     }
+
+    PredictIO.notify(on: .any) {
+      (event) in
+      print(event)
+    }
     return true
   }
 
