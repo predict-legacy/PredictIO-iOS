@@ -19,4 +19,6 @@ Pod::Spec.new do |s|
 
     s.dependency "RxSwift", "~> 4.1.2"
     s.dependency "SwiftyJSON", "~> 3.1.0"
+
+    s.swift_version = '4.1'
 end
