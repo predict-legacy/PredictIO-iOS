@@ -74,7 +74,9 @@ Under *Input Files* add an entry for each of the following items:
 
 ## Configure your project
 
-### 1. Enable Background Location Updates
+### Enable Background Location Updates (High Power mode only*)
+
+> **NOTE** *You only need to do this if you use *High Power mode* otherwise it can be skipped
 
 Location is used efficiently while in the background, having minimal effect on battery usage. To enable _Background Location Updates_ open your Project Settings, select your App Target, choose _Capabilities_, enable _Background Modes_ and check _Location updates_.
 
@@ -82,7 +84,7 @@ Location is used efficiently while in the background, having minimal effect on b
 
 > **NOTE** You are required to handle the location permissions request in your application with your own implementation.
 
-### 2. App Usage Descriptions to `Info.plist`
+### App Usage Descriptions to `Info.plist`
 
 iOS requires you provide the user with a meaningful description of why you will be using their location. It's required that you add the following to your `Info.plist`:
 
