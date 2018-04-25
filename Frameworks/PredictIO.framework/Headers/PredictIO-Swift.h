@@ -261,6 +261,9 @@ typedef SWIFT_ENUM(NSInteger, PredictIOPowerLevel) {
 
 SWIFT_CLASS("_TtC9PredictIO18PredictIOTripEvent")
 @interface PredictIOTripEvent : NSObject
+@property (nonatomic, readonly) enum PredictIOTripEventType type;
+@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic, readonly, copy) NSDate * _Nonnull timestamp;
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
