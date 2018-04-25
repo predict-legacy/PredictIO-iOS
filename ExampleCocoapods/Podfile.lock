@@ -1,18 +1,18 @@
 PODS:
-  - PredictIO (5.5.0-beta.1):
+  - PredictIO (5.5.0-beta.2):
     - RxSwift (~> 4.1.2)
     - SwiftyJSON (~> 3.1.0)
   - RxSwift (4.1.2)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
-  - PredictIO (= 5.5.0-beta.1)
+  - PredictIO (= 5.5.0-beta.2)
 
 SPEC CHECKSUMS:
-  PredictIO: 9d7623cfb9e23d7af7506b1e3d860717dab9140a
+  PredictIO: 06678cdf888afe8b1d271f69f0e997c04270e3d1
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: c31433bd606a11a5db7e526c1f71e5a40d6badd6
+PODFILE CHECKSUM: 6e17d3a16cbbdca8b066cb91e3c879213dc8f4ba
 
 COCOAPODS: 1.3.1
