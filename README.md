@@ -103,8 +103,8 @@ import PredictIO
 
 let apiKey = "<YOUR_API_KEY>"
 
-PredictIO.start(apiKey: "") { (error) in
-  switch error {
+PredictIO.start(apiKey: "") { (status) in
+  switch status {
   case .invalidKey:
     // Your API key is invalid (incorrect or deactivated)
     print("Invalid API Key")
