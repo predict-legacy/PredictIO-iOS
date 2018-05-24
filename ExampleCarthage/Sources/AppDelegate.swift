@@ -20,46 +20,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     locationManager.requestAlwaysAuthorization()
 
-    PredictIO.instance.start(apiKey: "") { (error) in
+    PredictIO.start(apiKey: "") { (error) in
       switch error {
-      case .invalidKey?:
+      case .invalidKey:
         // Your API key is invalid (incorrect or deactivated)
         print("Invalid API Key")
 
-      case .killSwitch?:
+      case .killSwitch:
         // Kill switch has been enabled to stop the SDK
         print("Kill switch is active")
 
-      case .wifiDisabled?:
+      case .wifiDisabled:
         // User has WiFi turned off significantly impacting location accuracy available.
         // This may result in missed events!
         // NOTE: SDK still launches after this error!
         print("WiFi is turned off")
 
-      case .locationPermissionNotDetermined?:
+      case .locationPermissionNotDetermined:
         // Background location permission has not been requested yet.
         // You need to call `requestAlwaysAuthorization()` on your
         // CLLocationManager instance where it makes sense to ask for this
         // permission in your app.
         print("Location permission: not yet determined")
 
-      case .locationPermissionRestricted?:
+      case .locationPermissionRestricted:
         // This application is not authorized to use location services.  Due
         // to active restrictions on location services, the user cannot change
         // this status, and may not have personally denied authorization
         print("Location permission: restricted")
 
-      case .locationPermissionWhenInUse?:
+      case .locationPermissionWhenInUse:
         // User has only granted 'When In Use' location permission, and
         // with that it is not possible to determine trips which are made.
         print("Location permission: when in use")
 
-      case .locationPermissionDenied?:
+      case .locationPermissionDenied:
         // User has flat out denied to give any location permission to
         // this application.
         print("Location permission: denied")
 
-      case nil:
+      case .success:
         // No error, SDK started with no problems
         print("Successfully started PredictIO SDK!")
       }

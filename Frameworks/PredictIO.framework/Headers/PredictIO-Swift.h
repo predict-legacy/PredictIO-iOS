@@ -167,6 +167,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import CoreLocation;
 @import CoreMotion;
 @import Foundation;
+@import ObjectiveC;
 @import UIKit;
 #endif
 
@@ -210,6 +211,71 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+
+enum PredictIOPowerLevel : NSInteger;
+enum PredictIOError : NSInteger;
+enum PredictIOTripEventType : NSInteger;
+@class PredictIOTripEvent;
+
+SWIFT_CLASS("_TtC9PredictIO9PredictIO")
+@interface PredictIO : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull fullVersion;)
++ (NSString * _Nonnull)fullVersion SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull versionNumber;)
++ (NSString * _Nonnull)versionNumber SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger buildNumber;)
++ (NSInteger)buildNumber SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+- (void)startWithApiKey:(NSString * _Nonnull)apiKey powerLevel:(enum PredictIOPowerLevel)powerLevel callback:(void (^ _Nonnull)(enum PredictIOError))callback;
+- (void)setCustomParameterWithKey:(NSString * _Nonnull)key value:(id _Nonnull)value;
+- (void)setWebhookURL:(NSString * _Nonnull)url;
+- (void)notifyOn:(enum PredictIOTripEventType)event callback:(void (^ _Nonnull)(PredictIOTripEvent * _Nonnull))callback;
+@end
+
+
+@interface PredictIO (SWIFT_EXTENSION(PredictIO))
++ (void)startWithApiKey:(NSString * _Nonnull)apiKey powerLevel:(enum PredictIOPowerLevel)powerLevel callback:(void (^ _Nonnull)(enum PredictIOError))callback;
++ (void)setCustomParameterWithKey:(NSString * _Nonnull)key value:(id _Nonnull)value;
++ (void)setWebhookURL:(NSString * _Nonnull)url;
++ (void)notifyOn:(enum PredictIOTripEventType)event callback:(void (^ _Nonnull)(PredictIOTripEvent * _Nonnull))callback;
+@end
+
+typedef SWIFT_ENUM(NSInteger, PredictIOError) {
+  PredictIOErrorSuccess = -1,
+  PredictIOErrorInvalidKey = 0,
+  PredictIOErrorKillSwitch = 1,
+  PredictIOErrorWifiDisabled = 2,
+  PredictIOErrorLocationPermissionNotDetermined = 3,
+  PredictIOErrorLocationPermissionRestricted = 4,
+  PredictIOErrorLocationPermissionDenied = 5,
+  PredictIOErrorLocationPermissionWhenInUse = 6,
+};
+static NSString * _Nonnull const PredictIOErrorDomain = @"PredictIO.PredictIOError";
+
+typedef SWIFT_ENUM(NSInteger, PredictIOPowerLevel) {
+  PredictIOPowerLevelLowPower = 0,
+  PredictIOPowerLevelHighPower = 1,
+};
+
+
+SWIFT_CLASS("_TtC9PredictIO18PredictIOTripEvent")
+@interface PredictIOTripEvent : NSObject
+@property (nonatomic, readonly) enum PredictIOTripEventType type;
+@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic, readonly, copy) NSDate * _Nonnull timestamp;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+typedef SWIFT_ENUM(NSInteger, PredictIOTripEventType) {
+  PredictIOTripEventTypeAny = 0,
+  PredictIOTripEventTypeArrival = 1,
+  PredictIOTripEventTypeDeparture = 2,
+  PredictIOTripEventTypeStill = 3,
+  PredictIOTripEventTypeEnroute = 4,
+};
 
 
 

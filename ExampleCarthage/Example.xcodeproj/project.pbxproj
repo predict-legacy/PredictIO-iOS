@@ -26,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6616A75E1F3DF48700B76DA1 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		6623F7ED1FC7119A001A2F91 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		66322F041F866438001627AE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		66322F061F866442001627AE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -111,6 +112,7 @@
 				66322F081F86644A001627AE /* SystemConfiguration.framework */,
 				66322F061F866442001627AE /* CoreLocation.framework */,
 				66322F041F866438001627AE /* CoreMotion.framework */,
+				6616A75E1F3DF48700B76DA1 /* RxCocoa.framework */,
 				66E9D2DA1F3DE25100194084 /* PredictIO.framework */,
 				66E9D2E01F3DE25100194084 /* RxSwift.framework */,
 				66E9D2E51F3DE25100194084 /* SwiftyJSON.framework */,
