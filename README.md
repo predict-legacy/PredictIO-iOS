@@ -7,7 +7,7 @@
 ## Requirements
 
 * iOS 8.0+
-* Xcode 9.2 (Swift 4.0.2)
+* Xcode 9.3 (Swift 4.1)
 * Register for a [predict.io API key](http://www.predict.io/service/registration/?level=1)
 
 ## Installation (CocoaPods)
@@ -15,7 +15,7 @@
 Installation via CocoaPods can be accomplished by adding one of the following to your `Podfile`:
 
 ```ruby
-pod 'PredictIO', '~> 5.3.0'
+pod 'PredictIO', '~> 5.5.0'
 ```
 
 ## Installation (Carthage)
@@ -23,7 +23,7 @@ pod 'PredictIO', '~> 5.3.0'
 Add this to your `Cartfile`:
 
 ```
-github "predict-io/PredictIO-iOS" ~> 5.3.0
+github "predict-io/PredictIO-iOS" ~> 5.5.0
 ```
 
 And install...
@@ -105,44 +105,44 @@ let apiKey = "<YOUR_API_KEY>"
 
 PredictIO.start(apiKey: "") { (error) in
   switch error {
-  case .invalidKey?:
+  case .invalidKey:
     // Your API key is invalid (incorrect or deactivated)
     print("Invalid API Key")
     
-  case .killSwitch?:
+  case .killSwitch:
     // Kill switch has been enabled to stop the SDK
     print("Kill switch is active")
 
-  case .wifiDisabled?:
+  case .wifiDisabled:
     // User has WiFi turned off significantly impacting location accuracy available.
     // This may result in missed events!
     // NOTE: SDK still launches after this error!
     print("WiFi is turned off")
 
-  case .locationPermissionNotDetermined?:
+  case .locationPermissionNotDetermined:
     // Background location permission has not been requested yet.
     // You need to call `requestAlwaysAuthorization()` on your
     // CLLocationManager instance where it makes sense to ask for this
     // permission in your app.
     print("Location permission: not yet determined")
 
-  case .locationPermissionRestricted?:
+  case .locationPermissionRestricted:
     // This application is not authorized to use location services.  Due
     // to active restrictions on location services, the user cannot change
     // this status, and may not have personally denied authorization
     print("Location permission: restricted")
 
-  case .locationPermissionWhenInUse?:
+  case .locationPermissionWhenInUse:
     // User has only granted 'When In Use' location permission, and
     // with that it is not possible to determine trips which are made.
     print("Location permission: when in use")
 
-  case .locationPermissionDenied?:
+  case .locationPermissionDenied:
     // User has flat out denied to give any location permission to
     // this application.
     print("Location permission: denied")
 
-  case nil:
+  case .success:
     // No error, SDK started with no problems
     print("Successfully started PredictIO SDK!")
   }
