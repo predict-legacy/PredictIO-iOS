@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/PredictIO-Swift.h</key>
 		<data>
-		Q13Ta55t3dGmplYLvRsMq8u4ZAA=
+		5ZGtEixm3xdVlUYfK9OOCDxUQJQ=
 		</data>
 		<key>Headers/PredictIO.h</key>
 		<data>
@@ -22,23 +22,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		jtf7i67cN1ykaEb3/2xHfri45Mw=
+		jXBYiUthxGGICw8CzM5Rmb2ydeI=
 		</data>
 		<key>Modules/PredictIO.swiftmodule/i386.swiftdoc</key>
 		<data>
-		tOA6vM6iHJyFKEAmbPw3zRPSZ5Q=
+		vOAzq/qvzTs0Xn0RgIxKnDj+fJA=
 		</data>
 		<key>Modules/PredictIO.swiftmodule/i386.swiftmodule</key>
 		<data>
-		Hk9AUOd6+GJepCYwT7QNyuk+Lhw=
+		5u30sUGOlwZSUyt055pY44IDlBY=
 		</data>
 		<key>Modules/PredictIO.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		w/51/N2bz1Hp3603vOVNhBt+i68=
+		5QDqtqMIVPYFopeYXmZ7ttHpzn4=
 		</data>
 		<key>Modules/PredictIO.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		6imyhYd8SLq0amI0ZH4nkezRteE=
+		ZMshr9cU4XXaE/BqXLLg8QGxEjE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -62,11 +62,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Q13Ta55t3dGmplYLvRsMq8u4ZAA=
+			5ZGtEixm3xdVlUYfK9OOCDxUQJQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			WD4CIWnx1cWvh/opTDnbNhq/j31oDekzOy4Lv9rTuz4=
+			lmFu2UrjnizZMe2kqxiRzsCTpyDWcb1+WyUdL/73oVw=
 			</data>
 		</dict>
 		<key>Headers/PredictIO.h</key>
@@ -95,44 +95,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tOA6vM6iHJyFKEAmbPw3zRPSZ5Q=
+			vOAzq/qvzTs0Xn0RgIxKnDj+fJA=
 			</data>
 			<key>hash2</key>
 			<data>
-			VVA/QxED5bPkw+yDIy2rtCkQdbKxra4DCc0Jn+xwolU=
+			rrHJpTLJseWoS7XbQ6O6bnsBB0tlhp6aEHHV/M2a8/w=
 			</data>
 		</dict>
 		<key>Modules/PredictIO.swiftmodule/i386.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Hk9AUOd6+GJepCYwT7QNyuk+Lhw=
+			5u30sUGOlwZSUyt055pY44IDlBY=
 			</data>
 			<key>hash2</key>
 			<data>
-			CudaLG25PAi50o5zlfJQI/YZtOOcYynrz/guznaBGxw=
+			evjBVOGNzDvUWBbl/T1iHnT3Qk396I47e27aqpyDxW8=
 			</data>
 		</dict>
 		<key>Modules/PredictIO.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			w/51/N2bz1Hp3603vOVNhBt+i68=
+			5QDqtqMIVPYFopeYXmZ7ttHpzn4=
 			</data>
 			<key>hash2</key>
 			<data>
-			fzoAo9vFNQhQET9zERjn1qA0iNMVXD+9FLBjEqXqDnE=
+			0al3YZWClzj31xxc75+Bk65B9WN+yFSFPKO0Rjd809g=
 			</data>
 		</dict>
 		<key>Modules/PredictIO.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6imyhYd8SLq0amI0ZH4nkezRteE=
+			ZMshr9cU4XXaE/BqXLLg8QGxEjE=
 			</data>
 			<key>hash2</key>
 			<data>
-			e8mqgiVBm2jULXwQXuyknnDvm/Nr8VuvIAANZP/mimk=
+			7RGBPoRi53JTPXrp6zHECn1G/HxfiY5SnBeBjRKvNWA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -149,7 +149,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -180,24 +180,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -233,13 +221,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>
