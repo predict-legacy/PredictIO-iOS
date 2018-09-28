@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		xU7aU32QouU3AJFxl2BJsvpOqqA=
+		l8ULKGMOY5t6p6Nhw+3eVHIyTEs=
 		</data>
 		<key>Modules/PredictIO.swiftmodule/i386.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/PredictIO.swiftmodule/i386.swiftmodule</key>
 		<data>
-		sbQtdDu/ifsvglKWhENowBC5TVQ=
+		jPQi5ENoPYtr6f2/Ta9Nf5MeYao=
 		</data>
 		<key>Modules/PredictIO.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/PredictIO.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		lFdgmGaDmc/hbsG0iaWEbtwDFiY=
+		UioIFb2pFFkEnZl2YGZTUPNLQzY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -106,11 +106,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sbQtdDu/ifsvglKWhENowBC5TVQ=
+			jPQi5ENoPYtr6f2/Ta9Nf5MeYao=
 			</data>
 			<key>hash2</key>
 			<data>
-			unzAgu2/jQyHTlCmwW1CqaGGGHERr3qr9LPl/TEANac=
+			Tc8E+i1mpkMIPPuvkXVsBymzSeLdnvxkSUIEkKbJ/wI=
 			</data>
 		</dict>
 		<key>Modules/PredictIO.swiftmodule/x86_64.swiftdoc</key>
@@ -128,11 +128,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lFdgmGaDmc/hbsG0iaWEbtwDFiY=
+			UioIFb2pFFkEnZl2YGZTUPNLQzY=
 			</data>
 			<key>hash2</key>
 			<data>
-			3bwdnSEJLwzkr9c6si2efvezWxIzmUOCAB8YPJnV2BE=
+			n4XjwBHNM13BFOaRPzXBqnup4uyv4rniAnCzVWDZTX0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
