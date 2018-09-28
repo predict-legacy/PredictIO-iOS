@@ -4,5 +4,5 @@ target 'Example' do
   use_frameworks!
 
   # pod 'PredictIO', path: '../'
-  pod 'PredictIO', '5.5.0'
+  pod 'PredictIO', '5.6.0'
 end
